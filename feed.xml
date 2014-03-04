@@ -6,16 +6,59 @@
     <atom:link href="http://docs.ingenieux.com.br/feed.xml" rel="self" type="application/rss+xml" />
     <description>ingenieux Labs Docs</description>
     <language>pl</language>
-    <pubDate>Wt, 4 mar 2014 01:38:24 +0100</pubDate>
-    <lastBuildDate>Wt, 4 mar 2014 01:38:24 +0100</lastBuildDate>
+    <pubDate>Wt, 4 mar 2014 23:23:45 +0100</pubDate>
+    <lastBuildDate>Wt, 4 mar 2014 23:23:45 +0100</lastBuildDate>
 
+    <item>
+      <title>Fourth Post</title>
+      <link>http://docs.ingenieux.com.br/2014/fourth-post.html</link>
+      <pubDate>Wt, 4 mar 2014 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">/2014/fourth-post.html</guid>
+      	<description>
+	&lt;p&gt;Hello World, &lt;code&gt;c++&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+ 
+int main()
+{
+    std::cout &amp;lt;&amp;lt; &amp;quot;Hello, world!&amp;quot; &amp;lt;&amp;lt; std::endl;
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hello World, &lt;code&gt;c#&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;using System;
+class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine(&amp;quot;Hello, world!&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- more --&gt;&lt;p&gt;Hello World, &lt;code&gt;go&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package main
+ 
+import &amp;quot;fmt&amp;quot;
+ 
+func main() {
+   fmt.Println(&amp;quot;Hello, world!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hello World, &lt;code&gt;java&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;public class HelloWorld {
+   public static void main(String[] args) {
+       System.out.println(&amp;quot;Hello, world!&amp;quot;);
+   }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hello World, &lt;code&gt;ruby&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;puts &amp;quot;Hello, world!&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+	</description>
+    </item>
     <item>
       <title>Third Post</title>
       <link>http://docs.ingenieux.com.br/2014/third-post.html</link>
       <pubDate>Pn, 3 mar 2014 00:00:00 +0100</pubDate>
       <guid isPermaLink="false">/2014/third-post.html</guid>
       	<description>
-	&lt;h1&gt;Title&lt;/h1&gt;&lt;p&gt;Hello world in &lt;code&gt;java&lt;/code&gt;:&lt;/p&gt;
+	&lt;h1&gt;Title&lt;/h1&gt;&lt;p&gt;Hello &lt;kbd&gt;world&lt;/kbd&gt; in &lt;code&gt;java&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;java&quot;&gt;public class HelloWorld {
 
     public static void main(String[] args) {
@@ -23,7 +66,7 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And for &lt;code&gt;python&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;print(&amp;quot;Hello, World!&amp;quot;)
+&lt;pre&gt;&lt;code&gt;print(&amp;quot;Hello, World!&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There should be some content so let&apos;s use classic placeholder...&lt;/p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque convallis libero id suscipit. Maecenas elementum magna non risus bibendum tincidunt. Vestibulum lobortis, magna vel vehicula lobortis, risus odio pellentesque nulla, ut cursus nisi purus nec tortor. Fusce nec diam augue. Duis rutrum metus sit amet nunc aliquam lobortis. Phasellus auctor fringilla dolor eu luctus. Duis tellus erat, lobortis luctus aliquet a, luctus ac sapien. Integer sagittis ipsum quis nulla ornare, porttitor interdum justo fermentum. Integer sed varius lectus.&lt;br/&gt;&lt;!-- more --&gt;&lt;br/&gt;Nulla convallis vitae urna vel pharetra. Suspendisse imperdiet, massa sed commodo consectetur, ante ligula fermentum turpis, ut sagittis nulla orci quis tortor. Pellentesque a metus lorem. Donec elementum, mi et dapibus scelerisque, neque est egestas purus, id gravida mi odio ut elit. Phasellus fringilla at enim ut varius. Nullam quis nisl in orci suscipit tincidunt vitae vitae urna. Sed sit amet porta augue, sed semper diam.&lt;/p&gt;&lt;p&gt;Sed cursus, eros vitae feugiat feugiat, augue ante ullamcorper nibh, a vehicula velit urna et velit. Vestibulum varius, quam eget malesuada sagittis, risus lectus rhoncus quam, sed lobortis dolor risus id massa. Integer eu accumsan est. Fusce malesuada suscipit massa id ullamcorper. Praesent luctus quam sit amet nisi faucibus, porttitor blandit odio congue. Etiam pulvinar placerat turpis vitae sodales. Praesent sit amet lacus dignissim, rutrum tellus et, vestibulum elit.&lt;/p&gt;&lt;p&gt;Sed tristique purus et mauris tristique, et consectetur velit accumsan. Aliquam iaculis elit quis turpis porta imperdiet. Nullam pulvinar vehicula lobortis. Cras ut sollicitudin justo. Pellentesque tempus euismod imperdiet. Sed euismod ligula ac dapibus adipiscing. Donec auctor dolor velit, nec varius mi luctus quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In vitae consectetur metus. Nam eget ipsum sit amet velit placerat sagittis bibendum eu arcu. Vestibulum ipsum enim, posuere eu tristique non, euismod in turpis. Nunc nibh dui, pretium et euismod vel, porta eget elit. Phasellus a sollicitudin risus. Pellentesque iaculis ligula sed nisl vehicula, non posuere tortor luctus. Duis pellentesque mauris leo, nec suscipit mauris aliquam quis. Pellentesque vel elit lobortis, ultricies nulla eget, luctus magna.&lt;/p&gt;&lt;p&gt;Quisque hendrerit posuere eros, at pulvinar justo ullamcorper ut. In id metus et tortor eleifend accumsan. Nulla hendrerit tortor eget purus molestie bibendum. Donec nec elementum dolor, nec aliquet enim. Sed ac quam vitae massa luctus congue sed accumsan est. Morbi vestibulum tellus vitae pulvinar fermentum. Maecenas vel mauris nulla. Vivamus at sodales leo. Sed id convallis arcu. Vestibulum aliquet commodo dolor, in bibendum dolor vehicula in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer laoreet hendrerit justo a fringilla. Suspendisse vitae erat nec metus sollicitudin sodales.&lt;/p&gt;
 	</description>
     </item>

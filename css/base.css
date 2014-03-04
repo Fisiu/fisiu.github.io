@@ -38,6 +38,16 @@ footer {
   padding-left: 40px;
 }
 
+.static-box > .panel-body {
+  padding: 10px;
+  text-align: center;
+}
+
+#repoview {
+  font-size: 12px;
+  padding: 5px;
+}
+
 .social-icon {
   vertical-align: middle;
 }
@@ -47,11 +57,18 @@ footer {
 }
 
 .read-more {
-	float: right;
-	font-size: 12px;
-	text-decoration: none;
+  float: right;
+  font-size: 12px;
+  text-decoration: none;
 }
 
+/* You can override pre > code styles */
+.snippet {
+}
+
+/* You can override archive well styles */
+.archive-month {
+}
 
 /*-------------------------------*/
 
@@ -86,3 +103,4 @@ footer {
   width: 80px;
 }
 /*-------------------------------*/
+
