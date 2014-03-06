@@ -25,6 +25,10 @@ footer {
 
 /* Site custom styles
  * ------------------------------*/
+article {
+  text-align: justify;
+}
+
 .gotop {
   display: block;
   text-align: right;
@@ -62,12 +66,21 @@ footer {
   text-decoration: none;
 }
 
+.tagsbar {
+  text-transform: lowercase !important;
+  font-size: 11px;
+}
+
 /* You can override pre > code styles */
 .snippet {
 }
 
 /* You can override archive well styles */
 .archive-month {
+}
+
+/* You can override tag well styles */
+.tag-month {
 }
 
 /*-------------------------------*/

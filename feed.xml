@@ -1,21 +1,22 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>la Manzana</title>
-    <link>http://docs.ingenieux.com.br/</link>
-    <atom:link href="http://docs.ingenieux.com.br/feed.xml" rel="self" type="application/rss+xml" />
-    <description>ingenieux Labs Docs</description>
+    <title>system.out.println.</title>
+    <link>http://fisiu.github.io/</link>
+    <atom:link href="http://fisiu.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <description>not so frequent log</description>
     <language>pl</language>
-    <pubDate>Śr, 5 mar 2014 03:53:03 +0100</pubDate>
-    <lastBuildDate>Śr, 5 mar 2014 03:53:03 +0100</lastBuildDate>
+    <pubDate>2014-03-06 18:31:38</pubDate>
+    <lastBuildDate>2014-03-06 18:31:38</lastBuildDate>
 
-    <item>
-      <title>Fourth Post</title>
-      <link>http://docs.ingenieux.com.br/2014/fourth-post.html</link>
-      <pubDate>Wt, 4 mar 2014 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">/2014/fourth-post.html</guid>
-      	<description>
-	&lt;p&gt;Hello World, &lt;code&gt;c++&lt;/code&gt;:&lt;/p&gt;
+      <item>
+        <title>Fourth Post</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2014/fourth-post.html</link>
+        <pubDate>2014-03-04 00:00:00</pubDate>
+        <guid isPermaLink="false">/2014/fourth-post.html</guid>
+        <description>
+	        &lt;p&gt;Hello World, &lt;code&gt;c++&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
  
 int main()
@@ -50,15 +51,16 @@ func main() {
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hello World, &lt;code&gt;ruby&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;puts &amp;quot;Hello, world!&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
-	</description>
-    </item>
-    <item>
-      <title>Third Post</title>
-      <link>http://docs.ingenieux.com.br/2014/third-post.html</link>
-      <pubDate>Pn, 3 mar 2014 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">/2014/third-post.html</guid>
-      	<description>
-	&lt;h1&gt;Title&lt;/h1&gt;&lt;p&gt;Hello &lt;kbd&gt;world&lt;/kbd&gt; in &lt;code&gt;java&lt;/code&gt;:&lt;/p&gt;
+        </description>
+      </item>
+      <item>
+        <title>Third Post</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2014/third-post.html</link>
+        <pubDate>2014-03-03 00:00:00</pubDate>
+        <guid isPermaLink="false">/2014/third-post.html</guid>
+        <description>
+	        &lt;h1&gt;Title&lt;/h1&gt;&lt;p&gt;Hello &lt;kbd&gt;world&lt;/kbd&gt; in &lt;code&gt;java&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;java&quot;&gt;public class HelloWorld {
 
     public static void main(String[] args) {
@@ -68,25 +70,76 @@ func main() {
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And for &lt;code&gt;python&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;print(&amp;quot;Hello, World!&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There should be some content so let&apos;s use classic placeholder...&lt;/p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque convallis libero id suscipit. Maecenas elementum magna non risus bibendum tincidunt. Vestibulum lobortis, magna vel vehicula lobortis, risus odio pellentesque nulla, ut cursus nisi purus nec tortor. Fusce nec diam augue. Duis rutrum metus sit amet nunc aliquam lobortis. Phasellus auctor fringilla dolor eu luctus. Duis tellus erat, lobortis luctus aliquet a, luctus ac sapien. Integer sagittis ipsum quis nulla ornare, porttitor interdum justo fermentum. Integer sed varius lectus.&lt;br/&gt;&lt;!-- more --&gt;&lt;br/&gt;Nulla convallis vitae urna vel pharetra. Suspendisse imperdiet, massa sed commodo consectetur, ante ligula fermentum turpis, ut sagittis nulla orci quis tortor. Pellentesque a metus lorem. Donec elementum, mi et dapibus scelerisque, neque est egestas purus, id gravida mi odio ut elit. Phasellus fringilla at enim ut varius. Nullam quis nisl in orci suscipit tincidunt vitae vitae urna. Sed sit amet porta augue, sed semper diam.&lt;/p&gt;&lt;p&gt;Sed cursus, eros vitae feugiat feugiat, augue ante ullamcorper nibh, a vehicula velit urna et velit. Vestibulum varius, quam eget malesuada sagittis, risus lectus rhoncus quam, sed lobortis dolor risus id massa. Integer eu accumsan est. Fusce malesuada suscipit massa id ullamcorper. Praesent luctus quam sit amet nisi faucibus, porttitor blandit odio congue. Etiam pulvinar placerat turpis vitae sodales. Praesent sit amet lacus dignissim, rutrum tellus et, vestibulum elit.&lt;/p&gt;&lt;p&gt;Sed tristique purus et mauris tristique, et consectetur velit accumsan. Aliquam iaculis elit quis turpis porta imperdiet. Nullam pulvinar vehicula lobortis. Cras ut sollicitudin justo. Pellentesque tempus euismod imperdiet. Sed euismod ligula ac dapibus adipiscing. Donec auctor dolor velit, nec varius mi luctus quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In vitae consectetur metus. Nam eget ipsum sit amet velit placerat sagittis bibendum eu arcu. Vestibulum ipsum enim, posuere eu tristique non, euismod in turpis. Nunc nibh dui, pretium et euismod vel, porta eget elit. Phasellus a sollicitudin risus. Pellentesque iaculis ligula sed nisl vehicula, non posuere tortor luctus. Duis pellentesque mauris leo, nec suscipit mauris aliquam quis. Pellentesque vel elit lobortis, ultricies nulla eget, luctus magna.&lt;/p&gt;&lt;p&gt;Quisque hendrerit posuere eros, at pulvinar justo ullamcorper ut. In id metus et tortor eleifend accumsan. Nulla hendrerit tortor eget purus molestie bibendum. Donec nec elementum dolor, nec aliquet enim. Sed ac quam vitae massa luctus congue sed accumsan est. Morbi vestibulum tellus vitae pulvinar fermentum. Maecenas vel mauris nulla. Vivamus at sodales leo. Sed id convallis arcu. Vestibulum aliquet commodo dolor, in bibendum dolor vehicula in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer laoreet hendrerit justo a fringilla. Suspendisse vitae erat nec metus sollicitudin sodales.&lt;/p&gt;
-	</description>
-    </item>
-    <item>
-      <title>Second Post</title>
-      <link>http://docs.ingenieux.com.br/2014/second-post.html</link>
-      <pubDate>Pt, 28 lut 2014 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">/2014/second-post.html</guid>
-      	<description>
-	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus. Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus, id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.&lt;/p&gt;
-	</description>
-    </item>
-    <item>
-      <title>First Post</title>
-      <link>http://docs.ingenieux.com.br/2013/first-post.html</link>
-      <pubDate>Śr, 17 lip 2013 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">/2013/first-post.html</guid>
-      	<description>
-	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus. Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus, id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.&lt;/p&gt;
-	</description>
-    </item>
+        </description>
+      </item>
+      <item>
+        <title>Second Post</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2014/second-post.html</link>
+        <pubDate>2014-02-28 00:00:00</pubDate>
+        <guid isPermaLink="false">/2014/second-post.html</guid>
+        <description>
+	        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus. Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus, id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.&lt;/p&gt;
+        </description>
+      </item>
+      <item>
+        <title>First Post</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2013/first-post.html</link>
+        <pubDate>2013-07-17 00:00:00</pubDate>
+        <guid isPermaLink="false">/2013/first-post.html</guid>
+        <description>
+	        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus. Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus, id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.&lt;/p&gt;
+        </description>
+      </item>
+      <item>
+        <title>Aktualizacja OpenOffice.org do wersji 3.0.1</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2009/aktualizacja-openofficeorg-do-wersji-301.html</link>
+        <pubDate>2009-02-03 00:00:00</pubDate>
+        <guid isPermaLink="false">/2009/aktualizacja-openofficeorg-do-wersji-301.html</guid>
+        <description>
+	        &lt;p&gt;Kilka dni temu ukazała się najnowsza edycja pakietu biurowego – OpenOffice.org 3.0.1. Dla openSUSE 11.1 pakiety są dostępne w &lt;em&gt;BuidService&lt;/em&gt; w repozytorium &lt;a href=&quot;http://download.opensuse.org/repositories/OpenOffice.org:/STABLE/openSUSE_11.1/&quot;&gt;OpenOffice.org:STABLE&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Jednak po dokonaniu aktualizacji i próbie uruchomienia wita nas błąd. Pojawia się okienko z informacją,  że nie można uruchomić programu. Próby uruchomienia z terminala też niewiele nam pomagają, gdyż żadne dodatkowe informacje na temat błędu nie są wyświetlane. Rozwiązanie problemu jest bardzo proste i sprowadza się do usunięcia trzech, niepotrzebnych pakietów. W tym celu wystarczy otworzyć terminal, zalogować się jako &lt;em&gt;root&lt;/em&gt; i usunąć konfliktujące biblioteki:&lt;/p&gt;&lt;p&gt;&lt;kbd&gt;su -&lt;/kbd&gt;&lt;br/&gt;&lt;kbd&gt;zypper rm OpenOffice_org-libs-gui OpenOffice_org-libs-core OpenOffice_org-components&lt;/kbd&gt;&lt;/p&gt;&lt;p&gt;Od teraz już można spokojnie korzystać z najnowszego OpenOffice.org :)&lt;/p&gt;
+        </description>
+      </item>
+      <item>
+        <title>weblog dla OpenOffice</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2009/weblog-dla-openoffice.html</link>
+        <pubDate>2009-02-03 00:00:00</pubDate>
+        <guid isPermaLink="false">/2009/weblog-dla-openoffice.html</guid>
+        <description>
+	        &lt;p&gt;No i znalazłem w końcu fajne rozszerzenie do OpenOffice. Można spokojnie pisać posty we  &lt;em&gt;Writerze&lt;/em&gt; i wysyłać bezpośrednio na swój blog :)&lt;/p&gt;&lt;p&gt;Rozszerzenie nazywa się Sun Weblog Publisher i można je znaleźć na stronie &lt;a href=&quot;http://extensions.services.openoffice.org/project/swp&quot;&gt;http://extensions.services.openoffice.org/project/swp&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Ciekawo czy jak wstawię obrazek to też zostanie ładnie wysłany?&lt;/p&gt;&lt;p&gt;// Edycja&lt;/p&gt;&lt;p&gt;Niestety nie udało mi się w ten sposób załączyć obrazka. Pozostaje metoda ręczna ;)&lt;/p&gt;&lt;p&gt;Choć w opisie tejże wtyczki znalazłem informację, że jest to możliwe. No nic, będę się musiał zaznajomić dokładniej z opcjami.&lt;/p&gt;
+        </description>
+      </item>
+      <item>
+        <title>openSUSE Beta 4 jeszcze nie dla mnie...</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2008/opensuse-beta-4-jeszcze-nie-dla-mnie.html</link>
+        <pubDate>2008-11-06 00:00:00</pubDate>
+        <guid isPermaLink="false">/2008/opensuse-beta-4-jeszcze-nie-dla-mnie.html</guid>
+        <description>
+	        &lt;p&gt;W poniedziałek, 2008-11-03, &lt;a href=&quot;http://news.opensuse.org/2008/11/03/development-release-opensuse-111-beta-4-now-available/&quot;&gt;ukazała&lt;/a&gt; się kolejna testowa wersja systemu openSUSE, oznaczona jako Beta 4. Spragniony testów przystąpiłem do pobierania obrazu &lt;a href=&quot;http://pl.opensuse.org/Download_Help#Aplikowanie_delta_ISO&quot;&gt;Delta ISO&lt;/a&gt;. Po pomyślnym utworzeniu pełnego obrazu iso nadszedł moment instalacji. Sam proces instalcji przebiegł w sposób standardowy. Miejscem docelowym nowej instalacji miała być mała partycja (~12GB) utworzona na macierzy &quot;&lt;a href=&quot;http://en.wikipedia.org/wiki/RAID#Firmware.2Fdriver_based_RAID&quot;&gt;fake RAID&lt;/a&gt;&quot;.&lt;br/&gt;&lt;!-- more --&gt;&lt;br/&gt;Instalacja przebiegła pomyślnie, nawet z zainstalowaniem &lt;a href=&quot;http://pl.wikipedia.org/wiki/Grub&quot;&gt;Gruba&lt;/a&gt; nie było problemów. Po ponownym uruchomieniu komputera okazało się, że nie można uruchomić dopiero co zainstalowanego systemu.&lt;/p&gt;&lt;p&gt;Komunikat, który mnie przywitał wyglądał tak:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(...)
+usbcore: registered new interface driver usbhid
+usbhid: v2.6:USB HID core driver
+...........................Could not find /dev/mapper/nvidia_ifjaecch_part2.
+Want me to fall back to /dev/mapper/nvidia_ifjaecch_part2? (Y/n)
+y
+Waiting for device /dev/mapper/nvidia_ifjaecch_part2 to appear: ...........................not found -- exiting to /bin/sh
+$_
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Po chwili postanowiłem zajrzeć na bugzillę Novell&apos;a, gdzie znalazłem stosowne informacje na ten temat. Całe szczęście, że problem został już rozwiązany. Po szczegóły odsyłam do &lt;a href=&quot;https://bugzilla.novell.com/show_bug.cgi?id=439439&quot;&gt;źródła&lt;/a&gt;.&lt;br/&gt;Jak dla mnie wersja Beta 4 jest bezużyteczna. Pozostaje czekanie na kolejne wydanie deweloperskie, które ma się ukazać już niebawem.&lt;/p&gt;
+        </description>
+      </item>
+      <item>
+        <title>Czas start!</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2008/czas-start.html</link>
+        <pubDate>2008-11-02 00:00:00</pubDate>
+        <guid isPermaLink="false">/2008/czas-start.html</guid>
+        <description>
+	        &lt;p&gt;W końcu znalazłem chwilę, aby dokończyć bloga. Co prawda w ostatniej chwili zdecydowałem się na zmianę motywu, przez co mogą pojawiać się drobne braki graficzne bądź inne. Mam nadzieję, że w niedługiej przyszłości doprowadzę wszystko do stanu prawie idealnego.&lt;br/&gt;Czas na rozpoczęcie blogowania, ze względu na liczebność obowiązków może nie jest najlepszy, choć biorąc pod uwagę cykl wydawniczy &lt;a href=&quot;http://www.opensuse.org&quot;&gt;openSUSE&lt;/a&gt; - jak najbardziej. Aktualną wersją systemu jest 11.0 a aktualnie trwające prace odnoszą się do wersji 11.1. Na dzień dzisiejszy, dodawanie &quot;czegokolwiek&quot; nowego do zestawu pakietów dystrybucji jest już zablokowane. Deweloperzy skupiają się teraz tylko i wyłącznie na eliminacji znalezionych i zgłoszonych błędów.&lt;br/&gt;Już jutro ma ukazać się kolejna wersja rozwojowa openSUSE Beta4. Więcej wiadomości na ten temat już wkrótce!&lt;/p&gt;
+        </description>
+      </item>
   </channel> 
 </rss>

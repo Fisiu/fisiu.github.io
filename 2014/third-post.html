@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-    Jbaked blog
+    system.out.println
         - Third Post
     </title>
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/prettify-themes/tomorrow.css">
+    <link rel="stylesheet" href="/css/prettify-themes/github.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="/css/base.css">
 
@@ -36,20 +36,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Jbaked blog</a>
+          <a class="navbar-brand" href="/">system.out.println</a>
         </div>
         
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="/pages/about.html">About me</a></li>
-            <li><a href="/pages/contact.html">Contact</a></li>
+            <li><a href="/pages/about.html">O mnie</a></li>
+            <li><a href="/pages/contact.html">Kontakt</a></li>
           </ul>
         
         <!-- Right navigation -->
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/archive.html"><i class="fa fa-list"></i> Archive</a></li>
-          <li><a href="/feed.xml" title="Rss"><i class="fa fa-rss"></i> Feed</a></li>
+          <li><a href="/archive.html"><i class="fa fa-list"></i> Archiwum</a></li>
+          <li><a href="/feed.xml" title="Rss"><i class="fa fa-rss"></i> Rss</a></li>
         </ul>
         <!-- Right navigation end -->
 
@@ -63,7 +63,12 @@
       <div class="row">
         <div class="col-md-12">
           <article>
-            <div class="page-header"><h1>Third Post</h1></div>
+            <div class="page-header"><h1>Third Post</h1>
+              <ol class="breadcrumb tagsbar">
+                <li><a href="/tags/blog.html">blog</a></li>
+                <li><a href="/tags/java.html">java</a></li>
+              </ol>
+            </div>
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;03 marzec 2014&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
@@ -83,20 +88,21 @@
         <div class="social">
   <!-- Facebook -->
           <span class="facebook">
-            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io/2014/third-post.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http://http://fisiu.github.io/2014/third-post.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </span>
   <!-- Google+ -->
           <span class="google">
             <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-            <g:plusone size="medium" href="fisiu.github.io/2014/third-post.html"></g:plusone>
+            <g:plusone size="medium" href="http://fisiu.github.io/2014/third-post.html"></g:plusone>
           </span>
   <!-- Twitter -->
           <span class="twitter">
-            <a href="http://twitter.com/share" class="twitter-share-button" data-url="fisiu.github.io/2014/third-post.html">Tweet</a>
+            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2014/third-post.html">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </span>
         </div>
-      </div><hr>
+      </div>
+<hr>
 <section class="comments">
   <div id="disqus_thread"></div>
   <script type="text/javascript">
@@ -141,7 +147,7 @@
       <!-- load prettify only when needed -->
       $(document).ready(function(){
         var prettify = false;
-        var classToAdd = 'prettyprint snippet linenums';
+        var classToAdd = 'prettyprint snippet';
         $("pre > code").each(function() {
           $("pre > code").parent().addClass(classToAdd);
           prettify = true;
