@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>system.out.println.</title>
+    <title>System.out.println.</title>
     <link>http://fisiu.github.io/</link>
     <atom:link href="http://fisiu.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>not so frequent log</description>
     <language>pl</language>
-    <pubDate>2014-03-07 14:21:23</pubDate>
-    <lastBuildDate>2014-03-07 14:21:23</lastBuildDate>
+    <pubDate>2014-03-07 14:42:57</pubDate>
+    <lastBuildDate>2014-03-07 14:42:57</lastBuildDate>
 
       <item>
         <title>Konsolidacja baz mysql dla aplikacji KDE w openSUSE</title>
