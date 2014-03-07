@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <title>
     system.out.println
@@ -24,7 +24,8 @@
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
   </head>
-  <body>      
+  <body>
+      
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -63,27 +64,12 @@
           <div class="col-md-9">
 
             <article>
-			  <h2>Tag #blog</h2>
+			  <h2>Tag #flash</h2>
 			  <hr>
-              <h4 class="well well-sm tag-month">marzec 2014</h4>
+              <h4 class="well well-sm tag-month">marzec 2013</h4>
               <ul>
                 <li>
-                  <p>04 - <a href="/2014/fourth-post.html">Fourth Post</a></p>
-                </li>
-                <li>
-                  <p>03 - <a href="/2014/third-post.html">Third Post</a></p>
-                </li>
-              </ul>
-			  <h4 class="well well-sm tag-month">luty 2014</h4>
-              <ul>
-                <li>
-                  <p>28 - <a href="/2014/second-post.html">Second Post</a></p>
-                </li>
-              </ul>
-			  <h4 class="well well-sm tag-month">lipiec 2013</h4>
-              <ul>
-                <li>
-                  <p>17 - <a href="/2013/first-post.html">First Post</a></p>
+                  <p>03 - <a href="/2013/chromium-i-flash-via-ppapi.html">Chromium i flash via PPAPI</a></p>
                 </li>
               </ul>
 		    </article>
@@ -139,7 +125,7 @@
             <p class="text-muted credit">&copy; Mariusz Fik 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.2.1</a> | <i title="Linux" class="fa fa-linux"></i></p>
           </div>
           <div class="col-xs-2 gotop">
-            <a href="#"><i class="fa fa-arrow-circle-up"> top</i></a>
+            <a href="#"><i class="fa fa-arrow-circle-up"> do góry</i></a>
           </div>
         </div>
       </div>
@@ -148,7 +134,20 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.image-scale.js"></script>
     
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('article > p > img').imageScale({
+          parent_css_selector: null, // Defaults to the image's immediate parent.
+          scale: 'fit',
+          center: true,
+          fade_duration: 0, // Fading is disabled if set to 0.
+          rescale_after_resize: true
+        });
+      });
+    </script>
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
     <script type="text/javascript">
       <!-- load prettify only when needed -->
@@ -165,18 +164,6 @@
       });
     </script>
 
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-    </script>
 
       <!-- call api only when sidebar is visible -->
         <script type="text/javascript">

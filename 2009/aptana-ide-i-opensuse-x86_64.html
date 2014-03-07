@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <title>
     system.out.println
-        - Fourth Post
+        - Aptana IDE i openSUSE x86_64
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,8 @@
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
   </head>
-  <body>      
+  <body>
+      
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -63,87 +64,50 @@
       <div class="row">
         <div class="col-md-12">
           <article>
-            <div class="page-header"><h1>Fourth Post</h1>
+            <div class="page-header"><h1>Aptana IDE i openSUSE x86_64</h1>
               <ol class="breadcrumb tagsbar">
-                <li><a href="/tags/blog.html">blog</a></li>
-                <li><a href="/tags/java.html">java</a></li>
+                <li><a href="/tags/openSUSE.html">openSUSE</a></li>
+                <li><a href="/tags/ajax.html">ajax</a></li>
+                <li><a href="/tags/aptana.html">aptana</a></li>
+                <li><a href="/tags/eclipse.html">eclipse</a></li>
+                <li><a href="/tags/ide.html">ide</a></li>
+                <li><a href="/tags/php.html">php</a></li>
               </ol>
             </div>
           <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;04 marzec 2014&nbsp;&nbsp;
+            <i class="fa fa-calendar"></i>&nbsp;20 kwiecień 2009&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2014/fourth-post.html#disqus_thread"></a></span>
           </p>
-              <p><p>Hello World, <code>c++</code>:</p>
-<pre><code>#include &lt;iostream&gt;
- 
-int main()
-{
-    std::cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; std::endl;
-    return 0;
-}
-</code></pre><p>Hello World, <code>c#</code>:</p>
-<pre><code>using System;
-class Program
-{
-    public static void Main()
-    {
-        Console.WriteLine(&quot;Hello, world!&quot;);
-    }
-}
-</code></pre>
-<!-- more --><p>Hello World, <code>go</code>:</p>
-<pre><code>package main
- 
-import &quot;fmt&quot;
- 
-func main() {
-   fmt.Println(&quot;Hello, world!&quot;)
-}
-</code></pre><p>Hello World, <code>java</code>:</p>
-<pre><code class="java">public class HelloWorld {
-   public static void main(String[] args) {
-       System.out.println(&quot;Hello, world!&quot;);
-   }
-}
-</code></pre><p>Hello World, <code>ruby</code>:</p>
-<pre><code class="ruby">puts &quot;Hello, world!&quot;
-</code></pre></p>
+              <p><p><a href="http://www.aptana.com/">Aptana</a> - to zintegrowane środowisko programistyczne zbudowane na bazie <a href="http://www.eclipse.org/">Eclipse</a>. Służy głównie do tworzenia aplikacji sieciowych w technologii <a href="http://pl.wikipedia.org/wiki/AJAX">AJAX</a>. Środowisko oferuje wsparcie dla <em>JavaScript</em>, <em>HTML</em>, <em>DOM</em>, <em>CSS</em>, uzupełnianie kodu oraz debugger JavaScript. Dzięki mechanizmowi wtyczek możemy w łatwy sposób dodać wsparcie dla <em>Ruby on Rails</em>, <em>PHP</em>, <em>Python</em>, <em>Perl</em>, <em>Adobe AIR</em> oraz <em>Apple iPhone</em>. Aplikacja dostępna jest na wiele platform, jak i również w formie wtyczki do <em>Eclipse</em>. Aptana, jako samodzielna aplikacja dostępna jest na platformę 32 bitową. Jednak po kilku prostych zabiegach możliwe jest jej uruchomienie w systemie x86_64.<br/><!-- more --><br/>Najpierw musimy pobrać główną aplikację Aptana Studio ze <a href="http://www.aptana.com/">strony domowej</a>. W tym opisie wszystkie pobierane pliki znajdują się w katalogu domowym, <code>~/</code>.</p><p><kbd>wget http://update.aptana.com/studio-standalone/Aptana_Studio_Setup_Linux_1.2.6.zip </kbd></p><p>Następnie tworzymy katalog <code>/opt/aptana</code>, zmieniamy jego właściciela i rozpakowujemy tam pobrany przed momentem plik.</p><p><kbd>su</kbd><br/><kbd>mkdir /opt/aptana</kbd><br/><kbd>chown użytkownik:users /opt/aptana</kbd><br/><kbd>exit</kbd><br/><kbd>unzip ~/Aptana_Studio_Setup_Linux_1.2.6.zip -d /opt</kbd></p><p>Kolejno pobieramy i rozpakowujemy mozilla-xulrunner w wersji 32bit.<br/><kbd>wget http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/linux-i686/xulrunner-1.8.1.3.en-US.linux-i686-20080128.tar.gz </kbd><br/><kbd>tar -xvf ~/xulrunner-1.8.1.3.en-US.linux-i686-20080128.tar.gz -C /opt/aptana</kbd></p><p>Teraz pozostało nam jeszcze doinstalowanie środowiska Javy 32bit. Uruchamiamy YaST → Oprogramowanie → Zarządzanie oprogramowaniem. Wybieramy pakiet widoczny na obrazku poniżej i akceptujemy zmiany.</p><p><img src="/img/2009/sun_java_i586.png"  alt="&quot;sun_java_i586&quot;"/></p><p>Kolejną czynnością jaką musimy wykonać jest napisanie prostego skryptu o nazwie np. <em>RunAptana.sh</em>. Można użyć dowolnego edytora. Ja posłużę się vi.</p><p><kbd>vi /opt/aptana/RunAptana.sh</kbd><br/>Kod skryptu powinien wyglądać tak:</p>
+<pre><code>#!/bin/bash
+MOZILLA_FIVE_HOME=/opt/aptana/xulrunner
+if [ $LD_LIBRARY_PATH ]; then
+LD_LIBRARY_PATH=$MOZILLA_FIVE_HOME:$LD_LIBRARY_PATH
+else
+LD_LIBRARY_PATH=$MOZILLA_FIVE_HOME
+fi
+export MOZILLA_FIVE_HOME LD_LIBRARY_PATH
+/opt/aptana/AptanaStudio -vm /usr/lib/jvm/java-1.6.0-sun-1.6.0/jre/bin/java
+</code></pre><p>I teraz już możemy zacząć korzystać z Aptany, uruchamiając ją za pomocą tego skryptu:</p><p><kbd>/opt/aptana/RunAptana.sh</kbd></p><p>Bardziej wymagający użytkownicy mogą sobie stworzyć jeszcze skrót w menu aplikacji.</p></p>
       <div class="share">
         <div class="social">
   <!-- Facebook -->
           <span class="facebook">
-            <iframe src="//www.facebook.com/plugins/like.php?href=http://http://fisiu.github.io/2014/fourth-post.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http://http://fisiu.github.io/2009/aptana-ide-i-opensuse-x86_64.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </span>
   <!-- Google+ -->
           <span class="google">
             <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-            <g:plusone size="medium" href="http://fisiu.github.io/2014/fourth-post.html"></g:plusone>
+            <g:plusone size="medium" href="http://fisiu.github.io/2009/aptana-ide-i-opensuse-x86_64.html"></g:plusone>
           </span>
   <!-- Twitter -->
           <span class="twitter">
-            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2014/fourth-post.html">Tweet</a>
+            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2009/aptana-ide-i-opensuse-x86_64.html">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </span>
         </div>
       </div>
-<hr>
-<section class="comments">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
-  
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>            </article>
+            </article>
         </div> <!-- /.col-md-12 -->
       </div> <!-- /.row -->
         
@@ -157,7 +121,7 @@ func main() {
             <p class="text-muted credit">&copy; Mariusz Fik 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.2.1</a> | <i title="Linux" class="fa fa-linux"></i></p>
           </div>
           <div class="col-xs-2 gotop">
-            <a href="#"><i class="fa fa-arrow-circle-up"> top</i></a>
+            <a href="#"><i class="fa fa-arrow-circle-up"> do góry</i></a>
           </div>
         </div>
       </div>
@@ -166,7 +130,20 @@ func main() {
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.image-scale.js"></script>
     
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('article > p > img').imageScale({
+          parent_css_selector: null, // Defaults to the image's immediate parent.
+          scale: 'fit',
+          center: true,
+          fade_duration: 0, // Fading is disabled if set to 0.
+          rescale_after_resize: true
+        });
+      });
+    </script>
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
     <script type="text/javascript">
       <!-- load prettify only when needed -->
@@ -183,18 +160,6 @@ func main() {
       });
     </script>
 
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-    </script>
 
         </body>
 </html>

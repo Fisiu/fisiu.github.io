@@ -3,7 +3,6 @@
   <head>
     <title>
     system.out.println
-        - Czas start!
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,42 +59,62 @@
 
     <!-- Begin page content -->
     <div class="container">
-      
-      <div class="row">
-        <div class="col-md-12">
-          <article>
-            <div class="page-header"><h1>Czas start!</h1>
-              <ol class="breadcrumb tagsbar">
-                <li><a href="/tags/luzem.html">luzem</a></li>
-              </ol>
+
+	    <div class="row">
+          <div class="col-md-9">
+
+            <article>
+			  <h2>Tag #kde</h2>
+			  <hr>
+              <h4 class="well well-sm tag-month">luty 2011</h4>
+              <ul>
+                <li>
+                  <p>10 - <a href="/2011/colibri-alternatywne-powiadomienia-plazmy.html">Colibri - alternatywne powiadomienia plazmy</a></p>
+                </li>
+              </ul>
+		    </article>
+
+	      </div> <!-- /.col-md -->
+      <div id="sidebar" class="col-md-3">
+        <aside>
+          <section>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <i class="fa fa-users fa-lg panel-title"> Społeczność</i>
+              </div>
+              <div class="list-group sidebar-list">
+                  <a href="https://github.com/Fisiu" target="_blank" class="list-group-item sidebar-list-item">
+                    <i class="fa fa-github-square fa-2x social-icon"></i> github
+                  </a>
+                  <a href="https://twitter.com/Fisiu" target="_blank" class="list-group-item sidebar-list-item">
+                    <i class="fa fa-twitter-square fa-2x social-icon"></i> twitter
+                  </a>
+                  <a href="https://plus.google.com/+MariuszFik" target="_blank" class="list-group-item sidebar-list-item">
+                    <i class="fa fa-google-plus-square fa-2x social-icon"></i> google+
+                  </a>
+              </div>
             </div>
-          <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;02 listopad 2008&nbsp;&nbsp;
-            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-          </p>
-              <p><p>W końcu znalazłem chwilę, aby dokończyć bloga. Co prawda w ostatniej chwili zdecydowałem się na zmianę motywu, przez co mogą pojawiać się drobne braki graficzne bądź inne. Mam nadzieję, że w niedługiej przyszłości doprowadzę wszystko do stanu prawie idealnego.<br/>Czas na rozpoczęcie blogowania, ze względu na liczebność obowiązków może nie jest najlepszy, choć biorąc pod uwagę cykl wydawniczy <a href="http://www.opensuse.org">openSUSE</a> - jak najbardziej. Aktualną wersją systemu jest 11.0 a aktualnie trwające prace odnoszą się do wersji 11.1. Na dzień dzisiejszy, dodawanie "czegokolwiek" nowego do zestawu pakietów dystrybucji jest już zablokowane. Deweloperzy skupiają się teraz tylko i wyłącznie na eliminacji znalezionych i zgłoszonych błędów.<br/>Już jutro ma ukazać się kolejna wersja rozwojowa openSUSE Beta4. Więcej wiadomości na ten temat już wkrótce!</p></p>
-      <div class="share">
-        <div class="social">
-  <!-- Facebook -->
-          <span class="facebook">
-            <iframe src="//www.facebook.com/plugins/like.php?href=http://http://fisiu.github.io/2008/czas-start.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-          </span>
-  <!-- Google+ -->
-          <span class="google">
-            <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-            <g:plusone size="medium" href="http://fisiu.github.io/2008/czas-start.html"></g:plusone>
-          </span>
-  <!-- Twitter -->
-          <span class="twitter">
-            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2008/czas-start.html">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          </span>
-        </div>
+            <div class="panel panel-primary static-box">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle fa-lg panel-title"> Licznik openSUSE</i>
+                </div>
+                <div class="panel-body">
+                    <p><a href="http://en.opensuse.org/Portal:13.1"><img src="http://countdown.opensuse.org/small.png" alt="openSUSE Counter"/></a></p>
+                </div>
+            </div>
+            <div class="panel panel-primary github-repoview">
+                <div class="panel-heading">
+                    <i class="fa fa-github fa-lg panel-title"> Repozytoria</i>
+                </div>
+                <div id="repoview" class="panel-body">
+                </div>
+            </div>
+          </section>
+        </aside>
       </div>
-            </article>
-        </div> <!-- /.col-md-12 -->
-      </div> <!-- /.row -->
-        
+        </div> <!-- /.row -->
+
+
       </div><!-- /.container -->
 
     <footer>
@@ -146,5 +165,27 @@
     </script>
 
 
-        </body>
+      <!-- call api only when sidebar is visible -->
+        <script type="text/javascript">
+          var username = 'Fisiu';
+          var repoLimit = 5;
+          var noRepoMsg = 'Brak publicznych repozytoriów.';
+          $(function() {
+            $.getJSON('https://api.github.com/users/' + username + '/repos?callback=?', {sort: 'pushed'}, function(resp) {
+              if (resp.data.length > 0) {
+                $('#repoview').append('<ul></ul>');
+                $.each($(resp.data), function(i, val) {
+                  $('#repoview > ul').append('<li><a href="'+val['html_url']+'">'+val['name']+'</a><p>'+((val['description']) ? val['description'] : '(No description.)')+'</p></li>');
+                  if(i == repoLimit -1) {
+                      return false;
+                  }
+                });
+              } else {
+                $('#repoview').append('<p>' + noRepoMsg + '</p>');
+              }
+            });
+          });
+        </script>
+  </body>
 </html>
+

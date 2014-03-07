@@ -1,6 +1,7 @@
 /* Sticky footer styles
  * ------------------------------*/
 @import url('//fonts.googleapis.com/css?family=Noto+Sans');
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
 
 html {
   position: relative;
@@ -25,8 +26,25 @@ footer {
 
 /* Site custom styles
  * ------------------------------*/
-article {
+article > p {
   text-align: justify;
+}
+
+article > .page-header {
+  border-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+article > p > img {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.post-meta {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-bottom: 10px;
 }
 
 .gotop {
@@ -68,11 +86,15 @@ article {
 
 .tagsbar {
   text-transform: lowercase !important;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 /* You can override pre > code styles */
 .snippet {
+}
+
+code {
+/*  font-family: 'Source Code Pro', sans-serif; */
 }
 
 /* You can override archive well styles */
