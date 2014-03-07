@@ -75,6 +75,7 @@
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;02 kwiecień 2009&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2009/kde-422-wydane.html#disqus_thread"></a></span>
           </p>
               <p><p>Bez większego rozgłosu wydana została dzisiaj, tj 02.04.2009 kolejna wersja środowiska KDE 4.2.2. Nazwa kodowa tego wydanie to "_**Cano**_". Aktualizacja wnosi sporo poprawek, zwłaszcza w silniku przeglądarki Konqueror – <a href="http://pl.wikipedia.org/wiki/KHTML">KHTML</a> oraz w programie pocztowym - <a href="http://pl.wikipedia.org/wiki/KMail">KMail</a>. Dodano także sporo poprawek zwiększających stabilność KRunner. Pełna lista zmian, w porównaniu do wydania 4.2.1, dostępna jest na stronach <a href="http://www.kde.org/announcements/changelogs/changelog4_2_1to4_2_2.php">http://www.kde.org</a>.</p><p><img src="/img/2009/desktop_kde42.png"  alt="&quot;desktop_kde42&quot;"/></p><p>Pakiety dla openSUSE są już dostępne w repozytorium KDE4:Factory. Aby zainstalować aktualną wersję KDE w openSUSE 11.1,  wystarczy dodać poniższe repozytoria za pomocą Yast:</p><p><code>http://download.opensuse.org/repositories/KDE:/KDE4:/Factory:/Desktop/openSUSE_11.1/</code><br/><code>http://download.opensuse.org/repositories/KDE:/KDE4:/Factory:/Extra-Apps/openSUSE_11.1/</code><br/><code>http://download.opensuse.org/repositories/KDE:/KDE4:/Community/openSUSE_11.1_KDE4_Factory_Desktop/</code></p><p>Dla poprzednich edycji openSUSE repozytoria są także dostępne. Wystarczy w adresie repozytorium zmienić 11.1 na odpowiedni numerek posiadanego przez nas systemu.</p><p>Następnie przeprowadzić standardową aktualizację lub wykonać w konsoli:</p><p><kbd>su</kbd><br/><kbd>zypper up</kbd></p></p>
       <div class="share">
@@ -95,7 +96,23 @@
           </span>
         </div>
       </div>
-            </article>
+<hr>
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
+  
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>            </article>
         </div> <!-- /.col-md-12 -->
       </div> <!-- /.row -->
         
@@ -118,6 +135,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/cookies.js"></script>
     <script src="/js/jquery.image-scale.js"></script>
     
     <script type="text/javascript">
@@ -148,6 +166,18 @@
       });
     </script>
 
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
 
         </body>
 </html>
