@@ -63,6 +63,16 @@
         <div class="row">
           <div class="col-md-9">
             <article>
+              <h2><a href="/2014/z-wordpressa-do-html.html">Z wordpressa do html</a></h2>
+          <p class="post-meta">
+            <i class="fa fa-calendar"></i>&nbsp;10 marzec 2014&nbsp;&nbsp;
+            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2014/z-wordpressa-do-html.html#disqus_thread"></a></span>
+          </p>
+              <p>Wiosna za pasem więc czas po porządki. Z racji, że ciągłe powiadomienia o kolejnych aktualizacjach wordpressa czy jego wtyczek zaczęły mnie dość mocno irytować a samo utrzymywanie tego bloga wymagało systematycznego nakładu pracy. Postanowiłem wyeliminować źródło problemów, czyli wordpressa. Więc zacząłem się rozglądać za "czymś" do generowania statycznych treści. Miało być to proste narzędzie, z relatywnie małymi zależnościami, umożliwiające szybki start. No i oczywiście import starych postów z wordpressa.</p><p>I tak trafiłem na system <a href="http://www.jbake.org/">JBake</a>. Narzędzie napisane w Javie, kilka silników do obsługi szablonów (<a href="http://freemarker.org/">freemarker</a>, <a href="http://groovy.codehaus.org/Groovy+Templates">groovy templates</a> i <a href="http://www.thymeleaf.org/">thymeleaf</a> v.2.3.0), dostępna <a href="https://github.com/ingenieux/jbake-maven-plugin">wtyczka mavena</a> umożliwia podgląd postów na żywo oraz automatyczne wysyłanie treści na <a href="http://pages.github.com/">githuba</a>. JBake nie posiada możliwości importowania danych bezpośrednio z wordpressa. Jednak istnieje sporo narzędzi do eksportowania stron/postów z wordpressa do formatu markdown. Osobiście użyłem nieco <a href="https://github.com/Fisiu/exitwp">zmodyfikowanego</a> skryptu <a href="https://github.com/thomasf/exitwp">exitwp</a>.</p><p>Pozostało stworzyć jakiś motyw i poprawić domyślne szablony. Podczas tego eksperymentu powstał motyw <code>fidbake</code>, zbudowany w oparciu o bootstrap 3, fontawesome i system komentarzy disqus. Całość dostępna jest na licencji MIT: <a href="https://github.com/Fisiu/fidbake">https://github.com/Fisiu/fidbake</a> a demo można sprawdzić pod adresem <a href="http://jbake-fidano.rhcloud.com/">http://jbake-fidano.rhcloud.com/</a>.</p><p>Stara (sub)domena jeszcze działa i wskazuje na stary blog. Aktualnie nie jestem pewien czy podpiąć ją pod githuba czy dać o niej zapomnieć. Czas pokaże...</p>
+              <br>
+            </article>
+            <article>
               <h2><a href="/2013/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse.html">Konsolidacja baz mysql dla aplikacji KDE w openSUSE</a></h2>
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;21 listopad 2013&nbsp;&nbsp;
@@ -74,7 +84,7 @@
   <li># - należy wykonać jako root</li>
   <li>$ - należy wykonać jako zwykły użytkownik</li>
   <li>&gt; - należy wykonać w konsoli mysql/mariadb</li>
-</ul><p>Zanim zaczniemy migrować bazy, należy zainstalować serwer mysql/mariadb i uruchomić go:</p><p><kbd># zypper in mariadb</kbd><br/><kbd># systemctl enable mysql</kbd><br/><kbd># systemctl start mysql</kbd></p>
+</ul><p>Zanim zaczniemy migrować bazy, należy zainstalować serwer mysql/mariadb i uruchomić go:</p><p><kbd># zypper in mariadb </kbd><br/><kbd># systemctl enable mysql </kbd><br/><kbd># systemctl start mysql </kbd></p>
 
               <a href="/2013/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse.html" class="btn btn-success btn-sm read-more">Czytaj więcej <i class="fa fa-arrow-right"></i></a>
               <br>
@@ -181,21 +191,6 @@ Bus 001 Device 004: ID 04e8:681c Samsung Electronics Co., Ltd ← Moje urządzen
               <p>Według <a href="http://en.opensuse.org/Roadmap">planu wydania</a> jutro powinien ukazać się kolejny, trzeci kamień milowy openSUSE 11.4. Jak zapowiedział wczoraj Stephan Kulow, na liście <a href="http://lists.opensuse.org/opensuse-factory/2010-11/msg00036.html">opensuse-factory</a>, M3 zostaje opóźniony. Powodem takie decyzji jest nadal niepoprawiony błąd w menadżerze okien KWin który skutkuje crashami serwera X przy włączonych efektach pulpitu. Jeśli błąd zostanie naprawiony szybko, M3 ujrzy światło dzienne w przyszłym tygodniu. Jednak dość prawdopodobne jest to, że tak się nie stanie. Wówczas M3 będzie miał wyłączoną opcję efektów pulpitu. Czas pokaże w jakim stanie dostaniemy M3 do testów ;)</p><p>Będąc przy temacie "factory" warto wspomnieć o szerszych testach <a href="http://lists.opensuse.org/opensuse-factory/2010-10/msg00244.html">systemd</a> - który być może zastąpi w oS 11.4 SysVinit. A najlepsze w tym wszystkim jest to, że aktualne wydanie oS 11.3 dostało działającego upstarta. Choć nie jest nawet domyślnie włączony i zanim to nastąpi jego miejsce może zająć systemd.</p><p>Jeśli jednak ktoś chce przełączyć się w openSUSE 11.3 z SysVinit na upstart wystarczy zainstalować pakiet 'upstart':</p><p><kbd>su</kbd><br/><kbd>zypper in upstart</kbd></p><p>Od teraz każdy następny uruchomienie systemu będzie zarządzane i kontrolowane przez upstart.</p>
               <br>
             </article>
-            <article>
-              <h2><a href="/2010/zmiany-w-repozytorium.html">Zmiany w repozytorium</a></h2>
-          <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;26 październik 2010&nbsp;&nbsp;
-            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2010/zmiany-w-repozytorium.html#disqus_thread"></a></span>
-          </p>
-              <p>No i zakurzyło się tu trochę. Czas na porządki. Zacznę od repo.</p>
-<ol>
-  <li><p>Zaktualizowane paczki cairo + freetype z włączonym wygładzaniem podpikselowym. Od teraz w osobnym repo <a href="http://download.opensuse.org/repositories/home:/Fisiu:/lcd/">home:Fisiu:lcd</a>.</p></li>
-  <li><p><a href="http://www.kadu.net/">Kadu</a> jest oficjalnie w repo <a href="http://en.opensuse.org/Package_repositories#Contrib">Contrib</a> i tym samym paczka z home powędrowała do własnego miejsca w <a href="http://download.opensuse.org/repositories/home:/Fisiu:/kadu/">home:Fisiu:kadu</a>.</p></li>
-  <li><p>Pakiety <a href="http://qbittorrent.sourceforge.net/">qbittorrent</a> i <a href="http://codelite.org/">codelite</a> są już w repo Contrib. I najlepiej instalować stamtąd instalować :wink:</p></li>
-</ol><p>I tyle z najważniejszych zmian...</p>
-              <br>
-            </article>
               <br>
               <ul class="pager">
                 Starsze posty dostępne są w <li><a href="/archive.html"> Archiwum</a></li>
@@ -259,6 +254,7 @@ Bus 001 Device 004: ID 04e8:681c Samsung Electronics Co., Ltd ← Moje urządzen
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gist-embed/1.6/gist-embed.min.js"></script>
     <script src="/js/cookies.js"></script>
     <script src="/js/jquery.image-scale.js"></script>
     
