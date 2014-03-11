@@ -63,6 +63,29 @@
         <div class="row">
           <div class="col-md-9">
             <article>
+              <h2><a href="/2014/planista-we-wy-dla-dyskow-ssd-w-opensuse.html">Planista We/Wy dla dysków SSD w openSUSE</a></h2>
+          <p class="post-meta">
+            <i class="fa fa-calendar"></i>&nbsp;11 marzec 2014&nbsp;&nbsp;
+            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2014/planista-we-wy-dla-dyskow-ssd-w-opensuse.html#disqus_thread"></a></span>
+          </p>
+              <p>Domyślnym planistą We/Wy w openSUSE jest <abbr title="Complete Fairness Queueing">CFQ</abbr> i radzi on sobie z klasycznymi dyskami talerzowymi całkiem dobrze. Więcej informacji o samym planiście CFQ można znaleźć w <a href="https://www.kernel.org/doc/Documentation/block/cfq-iosched.txt">dokumentacji kernela</a> a przegląd planistów dostępnych w dystrybucji openSUSE dostępny jest w <a href="http://activedoc.opensuse.org/book/opensuse-system-analysis-and-tuning-guide/chapter-13-tuning-io-performance">podręczniku openSUSE, rozdział 13</a>. Dla dysków <abbr title="Solid State Drive">SSD</abbr> lepszym wyborem zdaje się być planista Deadline bądź Noop.</p><p>Sprawdzić aktualnie używanego planistę można za pomocą:<br/><kbd>cat /sys/block/sda/queue/scheduler </kbd></p>
+<pre><code>noop deadline [cfq]
+</code></pre><p>Jako <code>root</code> możemy zmienić planistę w 'locie':<br/><kbd>echo noop &gt; /sys/block/sda/queue/scheduler </kbd></p><p>Skoro już wiemy jak zmienić planistę po uruchomieniu systemu, pozostaje tylko ten proces zautomatyzować. Jeśli posiadamy w komputerze tylko jeden dysk, i jest nim dysk SSD, najprostszym rozwiązaniem będzie dodanie parametru <code>elevator</code> (nazwa planisty jako wartość) do listy wywołania jądra. W tym celu edytujemy plik:<br/><kbd>sudo vi /etc/default/grub </kbd></p><p>I dodajemy nasz parametr do pozostałych dla opcji <code>GRUB_CMDLINE_LINUX_DEFAULT</code>. Przykładowy fragment ww. pliku może wyglądać tak:</p>
+<pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot; video=1680x1050 resume=/dev/disk/by-id/ata-Hitachi_HDS721050CLA362_JP1521HN0MUHTA-part5 splash=silent quiet showopts radeon.audio=0 radeon.dpm=1 elevator=deadline&quot;
+</code></pre><p>Pozostaje nam jeszcze zaktualizowanie menu rozruchowego, za pomocą:<br/><kbd>grub2-mkconfig -o /boot/grub2/grub.cfg </kbd></p><p>A co gdy mamy kilka dysków, różnego typu, zarówno talerzowe jak i SSD? Z pomocą przychodzi <code>udev</code>. Tworzymy zestaw prostych reguł, dzięki którym przydzielimy planistę w zależności od typu dysku. Tworzymy plik <code>/etc/udev/rules.d/50-io-schedulers.rules</code> z zawartością:</p>
+<pre><code># set deadline scheduler for non-rotating disks
+ACTION==&quot;add|change&quot;, KERNEL==&quot;sd[a-z]&quot;, ATTR{queue/rotational}==&quot;0&quot;, ATTR{queue/scheduler}=&quot;deadline&quot;
+
+# set cfq scheduler for rotating disks
+ACTION==&quot;add|change&quot;, KERNEL==&quot;sd[a-z]&quot;, ATTR{queue/rotational}==&quot;1&quot;, ATTR{queue/scheduler}=&quot;cfq&quot;
+</code></pre><p>Reguły będą mieć zastosowanie po ponownym uruchomieniu komputera. Dla przykładu, w komputerze dysk <code>/dev/sda</code> jest dyskiem SSD a <code>/dev/sdb</code> jest dyskiem talerzowym. Wyjście polecenia <code>cat /sys/block/sd{a,b}/queue/scheduler</code> zwróci:</p>
+<pre><code>noop [deadline] cfq 
+noop deadline [cfq]
+</code></pre>
+              <br>
+            </article>
+            <article>
               <h2><a href="/2014/z-wordpressa-do-html.html">Z wordpressa do html</a></h2>
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;10 marzec 2014&nbsp;&nbsp;
@@ -179,16 +202,6 @@ Bus 001 Device 004: ID 04e8:681c Samsung Electronics Co., Ltd ← Moje urządzen
               <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2010/krusader-z-svn.html#disqus_thread"></a></span>
           </p>
               <p>Krusader zainstalowany z domyślnych repozytoriów na openSUSE 11.3 potrafi zirytować nawet najbardziej wytrwałego i cierpliwego usera. Ja nie wytrzymywałem z błędami istniejącymi w wersji 2.0 więc skompilowałem paczki z wersją prosto z svn. Aktualnie jest to wersja 2.2.0.svn z 02.11.2010. Paczki dostępne są w repo <a href="http://download.opensuse.org/repositories/home:/Fisiu:/playground/openSUSE_11.3/">home:Fisiu:playground</a>.</p><p><img src="/img/2010/krusader_2.2.0.svn_.png"  alt="&quot;Krusader 2.2&quot;"/></p>
-              <br>
-            </article>
-            <article>
-              <h2><a href="/2010/11-4-m3-spoznione-wina-kde-sc.html">11.4 M3 spóźnione - wina KDE SC?</a></h2>
-          <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;04 listopad 2010&nbsp;&nbsp;
-            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2010/11-4-m3-spoznione-wina-kde-sc.html#disqus_thread"></a></span>
-          </p>
-              <p>Według <a href="http://en.opensuse.org/Roadmap">planu wydania</a> jutro powinien ukazać się kolejny, trzeci kamień milowy openSUSE 11.4. Jak zapowiedział wczoraj Stephan Kulow, na liście <a href="http://lists.opensuse.org/opensuse-factory/2010-11/msg00036.html">opensuse-factory</a>, M3 zostaje opóźniony. Powodem takie decyzji jest nadal niepoprawiony błąd w menadżerze okien KWin który skutkuje crashami serwera X przy włączonych efektach pulpitu. Jeśli błąd zostanie naprawiony szybko, M3 ujrzy światło dzienne w przyszłym tygodniu. Jednak dość prawdopodobne jest to, że tak się nie stanie. Wówczas M3 będzie miał wyłączoną opcję efektów pulpitu. Czas pokaże w jakim stanie dostaniemy M3 do testów ;)</p><p>Będąc przy temacie "factory" warto wspomnieć o szerszych testach <a href="http://lists.opensuse.org/opensuse-factory/2010-10/msg00244.html">systemd</a> - który być może zastąpi w oS 11.4 SysVinit. A najlepsze w tym wszystkim jest to, że aktualne wydanie oS 11.3 dostało działającego upstarta. Choć nie jest nawet domyślnie włączony i zanim to nastąpi jego miejsce może zająć systemd.</p><p>Jeśli jednak ktoś chce przełączyć się w openSUSE 11.3 z SysVinit na upstart wystarczy zainstalować pakiet 'upstart':</p><p><kbd>su</kbd><br/><kbd>zypper in upstart</kbd></p><p>Od teraz każdy następny uruchomienie systemu będzie zarządzane i kontrolowane przez upstart.</p>
               <br>
             </article>
               <br>
