@@ -6,9 +6,64 @@
     <atom:link href="http://fisiu.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>not so frequent log</description>
     <language>pl</language>
-    <pubDate>2014-03-11 20:12:49</pubDate>
-    <lastBuildDate>2014-03-11 20:12:49</lastBuildDate>
+    <pubDate>2014-03-23 22:15:53</pubDate>
+    <lastBuildDate>2014-03-23 22:15:53</lastBuildDate>
 
+      <item>
+        <title>Uzupełnianie poleceń zyppera w zsh</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2014/uzupelnianie-polecen-zyppera-w-zsh.html</link>
+        <pubDate>2014-03-23 00:00:00</pubDate>
+        <guid isPermaLink="false">/2014/uzupelnianie-polecen-zyppera-w-zsh.html</guid>
+        <description>
+	        &lt;p&gt;Narzędzie uzupełniania poleceń w zsh jest na prawdę potężne. Po zainstalowaniu &lt;abbr title=&quot;Z Shell&quot;&gt;ZSH&lt;/abbr&gt; w openSUSE 13.1 za pomocą &lt;kbd&gt;sudo zypper in zsh &lt;/kbd&gt; przyszła pora na poprawę wyglądu i zachowania powłoki.&lt;br/&gt;Zamiast tworzyć wszystko od podstaw skorzystałem z gotowego rozwiązania jakim jest &lt;a href=&quot;http://ohmyz.sh/&quot;&gt;oh-my-zsh&lt;/a&gt;. Jednak zamiast korzystać z wbudowanych motywów, użyłem &lt;a href=&quot;https://powerline.readthedocs.org/en/latest/&quot;&gt;powerline&lt;/a&gt; i dostosowałem wygląd do swoich potrzeb. Aktualnie wygląda to tak:&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/img/2014/zsh-konsole-powerline-prompt.png&quot;  alt=&quot;konsola_powerline_prompt&quot;/&gt;&lt;/p&gt;
+&lt;!-- more --&gt;&lt;p&gt;Domyślna dystrybucja &lt;abbr title=&quot;Z Shell&quot;&gt;ZSH&lt;/abbr&gt; zawiera sporą ilość rozszerzeń, jednym z nich jest uzupełnianie poleceń zyppera. Jednak zaraz po instalacji &lt;abbr title=&quot;Z Shell&quot;&gt;ZSH&lt;/abbr&gt;, uzupełnianie są tylko globalne opcje zyppera, bez listy poleceń. Można się spytać po co nam takie uzupełnianie które nie działa? A no po to żeby je naprawić ;-) Najpierw uruchomiłem &lt;abbr title=&quot;Z Shell&quot;&gt;ZSH&lt;/abbr&gt; z parametrami &lt;code&gt;-xv&lt;/code&gt;, dzięki temu widziałem jaka funkcja i skąd jest uruchamiana. Okazało się, że lista poleceń zyppera była źle filtrowana, i w efekcie wszystkie polecenia były pomijane na liście podpowiedzi. Rozwiązanie okazało się całkiem proste i wygląda dokładnie jak w poniższym kodzie:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;From 08c2443e5722b578943d2eccfca708e54dea5d20 Mon Sep 17 00:00:00 2001
+From: Mariusz Fik &amp;lt;fisiu@opensuse.org&amp;gt;
+Date: Sat, 15 Mar 2014 20:23:51 +0100
+Subject: [PATCH] Fix zypper commands completion [zypper &amp;lt;TAB&amp;gt;].
+
+Signed-off-by: Mariusz Fik &amp;lt;fisiu@opensuse.org&amp;gt;
+---
+ Completion/openSUSE/Command/_zypper | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/Completion/openSUSE/Command/_zypper b/Completion/openSUSE/Command/_zypper
+index ef8ca20..25a32c3 100644
+--- a/Completion/openSUSE/Command/_zypper
++++ b/Completion/openSUSE/Command/_zypper
+@@-2,6 +2,7 @@
+ #
+ # Copyright (C) 2009 Holger Macht &amp;lt;holger@homac.de&amp;gt;
+ # Copyright (C) 2014 Thomas Mitterfellner &amp;lt;thomas.mitterfellner@gmail.com&amp;gt;
++# Copyright (C) 2014 Mariusz Fik &amp;lt;fisiu@opensuse.org&amp;gt;
+ #
+ # This file is released under the GPLv2.
+ #
+@@-45,8 +46,10 @@ _zypper() {
+             # start parsing with &amp;quot;Global Options:&amp;quot;
+             [[ $hline =~ &amp;quot;^Global Options:&amp;quot; ]] &amp;amp;&amp;amp; tag=1
+             [[ $tag = 0 ]] &amp;amp;&amp;amp; continue
++            # skip empty lines
++            [[ $hline =~ ^\s*$ ]] &amp;amp;&amp;amp; continue
+             # all commands have to start with lower case letters
+-            [[ $hline[1] =~ ^[A-Z] ]] &amp;amp;&amp;amp; continue
++            [[ $hline == [[:upper:]]* ]] &amp;amp;&amp;amp; continue
+             (( ${#hline} &amp;lt; 2 )) &amp;amp;&amp;amp; continue
+ 
+             # cut comma at end of command
+--
+1.8.4.5﻿
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Powyższa łatka została już &lt;a href=&quot;https://sourceforge.net/p/zsh/code/ci/2dcf05310612d9bc9980d57f15d500fcf220a974/&quot;&gt;włączona&lt;/a&gt; do rozwojowej wersji &lt;abbr title=&quot;Z Shell&quot;&gt;ZSH&lt;/abbr&gt; i tym samym będzie dostępna wraz z kolejnym wydaniem (5.0.6) &lt;abbr title=&quot;Z Shell&quot;&gt;ZSH&lt;/abbr&gt;. Jednak nic nie stoi na przeszkodzie aby samodzielnie poprawić funkcję uzupełniania, wystarczy tylko zmodyfikować plik &lt;code&gt;/usr/share/zsh/functions/Completion/openSUSE/_zypper&lt;/code&gt;.&lt;br/&gt;Od teraz, wpisując w terminalu np. &lt;kbd&gt;zypper s[tab] &lt;/kbd&gt; zobaczymy wszystkie możliwe opcje zaczynające się na literę s:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ zypper s
+search           -- se Search for packages matching a pattern.
+services         -- ls List all defined services.
+shell            -- sh Accept multiple commands at once.
+source-download  -- Download source rpms for all installed packages to a local directory.
+source-install   -- si Install source packages and their build dependencies.
+&lt;/code&gt;&lt;/pre&gt;
+        </description>
+      </item>
       <item>
         <title>Planista We/Wy dla dysków SSD w openSUSE</title>
         <author>Mariusz Fik</author>

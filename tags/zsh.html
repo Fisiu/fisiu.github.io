@@ -3,7 +3,6 @@
   <head>
     <title>
     System.out.println
-        - Chromium i flash via PPAPI
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,47 +59,55 @@
 
     <!-- Begin page content -->
     <div class="container">
-      
-      <div class="row">
-        <div class="col-md-12">
-          <article>
-            <div class="page-header"><h1>Chromium i flash via PPAPI</h1>
-              <ol class="breadcrumb tagsbar">
-                <li><a href="/tags/openSUSE.html">openSUSE</a></li>
-                <li><a href="/tags/chromium.html">chromium</a></li>
-                <li><a href="/tags/flash.html">flash</a></li>
-                <li><a href="/tags/pepper.html">pepper</a></li>
-              </ol>
+
+	    <div class="row">
+          <div class="col-md-9">
+
+            <article>
+			  <h2>Tag #zsh</h2>
+			  <hr>
+              <h4 class="well well-sm tag-month">marzec 2014</h4>
+              <ul>
+                <li>
+                  <p>23 - <a href="/2014/uzupelnianie-polecen-zyppera-w-zsh.html">Uzupełnianie poleceń zyppera w zsh</a></p>
+                </li>
+              </ul>
+		    </article>
+
+	      </div> <!-- /.col-md -->
+      <div id="sidebar" class="col-md-3">
+        <aside>
+          <section>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <i class="fa fa-users fa-lg panel-title"> Społeczność</i>
+              </div>
+              <div class="list-group sidebar-list">
+                  <a href="https://github.com/Fisiu" target="_blank" class="list-group-item sidebar-list-item">
+                    <i class="fa fa-github-square fa-2x social-icon"></i> github
+                  </a>
+                  <a href="https://twitter.com/Fisiu" target="_blank" class="list-group-item sidebar-list-item">
+                    <i class="fa fa-twitter-square fa-2x social-icon"></i> twitter
+                  </a>
+                  <a href="https://plus.google.com/+MariuszFik" target="_blank" class="list-group-item sidebar-list-item">
+                    <i class="fa fa-google-plus-square fa-2x social-icon"></i> google+
+                  </a>
+              </div>
             </div>
-          <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;03 marzec 2013&nbsp;&nbsp;
-            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-          </p>
-              <p><p>Ady korzystać z najnowszego flasha w openSUSE konieczne jest zainstalowanie pakietu <code>chromium-pepper-flash</code>. Dostępny jest on w repozytorium <strong>packmana</strong>. Instalacja ogranicza się tylko do wykonania:</p><p><kbd>zypper in chromium-pepper-flash</kbd></p><p>Jednak aby chromium współpracowało z nową wtyczką, konieczne jest dodanie odpowiednich flag do globalnego pliku konfiguracyjnego chromium. Jako root edytujemy plik **/etc/default/chromium** i dodajemy poniższe flagi. Jeśli już korzystamy z innych flag, wystarczy je dopisać na końcu.</p>
-<pre><code>CHROMIUM_FLAGS=&quot;--ppapi-flash-path=/usr/lib/chromium/PepperFlash/libpepflashplayer.so&quot;
-</code></pre><p>Jeśli korzystamy z openSUSE w wersji x86_64, ścieżka do wtyczki zawiera <strong>lib64</strong> zamiast <strong>lib</strong>.</p><p>Po ponownym uruchomieniu przeglądarki chromium, odwiedzamy adres <code>chrome://plugins</code>. Szukamy wtyczek flasha i wyłączamy wersję NPAPI. Od teraz chromium będzie korzystało z nowego flasha, aktualnie w wersji 11.6. Dzięki temu, karta graficzna działająca na otwartym sterowniku radeon czy intel wykorzystywana jest do renderowania obrazu. Zapewne podobna sytuacja będzie mieć miejsce w przypadku korzystania z innego sprzętu i sterowników, choć sam na innych konfiguracjach tego nie testowałem.</p></p>
-      <div class="share">
-        <div class="social">
-  <!-- Facebook -->
-          <span class="facebook">
-            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io/2013/chromium-i-flash-via-ppapi.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-          </span>
-  <!-- Google+ -->
-          <span class="google">
-            <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-            <g:plusone size="medium" href="http://fisiu.github.io/2013/chromium-i-flash-via-ppapi.html"></g:plusone>
-          </span>
-  <!-- Twitter -->
-          <span class="twitter">
-            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2013/chromium-i-flash-via-ppapi.html">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          </span>
-        </div>
+            <div class="panel panel-primary static-box">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle fa-lg panel-title"> Licznik openSUSE</i>
+                </div>
+                <div class="panel-body">
+                    <p><a href="http://en.opensuse.org/Portal:13.1"><img src="http://countdown.opensuse.org/small.png" alt="openSUSE Counter"/></a></p>
+                </div>
+            </div>
+          </section>
+        </aside>
       </div>
-            </article>
-        </div> <!-- /.col-md-12 -->
-      </div> <!-- /.row -->
-        
+        </div> <!-- /.row -->
+
+
       </div><!-- /.container -->
 
     <footer>
@@ -168,3 +175,4 @@
     </script>
   </body>
 </html>
+

@@ -3,7 +3,7 @@
   <head>
     <title>
     System.out.println
-        - Chromium i flash via PPAPI
+        - Uzupełnianie poleceń zyppera w zsh
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,35 +64,77 @@
       <div class="row">
         <div class="col-md-12">
           <article>
-            <div class="page-header"><h1>Chromium i flash via PPAPI</h1>
+            <div class="page-header"><h1>Uzupełnianie poleceń zyppera w zsh</h1>
               <ol class="breadcrumb tagsbar">
                 <li><a href="/tags/openSUSE.html">openSUSE</a></li>
-                <li><a href="/tags/chromium.html">chromium</a></li>
-                <li><a href="/tags/flash.html">flash</a></li>
-                <li><a href="/tags/pepper.html">pepper</a></li>
+                <li><a href="/tags/zypper.html">zypper</a></li>
+                <li><a href="/tags/zsh.html">zsh</a></li>
               </ol>
             </div>
           <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;03 marzec 2013&nbsp;&nbsp;
+            <i class="fa fa-calendar"></i>&nbsp;23 marzec 2014&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
           </p>
-              <p><p>Ady korzystać z najnowszego flasha w openSUSE konieczne jest zainstalowanie pakietu <code>chromium-pepper-flash</code>. Dostępny jest on w repozytorium <strong>packmana</strong>. Instalacja ogranicza się tylko do wykonania:</p><p><kbd>zypper in chromium-pepper-flash</kbd></p><p>Jednak aby chromium współpracowało z nową wtyczką, konieczne jest dodanie odpowiednich flag do globalnego pliku konfiguracyjnego chromium. Jako root edytujemy plik **/etc/default/chromium** i dodajemy poniższe flagi. Jeśli już korzystamy z innych flag, wystarczy je dopisać na końcu.</p>
-<pre><code>CHROMIUM_FLAGS=&quot;--ppapi-flash-path=/usr/lib/chromium/PepperFlash/libpepflashplayer.so&quot;
-</code></pre><p>Jeśli korzystamy z openSUSE w wersji x86_64, ścieżka do wtyczki zawiera <strong>lib64</strong> zamiast <strong>lib</strong>.</p><p>Po ponownym uruchomieniu przeglądarki chromium, odwiedzamy adres <code>chrome://plugins</code>. Szukamy wtyczek flasha i wyłączamy wersję NPAPI. Od teraz chromium będzie korzystało z nowego flasha, aktualnie w wersji 11.6. Dzięki temu, karta graficzna działająca na otwartym sterowniku radeon czy intel wykorzystywana jest do renderowania obrazu. Zapewne podobna sytuacja będzie mieć miejsce w przypadku korzystania z innego sprzętu i sterowników, choć sam na innych konfiguracjach tego nie testowałem.</p></p>
+              <p><p>Narzędzie uzupełniania poleceń w zsh jest na prawdę potężne. Po zainstalowaniu <abbr title="Z Shell">ZSH</abbr> w openSUSE 13.1 za pomocą <kbd>sudo zypper in zsh </kbd> przyszła pora na poprawę wyglądu i zachowania powłoki.<br/>Zamiast tworzyć wszystko od podstaw skorzystałem z gotowego rozwiązania jakim jest <a href="http://ohmyz.sh/">oh-my-zsh</a>. Jednak zamiast korzystać z wbudowanych motywów, użyłem <a href="https://powerline.readthedocs.org/en/latest/">powerline</a> i dostosowałem wygląd do swoich potrzeb. Aktualnie wygląda to tak:</p><p><img src="/img/2014/zsh-konsole-powerline-prompt.png"  alt="konsola_powerline_prompt"/></p>
+<!-- more --><p>Domyślna dystrybucja <abbr title="Z Shell">ZSH</abbr> zawiera sporą ilość rozszerzeń, jednym z nich jest uzupełnianie poleceń zyppera. Jednak zaraz po instalacji <abbr title="Z Shell">ZSH</abbr>, uzupełnianie są tylko globalne opcje zyppera, bez listy poleceń. Można się spytać po co nam takie uzupełnianie które nie działa? A no po to żeby je naprawić ;-) Najpierw uruchomiłem <abbr title="Z Shell">ZSH</abbr> z parametrami <code>-xv</code>, dzięki temu widziałem jaka funkcja i skąd jest uruchamiana. Okazało się, że lista poleceń zyppera była źle filtrowana, i w efekcie wszystkie polecenia były pomijane na liście podpowiedzi. Rozwiązanie okazało się całkiem proste i wygląda dokładnie jak w poniższym kodzie:</p>
+<pre><code>From 08c2443e5722b578943d2eccfca708e54dea5d20 Mon Sep 17 00:00:00 2001
+From: Mariusz Fik &lt;fisiu@opensuse.org&gt;
+Date: Sat, 15 Mar 2014 20:23:51 +0100
+Subject: [PATCH] Fix zypper commands completion [zypper &lt;TAB&gt;].
+
+Signed-off-by: Mariusz Fik &lt;fisiu@opensuse.org&gt;
+---
+ Completion/openSUSE/Command/_zypper | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/Completion/openSUSE/Command/_zypper b/Completion/openSUSE/Command/_zypper
+index ef8ca20..25a32c3 100644
+--- a/Completion/openSUSE/Command/_zypper
++++ b/Completion/openSUSE/Command/_zypper
+@@-2,6 +2,7 @@
+ #
+ # Copyright (C) 2009 Holger Macht &lt;holger@homac.de&gt;
+ # Copyright (C) 2014 Thomas Mitterfellner &lt;thomas.mitterfellner@gmail.com&gt;
++# Copyright (C) 2014 Mariusz Fik &lt;fisiu@opensuse.org&gt;
+ #
+ # This file is released under the GPLv2.
+ #
+@@-45,8 +46,10 @@ _zypper() {
+             # start parsing with &quot;Global Options:&quot;
+             [[ $hline =~ &quot;^Global Options:&quot; ]] &amp;&amp; tag=1
+             [[ $tag = 0 ]] &amp;&amp; continue
++            # skip empty lines
++            [[ $hline =~ ^\s*$ ]] &amp;&amp; continue
+             # all commands have to start with lower case letters
+-            [[ $hline[1] =~ ^[A-Z] ]] &amp;&amp; continue
++            [[ $hline == [[:upper:]]* ]] &amp;&amp; continue
+             (( ${#hline} &lt; 2 )) &amp;&amp; continue
+ 
+             # cut comma at end of command
+--
+1.8.4.5﻿
+</code></pre><p>Powyższa łatka została już <a href="https://sourceforge.net/p/zsh/code/ci/2dcf05310612d9bc9980d57f15d500fcf220a974/">włączona</a> do rozwojowej wersji <abbr title="Z Shell">ZSH</abbr> i tym samym będzie dostępna wraz z kolejnym wydaniem (5.0.6) <abbr title="Z Shell">ZSH</abbr>. Jednak nic nie stoi na przeszkodzie aby samodzielnie poprawić funkcję uzupełniania, wystarczy tylko zmodyfikować plik <code>/usr/share/zsh/functions/Completion/openSUSE/_zypper</code>.<br/>Od teraz, wpisując w terminalu np. <kbd>zypper s[tab] </kbd> zobaczymy wszystkie możliwe opcje zaczynające się na literę s:</p>
+<pre><code>$ zypper s
+search           -- se Search for packages matching a pattern.
+services         -- ls List all defined services.
+shell            -- sh Accept multiple commands at once.
+source-download  -- Download source rpms for all installed packages to a local directory.
+source-install   -- si Install source packages and their build dependencies.
+</code></pre></p>
       <div class="share">
         <div class="social">
   <!-- Facebook -->
           <span class="facebook">
-            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io/2013/chromium-i-flash-via-ppapi.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io/2014/uzupelnianie-polecen-zyppera-w-zsh.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </span>
   <!-- Google+ -->
           <span class="google">
             <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-            <g:plusone size="medium" href="http://fisiu.github.io/2013/chromium-i-flash-via-ppapi.html"></g:plusone>
+            <g:plusone size="medium" href="http://fisiu.github.io/2014/uzupelnianie-polecen-zyppera-w-zsh.html"></g:plusone>
           </span>
   <!-- Twitter -->
           <span class="twitter">
-            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2013/chromium-i-flash-via-ppapi.html">Tweet</a>
+            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2014/uzupelnianie-polecen-zyppera-w-zsh.html">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </span>
         </div>
