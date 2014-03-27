@@ -63,6 +63,24 @@
         <div class="row">
           <div class="col-md-9">
             <article>
+              <h2><a href="/2014/biblioteka-apache-tomcat-native-w-eclipse.html">Biblioteka Apache Tomcat Native w Eclipse</a></h2>
+          <p class="post-meta">
+            <i class="fa fa-calendar"></i>&nbsp;27 marzec 2014&nbsp;&nbsp;
+            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2014/biblioteka-apache-tomcat-native-w-eclipse.html#disqus_thread"></a></span>
+          </p>
+              <p>Po dodaniu serwera aplikacji Apache Tomcat w Eclipse, podczas startu widzimy w logach:</p>
+<pre><code>INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+</code></pre><p>Jak dodać bibliotekę Apache Tomcat Native do <code>java.library.path</code>? Najpierw trzeba ją skompilować.</p><p>No potrzeby tego postu, zakładam, że tomcat znajduje w katalogu <code>/opt/java/servers/tomcat7</code>. Jeśli zmienna CATALINA_HOME nie jest ustawiona, warto ją dodać do np. <code>~/.profile</code>:</p>
+<pre><code># Export tomcat home
+export CATALINA_HOME=/opt/java/servers/tomcat7
+</code></pre><h3>Instalacja zależności</h3><p>Zanim zaczniemy kompilować, konieczne jest przygotowanie systemu. Na podstawowy zestaw narzędzi do kompilacji kodu w języku <code>c</code> składa się <code>gcc</code> i <code>make</code>. Indywidualne pakiety można zainstalować za pomocą:<br/><kbd>zypper in make gcc</kbd></p><p>Można także skorzystać z dostępnych wzorców i zainstalować <code>pattern devel_C_C++</code> za pomocą:<br/><kbd>zypper in -t pattern devel_C_C++</kbd></p><p>Do kompilacji samej zaś biblioteki potrzebujemy pakiety <code>libopenssl-devel</code> oraz <code>libapr1-devel</code>. Jeśli jeszcze ich nie mamy w systemie, to instalujemy:<br/><kbd>zypper in libopenssl-devel libapr1-devel</kbd></p>
+
+              <a href="/2014/biblioteka-apache-tomcat-native-w-eclipse.html" class="btn btn-success btn-sm read-more">Czytaj więcej <i class="fa fa-arrow-right"></i></a>
+              <br>
+              <br>
+            </article>
+            <article>
               <h2><a href="/2014/uzupelnianie-polecen-zyppera-w-zsh.html">Uzupełnianie poleceń zyppera w zsh</a></h2>
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;23 marzec 2014&nbsp;&nbsp;
@@ -195,16 +213,6 @@ Bus 001 Device 004: ID 04e8:681c Samsung Electronics Co., Ltd ← Moje urządzen
   <li>Games - gry</li>
   <li>Extra - wszystko co nie weszło w skład trzech powyższych</li>
 </ul><p>Więc każdy będzie mógł dodać to co mu pasuje. Jednak jeśli ktoś będzie chciał mieć tylko jedno repozytorium zawierające wszystkie powyższe, dostępny będzie plik .repo. Tym sposobem będzie można korzystać z Packmana tak jak dotychczas.</p>
-              <br>
-            </article>
-            <article>
-              <h2><a href="/2011/colibri-alternatywne-powiadomienia-plazmy.html">Colibri - alternatywne powiadomienia plazmy</a></h2>
-          <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;10 luty 2011&nbsp;&nbsp;
-            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2011/colibri-alternatywne-powiadomienia-plazmy.html#disqus_thread"></a></span>
-          </p>
-              <p>Aby skorzystać z alternatywnych powiadomień plazmy konieczne jest posiadanie KDE SC w wersji minimum 4.5. Potrzebny nam pakiet znajduje się w repozytorium Extra - stosownym dla naszej wersji KDE. Instalujemy go za pomocą:</p><p><kbd>su</kbd><br/><kbd>zypper install colibri</kbd></p><p>Następnie usuwamy widżet domyślnych powiadomień plazmy.</p><p><img src="/img/2011/remove_plazma_notification.png"  alt="&quot;Usuwanie powiadomień plazmy&quot;"/></p><p>Teraz wystarczy włączyć nowe powiadomienia. W tym celu uruchamiamy Ustawienia Systemowe → Powiadomienia programów i systemu → Colibri Notifications.<br/>Oto jak prezentuje się nowy styl powiadomień:</p><p><img src="/img/2011/colibri_notification.png"  alt="&quot;Powiadomienia Colibri&quot;"/></p>
               <br>
             </article>
               <br>
