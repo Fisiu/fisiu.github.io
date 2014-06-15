@@ -63,6 +63,30 @@
         <div class="row">
           <div class="col-md-9">
             <article>
+              <h2><a href="/2014/jbake-2.3.0-dostepny.html">JBake 2.3.0 dostępny</a></h2>
+          <p class="post-meta">
+            <i class="fa fa-calendar"></i>&nbsp;15 czerwiec 2014&nbsp;&nbsp;
+            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2014/jbake-2.3.0-dostepny.html#disqus_thread"></a></span>
+          </p>
+              <p>Całkiem niedawno ukazała się nowa wersja <a href="http://jbake.org/">jbake</a> - 2.3.0. Lista zmian dla tego wydania przedstawia się nastepująco:</p>
+<ul>
+  <li><p>Wsparcie dla przyrostowego renderowania stron (w tym wydaniu jeszcze domyślnie wyłączone, funkcja eksperymentalna)</p></li>
+  <li><p>Dodano wsparcie dla projektów w podkatalogach</p></li>
+  <li><p>Kod odpowiedzialny za parsowanie i renderowanie został przepisany, dzięki czemu łatwiejsze jest jego utrzymanie i dodawanie nowych funkcjonalności</p></li>
+  <li><p>Domyślny status może być teraz zdefiniowany w pliku konfiguracyjnym</p></li>
+  <li><p>Naprawiono błąd URI występujący na platformie Windows</p></li>
+  <li><p>Dodano opcję wiersza polceń realizującą opcje bake+serve</p></li>
+  <li><p>Dostęp do opcji konfiguracyjnych z plików w formacie AsciiDoc</p></li>
+  <li><p>Dodano wsparcie dla frameworka logowania</p></li>
+  <li><p>Dodano obsługę szablonów Groovy oraz Thymeleaf</p></li>
+  <li><p>Rozszerzony model danych jest dostępny w szablonach</p></li>
+  <li><p>Usprawniono raportowanie błędów</p></li>
+  <li><p>Startowy szablon został zaktualizowany i używa teraz Bootstrap 3.1.1 oraz jQuery 1.11.1</p></li>
+</ul><p>Jbake <a href="http://search.maven.org/#browse|523103791">jest</a> już dostępny w centralnym repozytorium maven. Można także użyć <a href="https://github.com/ingenieux/jbake-maven-plugin">jbake-maven-plugin</a> do szybkiego generowania stron i podglądu na żywo. Lista celów: <code>mvn jbake:help</code> w głównym katalogu projektu.</p>
+              <br>
+            </article>
+            <article>
               <h2><a href="/2014/biblioteka-apache-tomcat-native-w-eclipse.html">Biblioteka Apache Tomcat Native w Eclipse</a></h2>
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;27 marzec 2014&nbsp;&nbsp;
@@ -197,22 +221,6 @@ Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Bus 001 Device 002: ID 0dda:2005 Integrated Circuit Solution, Inc. Datalux DLX-1611 16in1 Card Reader
 Bus 001 Device 004: ID 04e8:681c Samsung Electronics Co., Ltd ← Moje urządzenie
 </code></pre><p>Istotną informacją jest ID producenta, w moim wypadku <strong>04e8</strong>.<br/>Teraz pozostało stworzyć odpowiednią regułę udev. Bez zagłębiania się w szczegóły reguł udev, można to zrobić tak:</p><p><kbd>su</kbd><br/><kbd><del>echo 'SUBSYSTEM=="usb", SYSFS{idVendor}=="04e8", MODE="0660" GROUP="users"' &gt; /etc/udev/rules.d/51-android.rules</del></kbd><br/><kbd>echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="04e8", ATTRS{idProduct}=="681c", MODE="0660" GROUP="users"' &gt; /etc/udev/rules.d/51-android.rules</kbd></p><p>Od teraz urządzenie powinno już prawidłowo działać z naszym systemem.</p>
-              <br>
-            </article>
-            <article>
-              <h2><a href="/2011/koniec-spamowania.html">Koniec spamowania ;)</a></h2>
-          <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;25 luty 2011&nbsp;&nbsp;
-            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2011/koniec-spamowania.html#disqus_thread"></a></span>
-          </p>
-              <p>Jako, że cały czas poszukiwałem wtyczki odpowiedzialnej za kolorowane składni w WordPressie dzisiaj przyszła pora na zmianę... Aktualnie ustawiłem <del>CodeColorer</del> SyntaxHighlighter. Wtyczka ta korzysta z tagów code a nie z pre tak jak poprzednia. W związku z tym zmodyfikowałem kilka postów aby zastosować style nowej wtyczki. Niestety spowodowało to zaśmiecenie planety openSUSE więc dalszych edycji zaniechałem.<br/>Przepraszam czytelników za spam :)</p><p>W ramach przypomnienia, chciałem napisać o zmianie struktury repozytorium Packman. Wraz z <a href="http://lists.links2linux.de/pipermail/packman/2011-February/009422.html">aktualizacją OBS do 2.1</a> na serwerach Packmana zmieniono układ repozytoriów. Do tej pory dostępne było jedno repozytorium w którym znajdowały się wszystkie pakiety. Aktualnie trwa przebudowywanie wszystkich pakietów więc nowy układ repozytoriów nie jest jeszcze kompletny. Jednak w efekcie końcowym, Packman będzie miał 4 repozytoria:</p>
-<ul>
-  <li>Essentials - podstawowe kodeki, MPlayer, SMPlayer</li>
-  <li>Multimedia - dodatkowe multimedia</li>
-  <li>Games - gry</li>
-  <li>Extra - wszystko co nie weszło w skład trzech powyższych</li>
-</ul><p>Więc każdy będzie mógł dodać to co mu pasuje. Jednak jeśli ktoś będzie chciał mieć tylko jedno repozytorium zawierające wszystkie powyższe, dostępny będzie plik .repo. Tym sposobem będzie można korzystać z Packmana tak jak dotychczas.</p>
               <br>
             </article>
               <br>

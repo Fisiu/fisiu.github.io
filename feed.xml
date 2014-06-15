@@ -6,9 +6,33 @@
     <atom:link href="http://fisiu.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>not so frequent log</description>
     <language>pl</language>
-    <pubDate>2014-03-27 17:29:40</pubDate>
-    <lastBuildDate>2014-03-27 17:29:40</lastBuildDate>
+    <pubDate>2014-06-15 23:50:18</pubDate>
+    <lastBuildDate>2014-06-15 23:50:18</lastBuildDate>
 
+      <item>
+        <title>JBake 2.3.0 dostępny</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2014/jbake-2.3.0-dostepny.html</link>
+        <pubDate>2014-06-15 00:00:00</pubDate>
+        <guid isPermaLink="false">/2014/jbake-2.3.0-dostepny.html</guid>
+        <description>
+	        &lt;p&gt;Całkiem niedawno ukazała się nowa wersja &lt;a href=&quot;http://jbake.org/&quot;&gt;jbake&lt;/a&gt; - 2.3.0. Lista zmian dla tego wydania przedstawia się nastepująco:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;p&gt;Wsparcie dla przyrostowego renderowania stron (w tym wydaniu jeszcze domyślnie wyłączone, funkcja eksperymentalna)&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Dodano wsparcie dla projektów w podkatalogach&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Kod odpowiedzialny za parsowanie i renderowanie został przepisany, dzięki czemu łatwiejsze jest jego utrzymanie i dodawanie nowych funkcjonalności&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Domyślny status może być teraz zdefiniowany w pliku konfiguracyjnym&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Naprawiono błąd URI występujący na platformie Windows&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Dodano opcję wiersza polceń realizującą opcje bake+serve&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Dostęp do opcji konfiguracyjnych z plików w formacie AsciiDoc&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Dodano wsparcie dla frameworka logowania&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Dodano obsługę szablonów Groovy oraz Thymeleaf&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Rozszerzony model danych jest dostępny w szablonach&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Usprawniono raportowanie błędów&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Startowy szablon został zaktualizowany i używa teraz Bootstrap 3.1.1 oraz jQuery 1.11.1&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Jbake &lt;a href=&quot;http://search.maven.org/#browse|523103791&quot;&gt;jest&lt;/a&gt; już dostępny w centralnym repozytorium maven. Można także użyć &lt;a href=&quot;https://github.com/ingenieux/jbake-maven-plugin&quot;&gt;jbake-maven-plugin&lt;/a&gt; do szybkiego generowania stron i podglądu na żywo. Lista celów: &lt;code&gt;mvn jbake:help&lt;/code&gt; w głównym katalogu projektu.&lt;/p&gt;
+        </description>
+      </item>
       <item>
         <title>Biblioteka Apache Tomcat Native w Eclipse</title>
         <author>Mariusz Fik</author>

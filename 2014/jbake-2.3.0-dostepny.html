@@ -3,6 +3,7 @@
   <head>
     <title>
     System.out.println
+        - JBake 2.3.0 dostępny
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,68 +60,75 @@
 
     <!-- Begin page content -->
     <div class="container">
-
-	    <div class="row">
-          <div class="col-md-9">
-
-            <article>
-			  <h2>Tag #blog</h2>
-			  <hr>
-              <h4 class="well well-sm tag-month">czerwiec 2014</h4>
-              <ul>
-                <li>
-                  <p>15 - <a href="/2014/jbake-2.3.0-dostepny.html">JBake 2.3.0 dostępny</a></p>
-                </li>
-              </ul>
-			  <h4 class="well well-sm tag-month">marzec 2014</h4>
-              <ul>
-                <li>
-                  <p>10 - <a href="/2014/z-wordpressa-do-html.html">Z wordpressa do html</a></p>
-                </li>
-              </ul>
-		    </article>
-
-	      </div> <!-- /.col-md -->
-      <div id="sidebar" class="col-md-3">
-        <aside>
-          <section>
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <i class="fa fa-users fa-lg panel-title"> Społeczność</i>
-              </div>
-              <div class="list-group sidebar-list">
-                  <a href="https://github.com/Fisiu" target="_blank" class="list-group-item sidebar-list-item">
-                    <i class="fa fa-github-square fa-2x social-icon"></i> github
-                  </a>
-                  <a href="https://twitter.com/Fisiu" target="_blank" class="list-group-item sidebar-list-item">
-                    <i class="fa fa-twitter-square fa-2x social-icon"></i> twitter
-                  </a>
-                  <a href="https://plus.google.com/+MariuszFik" target="_blank" class="list-group-item sidebar-list-item">
-                    <i class="fa fa-google-plus-square fa-2x social-icon"></i> google+
-                  </a>
-              </div>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <article>
+            <div class="page-header"><h1>JBake 2.3.0 dostępny</h1>
+              <ol class="breadcrumb tagsbar">
+                <li><a href="/tags/java.html">java</a></li>
+                <li><a href="/tags/jbake.html">jbake</a></li>
+                <li><a href="/tags/blog.html">blog</a></li>
+              </ol>
             </div>
-            <div class="panel panel-primary static-box">
-                <div class="panel-heading">
-                    <i class="fa fa-info-circle fa-lg panel-title"> Licznik openSUSE</i>
-                </div>
-                <div class="panel-body">
-                    <p><a href="http://en.opensuse.org/Portal:13.1"><img src="http://countdown.opensuse.org/small.png" alt="openSUSE Counter"/></a></p>
-                </div>
-            </div>
-            <div class="panel panel-primary github-repoview">
-                <div class="panel-heading">
-                    <i class="fa fa-github fa-lg panel-title"> Repozytoria</i>
-                </div>
-                <div id="repoview" class="panel-body">
-                </div>
-            </div>
-          </section>
-        </aside>
+          <p class="post-meta">
+            <i class="fa fa-calendar"></i>&nbsp;15 czerwiec 2014&nbsp;&nbsp;
+            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2014/jbake-2.3.0-dostepny.html#disqus_thread"></a></span>
+          </p>
+              <p><p>Całkiem niedawno ukazała się nowa wersja <a href="http://jbake.org/">jbake</a> - 2.3.0. Lista zmian dla tego wydania przedstawia się nastepująco:</p>
+<ul>
+  <li><p>Wsparcie dla przyrostowego renderowania stron (w tym wydaniu jeszcze domyślnie wyłączone, funkcja eksperymentalna)</p></li>
+  <li><p>Dodano wsparcie dla projektów w podkatalogach</p></li>
+  <li><p>Kod odpowiedzialny za parsowanie i renderowanie został przepisany, dzięki czemu łatwiejsze jest jego utrzymanie i dodawanie nowych funkcjonalności</p></li>
+  <li><p>Domyślny status może być teraz zdefiniowany w pliku konfiguracyjnym</p></li>
+  <li><p>Naprawiono błąd URI występujący na platformie Windows</p></li>
+  <li><p>Dodano opcję wiersza polceń realizującą opcje bake+serve</p></li>
+  <li><p>Dostęp do opcji konfiguracyjnych z plików w formacie AsciiDoc</p></li>
+  <li><p>Dodano wsparcie dla frameworka logowania</p></li>
+  <li><p>Dodano obsługę szablonów Groovy oraz Thymeleaf</p></li>
+  <li><p>Rozszerzony model danych jest dostępny w szablonach</p></li>
+  <li><p>Usprawniono raportowanie błędów</p></li>
+  <li><p>Startowy szablon został zaktualizowany i używa teraz Bootstrap 3.1.1 oraz jQuery 1.11.1</p></li>
+</ul><p>Jbake <a href="http://search.maven.org/#browse|523103791">jest</a> już dostępny w centralnym repozytorium maven. Można także użyć <a href="https://github.com/ingenieux/jbake-maven-plugin">jbake-maven-plugin</a> do szybkiego generowania stron i podglądu na żywo. Lista celów: <code>mvn jbake:help</code> w głównym katalogu projektu.</p></p>
+      <div class="share">
+        <div class="social">
+  <!-- Facebook -->
+          <span class="facebook">
+            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io/2014/jbake-2.3.0-dostepny.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          </span>
+  <!-- Google+ -->
+          <span class="google">
+            <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+            <g:plusone size="medium" href="http://fisiu.github.io/2014/jbake-2.3.0-dostepny.html"></g:plusone>
+          </span>
+  <!-- Twitter -->
+          <span class="twitter">
+            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2014/jbake-2.3.0-dostepny.html">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </span>
+        </div>
       </div>
-        </div> <!-- /.row -->
-
-
+<hr>
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
+  
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>            </article>
+        </div> <!-- /.col-md-12 -->
+      </div> <!-- /.row -->
+        
       </div><!-- /.container -->
 
     <footer>
@@ -185,28 +193,7 @@
       }());
     </script>
 
-      <!-- call api only when sidebar is visible -->
-        <script type="text/javascript">
-          var username = 'Fisiu';
-          var repoLimit = 5;
-          var noRepoMsg = 'Brak publicznych repozytoriów.';
-          $(function() {
-            $.getJSON('https://api.github.com/users/' + username + '/repos?callback=?', {sort: 'pushed'}, function(resp) {
-              if (resp.data.length > 0) {
-                $('#repoview').append('<ul></ul>');
-                $.each($(resp.data), function(i, val) {
-                  $('#repoview > ul').append('<li><a href="'+val['html_url']+'">'+val['name']+'</a><p>'+((val['description']) ? val['description'] : '(No description.)')+'</p></li>');
-                  if(i == repoLimit -1) {
-                      return false;
-                  }
-                });
-              } else {
-                $('#repoview').append('<p>' + noRepoMsg + '</p>');
-              }
-            });
-          });
-        </script>
-
+      
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-2256304-7']);
@@ -221,4 +208,3 @@
     </script>
   </body>
 </html>
-
