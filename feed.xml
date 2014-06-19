@@ -6,9 +6,19 @@
     <atom:link href="http://fisiu.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>not so frequent log</description>
     <language>pl</language>
-    <pubDate>2014-06-15 23:50:18</pubDate>
-    <lastBuildDate>2014-06-15 23:50:18</lastBuildDate>
+    <pubDate>2014-06-19 19:10:43</pubDate>
+    <lastBuildDate>2014-06-19 19:10:43</lastBuildDate>
 
+      <item>
+        <title>Porządki w home:Fisiu:kadu</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2014/porzadki-w-home:Fisiu:kadu.html</link>
+        <pubDate>2014-06-19 00:00:00</pubDate>
+        <guid isPermaLink="false">/2014/porzadki-w-home:Fisiu:kadu.html</guid>
+        <description>
+	        &lt;p&gt;Wydanie kadu-1.0 coraz &lt;a href=&quot;http://www.kadu.im/forum/viewtopic.php?f=6&amp;t=16970&quot;&gt;bliżej&lt;/a&gt;. O ile do wydania openSUSE 13.2 jeszcze sporo czasu &lt;a href=&quot;https://news.opensuse.org/2013/05/17/opensuse-kicks-off-development-with-milestone-1&quot;&gt;pozostało&lt;/a&gt;, to moje repozytorium &lt;a href=&quot;https://build.opensuse.org/project/show/home:Fisiu:kadu&quot;&gt;home:Fisiu:kadu&lt;/a&gt; dostarczało kadu w najnowszej wersji wszystkim użytkownikom openSUSE. Aktualnie dostępne są dwie wersje, ostatnie wydanie z serii 0.12 - kadu-0.12.3, a dla starszych wersji openSUSE ostatnie wydanie z serii 0.6 - kadu-0.6.5.&lt;/p&gt;&lt;p&gt;Kadu 0.12.3 zostanie zaktualizowane do wersji 1.0 a kadu-old (czyli wersja 0.6.5) zostanie usunięte. Jeśli ktoś z Was chciałby widzieć wersję kadu-0.12.3 jako wersję archiwalną czyli kadu-old, proszę o taką informację. Jeśli w przeciągu tygodnia nie będzie takiej informacji, uznam, że liczy się dla Was tylko najnowsza wersja kadu ;-) Albo wersja dostępna w głównym repozytorium danej wersji openSUSE.&lt;/p&gt;&lt;p&gt;Główna biblioteka z której korzysta kadu, &lt;code&gt;libgadu&lt;/code&gt; jest już dostępna w wersji &lt;a href=&quot;http://libgadu.net/releases/1.12.0.html&quot;&gt;1.12.0&lt;/a&gt; więc kadu-1.0 powinno być dostępne &quot;na dniach&quot;.&lt;/p&gt;
+        </description>
+      </item>
       <item>
         <title>JBake 2.3.0 dostępny</title>
         <author>Mariusz Fik</author>

@@ -63,6 +63,16 @@
         <div class="row">
           <div class="col-md-9">
             <article>
+              <h2><a href="/2014/porzadki-w-home:Fisiu:kadu.html">Porządki w home:Fisiu:kadu</a></h2>
+          <p class="post-meta">
+            <i class="fa fa-calendar"></i>&nbsp;19 czerwiec 2014&nbsp;&nbsp;
+            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2014/porzadki-w-home:Fisiu:kadu.html#disqus_thread"></a></span>
+          </p>
+              <p>Wydanie kadu-1.0 coraz <a href="http://www.kadu.im/forum/viewtopic.php?f=6&t=16970">bliżej</a>. O ile do wydania openSUSE 13.2 jeszcze sporo czasu <a href="https://news.opensuse.org/2013/05/17/opensuse-kicks-off-development-with-milestone-1">pozostało</a>, to moje repozytorium <a href="https://build.opensuse.org/project/show/home:Fisiu:kadu">home:Fisiu:kadu</a> dostarczało kadu w najnowszej wersji wszystkim użytkownikom openSUSE. Aktualnie dostępne są dwie wersje, ostatnie wydanie z serii 0.12 - kadu-0.12.3, a dla starszych wersji openSUSE ostatnie wydanie z serii 0.6 - kadu-0.6.5.</p><p>Kadu 0.12.3 zostanie zaktualizowane do wersji 1.0 a kadu-old (czyli wersja 0.6.5) zostanie usunięte. Jeśli ktoś z Was chciałby widzieć wersję kadu-0.12.3 jako wersję archiwalną czyli kadu-old, proszę o taką informację. Jeśli w przeciągu tygodnia nie będzie takiej informacji, uznam, że liczy się dla Was tylko najnowsza wersja kadu ;-) Albo wersja dostępna w głównym repozytorium danej wersji openSUSE.</p><p>Główna biblioteka z której korzysta kadu, <code>libgadu</code> jest już dostępna w wersji <a href="http://libgadu.net/releases/1.12.0.html">1.12.0</a> więc kadu-1.0 powinno być dostępne "na dniach".</p>
+              <br>
+            </article>
+            <article>
               <h2><a href="/2014/jbake-2.3.0-dostepny.html">JBake 2.3.0 dostępny</a></h2>
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;15 czerwiec 2014&nbsp;&nbsp;
@@ -201,26 +211,6 @@ ACTION==&quot;remove&quot;, SUBSYSTEM==&quot;input&quot;, KERNEL==&quot;mouse[1-
               <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2012/priorytety-fontow-a-fontconfig.html#disqus_thread"></a></span>
           </p>
               <p><a href="http://www.freedesktop.org/wiki/Software/fontconfig">Fontconfig</a> jest biblioteką służącą do konfiguracji dostępu do fontów. Cała konfiguracja jest przechowywana w plikach <a href="http://pl.wikipedia.org/wiki/XML">xml</a>, dzięki czemu są one czytelne i łatwe w modyfikacji. Wyczerpujące informacje można znaleźć w podręczniku man fonts-conf bądź bezpośrednio na <a href="http://www.freedesktop.org/software/fontconfig/fontconfig-user.html">stronie</a>.</p><p>Domyślna konfiguracja jest wystarczająca dla przeciętnego użytkownika jednak ma pewien mankament. Otóż rodzina fontów MS ma większy priorytet niż fonty domyślne. Dla przykładu, mając ustawione fonty z rodziny <strong>DejaVu Sans</strong> jako domyślne instalujemy font <strong>Consolas</strong> (dostępny np. w <a href="http://download.microsoft.com/download/E/6/7/E675FFFC-2A6D-4AB0-B3EB-27C9F8C8F696/PowerPointViewer.exe">PowerPointViewer</a> - wypakować za pomocą cabextract). Okazuje się, że po instalacji staje się on domyślnym fontem monospace. Czy aby tego chcieliśmy?</p><p>Jeśli nie chcemy aby zainstalowane fonty MS stały się domyślnymi, wystarczy zmienić konfigurację fontconfig. Tworzymy kopię zapasową i edytujemy plik:</p><p><kbd>su</kbd><br/><kbd>cp /etc/fonts/suse-post-user.conf /etc/fonts/suse-post-user.conf.backup</kbd><br/><kbd>vim /etc/fonts/suse-post-user.conf</kbd></p><p>Odszukujemy odpowiednie fonty które wg. nas nie powinny panoszyć się w systemie (np. Consolas, Verdana, etc.) i przenosimy je o kilka linii w dół. Po zapisaniu pliku pozostaje nam odświeżenie pamięci podręcznej fontconfig:</p><p><kbd>su</kbd><br/><kbd>rm /var/cache/fontconfig/*</kbd><br/><kbd>fc-cache</kbd></p><p>Od teraz, fonty którym obniżyliśmy priorytet nie będą 'ustawiać' się jako domyślne choć nadal można będzie z nich korzystać.</p><p>Przykładowy plik konfiguracyjny z obniżonym priorytetem fontów MS: <a href="https://gist.github.com/Fisiu/9403085">suse-post-user.conf</a></p>
-              <br>
-            </article>
-            <article>
-              <h2><a href="/2011/android-i-opensuse-11-4.html">Android i openSUSE 11.4</a></h2>
-          <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;24 marzec 2011&nbsp;&nbsp;
-            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2011/android-i-opensuse-11-4.html#disqus_thread"></a></span>
-          </p>
-              <p>Po instalacji i konfiguracji openSUSE 11.4 okazało się, że po instalacji <a href="http://developer.android.com/sdk/index.html">SDK Androida</a> nie można połączyć się z zewnętrznym urządzeniem. Efekt jest taki:</p>
-<pre><code>$ adb devices
-List of devices attached
-????????????     no permissions
-</code></pre><p>Rozwiązanie jest bardzo proste. Należy najpierw sprawdzić, jak identyfikuje się nasz sprzęt.</p>
-<pre><code>fisiu@pendrak:~&gt; lsusb
-Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
-Bus 001 Device 002: ID 0dda:2005 Integrated Circuit Solution, Inc. Datalux DLX-1611 16in1 Card Reader
-Bus 001 Device 004: ID 04e8:681c Samsung Electronics Co., Ltd ← Moje urządzenie
-</code></pre><p>Istotną informacją jest ID producenta, w moim wypadku <strong>04e8</strong>.<br/>Teraz pozostało stworzyć odpowiednią regułę udev. Bez zagłębiania się w szczegóły reguł udev, można to zrobić tak:</p><p><kbd>su</kbd><br/><kbd><del>echo 'SUBSYSTEM=="usb", SYSFS{idVendor}=="04e8", MODE="0660" GROUP="users"' &gt; /etc/udev/rules.d/51-android.rules</del></kbd><br/><kbd>echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="04e8", ATTRS{idProduct}=="681c", MODE="0660" GROUP="users"' &gt; /etc/udev/rules.d/51-android.rules</kbd></p><p>Od teraz urządzenie powinno już prawidłowo działać z naszym systemem.</p>
               <br>
             </article>
               <br>
