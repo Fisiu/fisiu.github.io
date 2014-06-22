@@ -6,9 +6,24 @@
     <atom:link href="http://fisiu.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>not so frequent log</description>
     <language>pl</language>
-    <pubDate>2014-06-19 19:10:43</pubDate>
-    <lastBuildDate>2014-06-19 19:10:43</lastBuildDate>
+    <pubDate>2014-06-22 22:08:17</pubDate>
+    <lastBuildDate>2014-06-22 22:08:17</lastBuildDate>
 
+      <item>
+        <title>Jak okiełznać bałagan w zdjęciach?</title>
+        <author>Mariusz Fik</author>
+        <link>http://fisiu.github.io/2014/jak-okielznac-balagan-w-zdjeciach.html</link>
+        <pubDate>2014-06-22 00:00:00</pubDate>
+        <guid isPermaLink="false">/2014/jak-okielznac-balagan-w-zdjeciach.html</guid>
+        <description>
+	        &lt;p&gt;Zbieramy fotki z jakiegoś wydarzenia na przestrzeni kilku lat. W tym czasie używamy różnych aparatów, telefonów czy kamer. Każde z tych urządzeń ma inny schemat nazywania plików, różne formaty daty i/lub czasu. Dochodzimy do momentu, że w katalogu mamy setki czy tysiące zdjęć. Jak zatem zapanować na takim bałaganem? Ano w 2 prostych krokach.&lt;br/&gt;Po pierwsze, kopiujemy wszystkie zdjęcia do nowego katalogu. W międzyczasie sprawdzamy czy mamy zainstalowany program &lt;code&gt;jhead&lt;/code&gt; np. za pomocą &lt;kbd&gt;which jhead&lt;/kbd&gt;. Jeśli programu brak, to w openSUSE szybko instalujemy za pomocą YaST bądź w konsoli &lt;kbd&gt;sudo zypper in jhead&lt;/kbd&gt;. Program zainstalowany, zdjęcia skopiowane - czas ogarnąć bałagan.&lt;br/&gt;W konsoli przechodzimy do katalogu ze zdjęciami i uruchamiamy:&lt;/p&gt;&lt;p&gt;&lt;kbd&gt;jhead -autorot -ft -nfIMG_%Y.%m.%d-%H.%M.%S *.jpg&lt;/kbd&gt;&lt;/p&gt;&lt;p&gt;Użyte parametry oznaczają:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;-autorot Automatyczne obracanie zdjęcia na podstawie danych Exif&lt;/li&gt;
+  &lt;li&gt;-ft Ustawia datę modyfikacji pliku na podstawie daty z danych Exif&lt;/li&gt;
+  &lt;li&gt;-nf Zmienia nazwę pliku, zgodnie z podanym wzorcem (&lt;code&gt;man date&lt;/code&gt;), data i czas ustawiane na podstawie danych Exif&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;I tak przykładowy plik &lt;code&gt;20130801_144642.jpg&lt;/code&gt; zmieni nazwę na &lt;code&gt;IMG_2013.08.01-14.46.41.jpg&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;PS. Jeśli wcześniej usunęliśmy dane Exif z plików, niestety nic z tego nie wyjdzie.&lt;/p&gt;
+        </description>
+      </item>
       <item>
         <title>Porządki w home:Fisiu:kadu</title>
         <author>Mariusz Fik</author>

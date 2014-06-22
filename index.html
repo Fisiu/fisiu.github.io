@@ -63,6 +63,21 @@
         <div class="row">
           <div class="col-md-9">
             <article>
+              <h2><a href="/2014/jak-okielznac-balagan-w-zdjeciach.html">Jak okiełznać bałagan w zdjęciach?</a></h2>
+          <p class="post-meta">
+            <i class="fa fa-calendar"></i>&nbsp;22 czerwiec 2014&nbsp;&nbsp;
+            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2014/jak-okielznac-balagan-w-zdjeciach.html#disqus_thread"></a></span>
+          </p>
+              <p>Zbieramy fotki z jakiegoś wydarzenia na przestrzeni kilku lat. W tym czasie używamy różnych aparatów, telefonów czy kamer. Każde z tych urządzeń ma inny schemat nazywania plików, różne formaty daty i/lub czasu. Dochodzimy do momentu, że w katalogu mamy setki czy tysiące zdjęć. Jak zatem zapanować na takim bałaganem? Ano w 2 prostych krokach.<br/>Po pierwsze, kopiujemy wszystkie zdjęcia do nowego katalogu. W międzyczasie sprawdzamy czy mamy zainstalowany program <code>jhead</code> np. za pomocą <kbd>which jhead</kbd>. Jeśli programu brak, to w openSUSE szybko instalujemy za pomocą YaST bądź w konsoli <kbd>sudo zypper in jhead</kbd>. Program zainstalowany, zdjęcia skopiowane - czas ogarnąć bałagan.<br/>W konsoli przechodzimy do katalogu ze zdjęciami i uruchamiamy:</p><p><kbd>jhead -autorot -ft -nfIMG_%Y.%m.%d-%H.%M.%S *.jpg</kbd></p><p>Użyte parametry oznaczają:</p>
+<ul>
+  <li>-autorot Automatyczne obracanie zdjęcia na podstawie danych Exif</li>
+  <li>-ft Ustawia datę modyfikacji pliku na podstawie daty z danych Exif</li>
+  <li>-nf Zmienia nazwę pliku, zgodnie z podanym wzorcem (<code>man date</code>), data i czas ustawiane na podstawie danych Exif</li>
+</ul><p>I tak przykładowy plik <code>20130801_144642.jpg</code> zmieni nazwę na <code>IMG_2013.08.01-14.46.41.jpg</code>.</p><p>PS. Jeśli wcześniej usunęliśmy dane Exif z plików, niestety nic z tego nie wyjdzie.</p>
+              <br>
+            </article>
+            <article>
               <h2><a href="/2014/porzadki-w-home:Fisiu:kadu.html">Porządki w home:Fisiu:kadu</a></h2>
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;19 czerwiec 2014&nbsp;&nbsp;
@@ -201,16 +216,6 @@ noop deadline [cfq]
 <pre><code>ACTION==&quot;add&quot;, SUBSYSTEM==&quot;input&quot;, KERNEL==&quot;mouse[1-9]&quot;, ENV{DISPLAY}=&quot;:0.0&quot;, ENV{XAUTHORITY}=&quot;/home/$user/.Xauthority&quot;, ENV{ID_CLASS}=&quot;mouse&quot;, RUN+=&quot;/usr/bin/synclient TouchpadOff=1&quot;
 ACTION==&quot;remove&quot;, SUBSYSTEM==&quot;input&quot;, KERNEL==&quot;mouse[1-9]&quot;, ENV{DISPLAY}=&quot;:0.0&quot;, ENV{XAUTHORITY}=&quot;/home/$user/.Xauthority&quot;, ENV{ID_CLASS}=&quot;mouse&quot;, RUN+=&quot;/usr/bin/synclient TouchpadOff=0&quot;
 </code></pre><p><strong>*</strong> Dell Vostro 3450 + Linux 3.3.2-1-desktop</p><p>Pozwoliłem sobie na edycję posta z bardzo prostego powodu. Człowiek pisze reguły udev zamiast uruchomić <kbd>synaptiks</kbd> i zaznaczyć żądaną opcję. Zdecydowanie szybciej i wygodniej. Powyższy plik można spokojnie usunąć :wink:</p><p><img src="/img/2012/synaptiks-with-mouse.png"  alt="&quot;Konfiguracja touchpada w KDE&quot;"/></p>
-              <br>
-            </article>
-            <article>
-              <h2><a href="/2012/priorytety-fontow-a-fontconfig.html">Priorytety fontów a fontconfig</a></h2>
-          <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;26 styczeń 2012&nbsp;&nbsp;
-            <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2012/priorytety-fontow-a-fontconfig.html#disqus_thread"></a></span>
-          </p>
-              <p><a href="http://www.freedesktop.org/wiki/Software/fontconfig">Fontconfig</a> jest biblioteką służącą do konfiguracji dostępu do fontów. Cała konfiguracja jest przechowywana w plikach <a href="http://pl.wikipedia.org/wiki/XML">xml</a>, dzięki czemu są one czytelne i łatwe w modyfikacji. Wyczerpujące informacje można znaleźć w podręczniku man fonts-conf bądź bezpośrednio na <a href="http://www.freedesktop.org/software/fontconfig/fontconfig-user.html">stronie</a>.</p><p>Domyślna konfiguracja jest wystarczająca dla przeciętnego użytkownika jednak ma pewien mankament. Otóż rodzina fontów MS ma większy priorytet niż fonty domyślne. Dla przykładu, mając ustawione fonty z rodziny <strong>DejaVu Sans</strong> jako domyślne instalujemy font <strong>Consolas</strong> (dostępny np. w <a href="http://download.microsoft.com/download/E/6/7/E675FFFC-2A6D-4AB0-B3EB-27C9F8C8F696/PowerPointViewer.exe">PowerPointViewer</a> - wypakować za pomocą cabextract). Okazuje się, że po instalacji staje się on domyślnym fontem monospace. Czy aby tego chcieliśmy?</p><p>Jeśli nie chcemy aby zainstalowane fonty MS stały się domyślnymi, wystarczy zmienić konfigurację fontconfig. Tworzymy kopię zapasową i edytujemy plik:</p><p><kbd>su</kbd><br/><kbd>cp /etc/fonts/suse-post-user.conf /etc/fonts/suse-post-user.conf.backup</kbd><br/><kbd>vim /etc/fonts/suse-post-user.conf</kbd></p><p>Odszukujemy odpowiednie fonty które wg. nas nie powinny panoszyć się w systemie (np. Consolas, Verdana, etc.) i przenosimy je o kilka linii w dół. Po zapisaniu pliku pozostaje nam odświeżenie pamięci podręcznej fontconfig:</p><p><kbd>su</kbd><br/><kbd>rm /var/cache/fontconfig/*</kbd><br/><kbd>fc-cache</kbd></p><p>Od teraz, fonty którym obniżyliśmy priorytet nie będą 'ustawiać' się jako domyślne choć nadal można będzie z nich korzystać.</p><p>Przykładowy plik konfiguracyjny z obniżonym priorytetem fontów MS: <a href="https://gist.github.com/Fisiu/9403085">suse-post-user.conf</a></p>
               <br>
             </article>
               <br>
