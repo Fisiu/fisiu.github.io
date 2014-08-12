@@ -75,7 +75,6 @@
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;26 luty 2009&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2009/dropbox-i-kde.html#disqus_thread"></a></span>
           </p>
               <p><p>Dropbox jest usługą pozwalającą nam na synchronizację plików pomiędzy komputerami. Nasze dane są przesyłane na serwer a z niego na inne nasze komputery. O cały proces dba aplikacja działająca w tle, która monitoruje nasze pliki i w razie potrzeby dokonuje ich aktualizacji. Darmowa wersja konta udostępnia nam 2GB przestrzeni dyskowej. Aczkolwiek istnieje sposób na powiększenie jej do 6GB bez wydawania nawet złotówki. Po więcej informacji na ten temat zapraszam na <a href="https://www.getdropbox.com/referrals">https://www.getdropbox.com/referrals</a>.</p><p>Twórcy usługi nie ograniczają się tylko do użytkowników <em>jedynie słusznego systemu</em> i dlatego udostępnili aplikację zarówno dla Windows, MacOSX jak i Linux. Oficjalna wersja dla <em>pingwina</em> jest zintegrowana z nautilusem, elementem środowiska Gnome. Jednak cóż począć, jeśli korzystamy z KDE? A i na to jest rada ;)<br/><!-- more --><br/>Najpierw musimy pobrać aplikację stosowną do wersji naszego systemu.<br/> * <a href="http://www.getdropbox.com/download?plat=lnx.x86">Dropbox</a> dla wersji 32-bit<br/> * <a href="http://www.getdropbox.com/download?plat=lnx.x86_64">Dropbox</a> dla wersji 64-bit</p><p>Załóżmy, że archiwum z aplikacją zostanie zapisane w naszym katalogu domowym, ~/</p><p>Następnie musimy je rozpakować. W tym celu możemy użyć menu kontekstowego menedżera plików bądź wydając polecenie w konsoli:<br/><kbd>tar -xvf dropbox-lnx.x86*</kbd></p><p>Archiwum zostnie wypakowane do naszego katalogu domowego. Następnie przechodzimy do miejsca, gdzie zostało ono rozpakowane:<br/><kbd>cd ~/.dropbox-dist</kbd></p><p>Teraz pozostaje nam już tylko uruchomić program, wydając polecenie:<br/><kbd>./dropboxd</kbd></p><p>Dalej postępujemy zgodnie z kreatorem pierwszego uruchomienia, gdzie możemy określić m.in. katalog, którego zawartość będzie synchronizowana.</p><p>Jeśli chcemy, aby <em>Dropbox</em> był uruchamiany razem z KDE, wystarczy dodać go do aplikacji auto startu. W tym celu wybieramy z menu systemowego <em>Ustawienia Systemowe → Zaawansowane → Automatyczne Uruchomienie</em>. W oknie konfiguracji wybieramy przycisk <strong>Add Program</strong> i podajemy ścieżkę do programu:<br/><kbd>~/.dropbox-dist/dropboxd</kbd></p><p>Zaznaczamy jeszcze opcję <strong>Enabled</strong>, aby aktywować automatyczne uruchamianie dopiero co skonfigurowanego programu.</p><p>Od tej pory <em>Dropbox</em> będzie czuwał nad stanem naszych plików po każdym uruchomieniu komputera.</p><p><img src="/img/2009/dropbox_tray-300x55.png"  alt="&quot;Dropbox w tacce Systemowej&quot;"/></p></p>
       <div class="share">
@@ -96,23 +95,7 @@
           </span>
         </div>
       </div>
-<hr>
-<section class="comments">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
-  
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>            </article>
+            </article>
         </div> <!-- /.col-md-12 -->
       </div> <!-- /.row -->
         
@@ -167,20 +150,8 @@
       });
     </script>
 
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
 
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-    </script>
 
-      
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-2256304-7']);
