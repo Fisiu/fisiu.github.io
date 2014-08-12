@@ -180,6 +180,13 @@
                     <p><a href="http://en.opensuse.org/Portal:13.1"><img src="http://countdown.opensuse.org/small.png" alt="openSUSE Counter"/></a></p>
                 </div>
             </div>
+            <div class="panel panel-primary github-repoview">
+                <div class="panel-heading">
+                    <i class="fa fa-github fa-lg panel-title"> Repozytoria</i>
+                </div>
+                <div id="repoview" class="panel-body">
+                </div>
+            </div>
           </section>
         </aside>
       </div>
@@ -237,7 +244,40 @@
       });
     </script>
 
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+
+      <!-- call api only when sidebar is visible -->
+        <script type="text/javascript">
+          var username = 'Fisiu';
+          var repoLimit = 5;
+          var noRepoMsg = 'Brak publicznych repozytoriów.';
+          $(function() {
+            $.getJSON('https://api.github.com/users/' + username + '/repos?callback=?', {sort: 'pushed'}, function(resp) {
+              if (resp.data.length > 0) {
+                $('#repoview').append('<ul></ul>');
+                $.each($(resp.data), function(i, val) {
+                  $('#repoview > ul').append('<li><a href="'+val['html_url']+'">'+val['name']+'</a><p>'+((val['description']) ? val['description'] : '(No description.)')+'</p></li>');
+                  if(i == repoLimit -1) {
+                      return false;
+                  }
+                });
+              } else {
+                $('#repoview').append('<p>' + noRepoMsg + '</p>');
+              }
+            });
+          });
+        </script>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
