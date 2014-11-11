@@ -11,9 +11,9 @@
     <meta name="description" content="Static blog generated with JBake">
 
     <!-- Style -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.0/yeti/bootstrap.min.css">
     <link rel="stylesheet" href="/css/prettify-themes/github.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
     <link rel="stylesheet" href="/css/base.css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -70,28 +70,28 @@
               </ol>
             </div>
           <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;25 kwiecień 2012&nbsp;&nbsp;
+            <i class="fa fa-calendar"></i>&nbsp;25 kwietnia 2012&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2012/touchpad-i-mysz-usb-bez-spiec.html#disqus_thread"></a></span>
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io2012/touchpad-i-mysz-usb-bez-spiec.html#disqus_thread"></a></span>
           </p>
               <p><p>Często pracując na laptopie korzystam z zewnętrznej myszki na usb. Jednak po jej podłączeniu touchpad nadal działa a "magiczny" skrót do jego obsługi Fn + F3 <strong>*</strong> zdaje się być bezużyteczny. Z pomocą przychodzi nam udev i wszechstronność jego reguł. Aby wyłączyć touchpad po podłączeniu myszy do portu usb i automatycznie go włączyć po jej odłączeniu wystarczy, że utworzymy 2 proste reguły. Tworzymy plik <code>/etc/udev/rules.d/01-touchpad.rules</code> z zawartością zamieszczoną poniżej. W miejsce <code>$user</code> wstawiamy nazwę użytkownika.</p>
 <pre><code>ACTION==&quot;add&quot;, SUBSYSTEM==&quot;input&quot;, KERNEL==&quot;mouse[1-9]&quot;, ENV{DISPLAY}=&quot;:0.0&quot;, ENV{XAUTHORITY}=&quot;/home/$user/.Xauthority&quot;, ENV{ID_CLASS}=&quot;mouse&quot;, RUN+=&quot;/usr/bin/synclient TouchpadOff=1&quot;
 ACTION==&quot;remove&quot;, SUBSYSTEM==&quot;input&quot;, KERNEL==&quot;mouse[1-9]&quot;, ENV{DISPLAY}=&quot;:0.0&quot;, ENV{XAUTHORITY}=&quot;/home/$user/.Xauthority&quot;, ENV{ID_CLASS}=&quot;mouse&quot;, RUN+=&quot;/usr/bin/synclient TouchpadOff=0&quot;
-</code></pre><p><strong>*</strong> Dell Vostro 3450 + Linux 3.3.2-1-desktop</p><p>Pozwoliłem sobie na edycję posta z bardzo prostego powodu. Człowiek pisze reguły udev zamiast uruchomić <kbd>synaptiks</kbd> i zaznaczyć żądaną opcję. Zdecydowanie szybciej i wygodniej. Powyższy plik można spokojnie usunąć :wink:</p><p><img src="/img/2012/synaptiks-with-mouse.png"  alt="&quot;Konfiguracja touchpada w KDE&quot;"/></p></p>
+</code></pre><p><strong>*</strong> Dell Vostro 3450 + Linux 3.3.2-1-desktop</p><p>Pozwoliłem sobie na edycję posta z bardzo prostego powodu. Człowiek pisze reguły udev zamiast uruchomić <kbd>synaptiks</kbd> i zaznaczyć żądaną opcję. Zdecydowanie szybciej i wygodniej. Powyższy plik można spokojnie usunąć :wink:</p><p><img src="/img/2012/synaptiks-with-mouse.png" alt=""Konfiguracja touchpada w KDE"""/></p></p>
       <div class="share">
         <div class="social">
   <!-- Facebook -->
           <span class="facebook">
-            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io/2012/touchpad-i-mysz-usb-bez-spiec.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io2012/touchpad-i-mysz-usb-bez-spiec.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </span>
   <!-- Google+ -->
           <span class="google">
             <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-            <g:plusone size="medium" href="http://fisiu.github.io/2012/touchpad-i-mysz-usb-bez-spiec.html"></g:plusone>
+            <g:plusone size="medium" href="http://fisiu.github.io2012/touchpad-i-mysz-usb-bez-spiec.html"></g:plusone>
           </span>
   <!-- Twitter -->
           <span class="twitter">
-            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2012/touchpad-i-mysz-usb-bez-spiec.html">Tweet</a>
+            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io2012/touchpad-i-mysz-usb-bez-spiec.html">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </span>
         </div>
@@ -123,7 +123,7 @@ ACTION==&quot;remove&quot;, SUBSYSTEM==&quot;input&quot;, KERNEL==&quot;mouse[1-
         <hr>
         <div class="row">
           <div class="col-xs-10">
-            <p class="text-muted credit">&copy; Mariusz Fik 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.2.1</a> | <i title="Linux" class="fa fa-linux"></i></p>
+            <p class="text-muted credit">&copy; Mariusz Fik 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.3.0</a> | Baked with <a href="http://jbake.org">JBake v2.3.2</a> | <i title="Linux" class="fa fa-linux"></i></p>
           </div>
           <div class="col-xs-2 gotop">
             <a href="#"><i class="fa fa-arrow-circle-up"> do góry</i></a>
@@ -133,8 +133,8 @@ ACTION==&quot;remove&quot;, SUBSYSTEM==&quot;input&quot;, KERNEL==&quot;mouse[1-
     </footer>
 
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gist-embed/1.6/gist-embed.min.js"></script>
     <script src="/js/cookies.js"></script>
     <script src="/js/jquery.image-scale.js"></script>

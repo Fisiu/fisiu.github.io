@@ -11,9 +11,9 @@
     <meta name="description" content="Static blog generated with JBake">
 
     <!-- Style -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.0/yeti/bootstrap.min.css">
     <link rel="stylesheet" href="/css/prettify-themes/github.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
     <link rel="stylesheet" href="/css/base.css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -73,25 +73,25 @@
               </ol>
             </div>
           <p class="post-meta">
-            <i class="fa fa-calendar"></i>&nbsp;26 luty 2009&nbsp;&nbsp;
+            <i class="fa fa-calendar"></i>&nbsp;26 lutego 2009&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2009/dropbox-i-kde.html#disqus_thread"></a></span>
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io2009/dropbox-i-kde.html#disqus_thread"></a></span>
           </p>
-              <p><p>Dropbox jest usługą pozwalającą nam na synchronizację plików pomiędzy komputerami. Nasze dane są przesyłane na serwer a z niego na inne nasze komputery. O cały proces dba aplikacja działająca w tle, która monitoruje nasze pliki i w razie potrzeby dokonuje ich aktualizacji. Darmowa wersja konta udostępnia nam 2GB przestrzeni dyskowej. Aczkolwiek istnieje sposób na powiększenie jej do 6GB bez wydawania nawet złotówki. Po więcej informacji na ten temat zapraszam na <a href="https://www.getdropbox.com/referrals">https://www.getdropbox.com/referrals</a>.</p><p>Twórcy usługi nie ograniczają się tylko do użytkowników <em>jedynie słusznego systemu</em> i dlatego udostępnili aplikację zarówno dla Windows, MacOSX jak i Linux. Oficjalna wersja dla <em>pingwina</em> jest zintegrowana z nautilusem, elementem środowiska Gnome. Jednak cóż począć, jeśli korzystamy z KDE? A i na to jest rada ;)<br/><!-- more --><br/>Najpierw musimy pobrać aplikację stosowną do wersji naszego systemu.<br/> * <a href="http://www.getdropbox.com/download?plat=lnx.x86">Dropbox</a> dla wersji 32-bit<br/> * <a href="http://www.getdropbox.com/download?plat=lnx.x86_64">Dropbox</a> dla wersji 64-bit</p><p>Załóżmy, że archiwum z aplikacją zostanie zapisane w naszym katalogu domowym, ~/</p><p>Następnie musimy je rozpakować. W tym celu możemy użyć menu kontekstowego menedżera plików bądź wydając polecenie w konsoli:<br/><kbd>tar -xvf dropbox-lnx.x86*</kbd></p><p>Archiwum zostnie wypakowane do naszego katalogu domowego. Następnie przechodzimy do miejsca, gdzie zostało ono rozpakowane:<br/><kbd>cd ~/.dropbox-dist</kbd></p><p>Teraz pozostaje nam już tylko uruchomić program, wydając polecenie:<br/><kbd>./dropboxd</kbd></p><p>Dalej postępujemy zgodnie z kreatorem pierwszego uruchomienia, gdzie możemy określić m.in. katalog, którego zawartość będzie synchronizowana.</p><p>Jeśli chcemy, aby <em>Dropbox</em> był uruchamiany razem z KDE, wystarczy dodać go do aplikacji auto startu. W tym celu wybieramy z menu systemowego <em>Ustawienia Systemowe → Zaawansowane → Automatyczne Uruchomienie</em>. W oknie konfiguracji wybieramy przycisk <strong>Add Program</strong> i podajemy ścieżkę do programu:<br/><kbd>~/.dropbox-dist/dropboxd</kbd></p><p>Zaznaczamy jeszcze opcję <strong>Enabled</strong>, aby aktywować automatyczne uruchamianie dopiero co skonfigurowanego programu.</p><p>Od tej pory <em>Dropbox</em> będzie czuwał nad stanem naszych plików po każdym uruchomieniu komputera.</p><p><img src="/img/2009/dropbox_tray-300x55.png"  alt="&quot;Dropbox w tacce Systemowej&quot;"/></p></p>
+              <p><p>Dropbox jest usługą pozwalającą nam na synchronizację plików pomiędzy komputerami. Nasze dane są przesyłane na serwer a z niego na inne nasze komputery. O cały proces dba aplikacja działająca w tle, która monitoruje nasze pliki i w razie potrzeby dokonuje ich aktualizacji. Darmowa wersja konta udostępnia nam 2GB przestrzeni dyskowej. Aczkolwiek istnieje sposób na powiększenie jej do 6GB bez wydawania nawet złotówki. Po więcej informacji na ten temat zapraszam na <a href="https://www.getdropbox.com/referrals">https://www.getdropbox.com/referrals</a>.</p><p>Twórcy usługi nie ograniczają się tylko do użytkowników <em>jedynie słusznego systemu</em> i dlatego udostępnili aplikację zarówno dla Windows, MacOSX jak i Linux. Oficjalna wersja dla <em>pingwina</em> jest zintegrowana z nautilusem, elementem środowiska Gnome. Jednak cóż począć, jeśli korzystamy z KDE? A i na to jest rada ;)<br/><!-- more --><br/>Najpierw musimy pobrać aplikację stosowną do wersji naszego systemu.<br/> * <a href="http://www.getdropbox.com/download?plat=lnx.x86">Dropbox</a> dla wersji 32-bit<br/> * <a href="http://www.getdropbox.com/download?plat=lnx.x86_64">Dropbox</a> dla wersji 64-bit</p><p>Załóżmy, że archiwum z aplikacją zostanie zapisane w naszym katalogu domowym, ~/</p><p>Następnie musimy je rozpakować. W tym celu możemy użyć menu kontekstowego menedżera plików bądź wydając polecenie w konsoli:<br/><kbd>tar -xvf dropbox-lnx.x86*</kbd></p><p>Archiwum zostnie wypakowane do naszego katalogu domowego. Następnie przechodzimy do miejsca, gdzie zostało ono rozpakowane:<br/><kbd>cd ~/.dropbox-dist</kbd></p><p>Teraz pozostaje nam już tylko uruchomić program, wydając polecenie:<br/><kbd>./dropboxd</kbd></p><p>Dalej postępujemy zgodnie z kreatorem pierwszego uruchomienia, gdzie możemy określić m.in. katalog, którego zawartość będzie synchronizowana.</p><p>Jeśli chcemy, aby <em>Dropbox</em> był uruchamiany razem z KDE, wystarczy dodać go do aplikacji auto startu. W tym celu wybieramy z menu systemowego <em>Ustawienia Systemowe → Zaawansowane → Automatyczne Uruchomienie</em>. W oknie konfiguracji wybieramy przycisk <strong>Add Program</strong> i podajemy ścieżkę do programu:<br/><kbd>~/.dropbox-dist/dropboxd</kbd></p><p>Zaznaczamy jeszcze opcję <strong>Enabled</strong>, aby aktywować automatyczne uruchamianie dopiero co skonfigurowanego programu.</p><p>Od tej pory <em>Dropbox</em> będzie czuwał nad stanem naszych plików po każdym uruchomieniu komputera.</p><p><img src="/img/2009/dropbox_tray-300x55.png" alt=""Dropbox w tacce Systemowej"""/></p></p>
       <div class="share">
         <div class="social">
   <!-- Facebook -->
           <span class="facebook">
-            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io/2009/dropbox-i-kde.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io2009/dropbox-i-kde.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </span>
   <!-- Google+ -->
           <span class="google">
             <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-            <g:plusone size="medium" href="http://fisiu.github.io/2009/dropbox-i-kde.html"></g:plusone>
+            <g:plusone size="medium" href="http://fisiu.github.io2009/dropbox-i-kde.html"></g:plusone>
           </span>
   <!-- Twitter -->
           <span class="twitter">
-            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2009/dropbox-i-kde.html">Tweet</a>
+            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io2009/dropbox-i-kde.html">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </span>
         </div>
@@ -123,7 +123,7 @@
         <hr>
         <div class="row">
           <div class="col-xs-10">
-            <p class="text-muted credit">&copy; Mariusz Fik 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake v2.2.1</a> | <i title="Linux" class="fa fa-linux"></i></p>
+            <p class="text-muted credit">&copy; Mariusz Fik 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.3.0</a> | Baked with <a href="http://jbake.org">JBake v2.3.2</a> | <i title="Linux" class="fa fa-linux"></i></p>
           </div>
           <div class="col-xs-2 gotop">
             <a href="#"><i class="fa fa-arrow-circle-up"> do góry</i></a>
@@ -133,8 +133,8 @@
     </footer>
 
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gist-embed/1.6/gist-embed.min.js"></script>
     <script src="/js/cookies.js"></script>
     <script src="/js/jquery.image-scale.js"></script>
