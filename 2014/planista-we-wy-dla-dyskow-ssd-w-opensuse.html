@@ -74,7 +74,7 @@
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;11 marca 2014&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io2014/planista-we-wy-dla-dyskow-ssd-w-opensuse.html#disqus_thread"></a></span>
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2014/planista-we-wy-dla-dyskow-ssd-w-opensuse.html#disqus_thread"></a></span>
           </p>
               <p><p>Domyślnym planistą We/Wy w openSUSE jest <abbr title="Complete Fairness Queueing">CFQ</abbr> i radzi on sobie z klasycznymi dyskami talerzowymi całkiem dobrze. Więcej informacji o samym planiście CFQ można znaleźć w <a href="https://www.kernel.org/doc/Documentation/block/cfq-iosched.txt">dokumentacji kernela</a> a przegląd planistów dostępnych w dystrybucji openSUSE dostępny jest w <a href="http://activedoc.opensuse.org/book/opensuse-system-analysis-and-tuning-guide/chapter-13-tuning-io-performance">podręczniku openSUSE, rozdział 13</a>. Dla dysków <abbr title="Solid State Drive">SSD</abbr> lepszym wyborem zdaje się być planista Deadline bądź Noop.</p><p>Sprawdzić aktualnie używanego planistę można za pomocą:<br/><kbd>cat /sys/block/sda/queue/scheduler </kbd></p>
 <pre><code>noop deadline [cfq]

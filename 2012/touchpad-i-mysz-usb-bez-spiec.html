@@ -72,7 +72,7 @@
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;25 kwietnia 2012&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io2012/touchpad-i-mysz-usb-bez-spiec.html#disqus_thread"></a></span>
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2012/touchpad-i-mysz-usb-bez-spiec.html#disqus_thread"></a></span>
           </p>
               <p><p>Często pracując na laptopie korzystam z zewnętrznej myszki na usb. Jednak po jej podłączeniu touchpad nadal działa a "magiczny" skrót do jego obsługi Fn + F3 <strong>*</strong> zdaje się być bezużyteczny. Z pomocą przychodzi nam udev i wszechstronność jego reguł. Aby wyłączyć touchpad po podłączeniu myszy do portu usb i automatycznie go włączyć po jej odłączeniu wystarczy, że utworzymy 2 proste reguły. Tworzymy plik <code>/etc/udev/rules.d/01-touchpad.rules</code> z zawartością zamieszczoną poniżej. W miejsce <code>$user</code> wstawiamy nazwę użytkownika.</p>
 <pre><code>ACTION==&quot;add&quot;, SUBSYSTEM==&quot;input&quot;, KERNEL==&quot;mouse[1-9]&quot;, ENV{DISPLAY}=&quot;:0.0&quot;, ENV{XAUTHORITY}=&quot;/home/$user/.Xauthority&quot;, ENV{ID_CLASS}=&quot;mouse&quot;, RUN+=&quot;/usr/bin/synclient TouchpadOff=1&quot;

@@ -75,7 +75,7 @@
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;03 marca 2013&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io2013/chromium-i-flash-via-ppapi.html#disqus_thread"></a></span>
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2013/chromium-i-flash-via-ppapi.html#disqus_thread"></a></span>
           </p>
               <p><p>Ady korzystać z najnowszego flasha w openSUSE konieczne jest zainstalowanie pakietu <code>chromium-pepper-flash</code>. Dostępny jest on w repozytorium <strong>packmana</strong>. Instalacja ogranicza się tylko do wykonania:</p><p><kbd>zypper in chromium-pepper-flash</kbd></p><p>Jednak aby chromium współpracowało z nową wtyczką, konieczne jest dodanie odpowiednich flag do globalnego pliku konfiguracyjnego chromium. Jako root edytujemy plik **/etc/default/chromium** i dodajemy poniższe flagi. Jeśli już korzystamy z innych flag, wystarczy je dopisać na końcu.</p>
 <pre><code>CHROMIUM_FLAGS=&quot;--ppapi-flash-path=/usr/lib/chromium/PepperFlash/libpepflashplayer.so&quot;
