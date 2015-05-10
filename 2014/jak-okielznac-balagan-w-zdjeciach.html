@@ -74,6 +74,7 @@
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;22 czerwca 2014&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io//2014/jak-okielznac-balagan-w-zdjeciach.html#disqus_thread"></a></span>
           </p>
               <p><p>Zbieramy fotki z jakiegoś wydarzenia na przestrzeni kilku lat. W tym czasie używamy różnych aparatów, telefonów czy kamer. Każde z tych urządzeń ma inny schemat nazywania plików, różne formaty daty i/lub czasu. Dochodzimy do momentu, że w katalogu mamy setki czy tysiące zdjęć. Jak zatem zapanować na takim bałaganem? Ano w 2 prostych krokach.<br/>Po pierwsze, kopiujemy wszystkie zdjęcia do nowego katalogu. W międzyczasie sprawdzamy czy mamy zainstalowany program <code>jhead</code> np. za pomocą <kbd>which jhead</kbd>. Jeśli programu brak, to w openSUSE szybko instalujemy za pomocą YaST bądź w konsoli <kbd>sudo zypper in jhead</kbd>. Program zainstalowany, zdjęcia skopiowane - czas ogarnąć bałagan.<br/>W konsoli przechodzimy do katalogu ze zdjęciami i uruchamiamy:</p><p><kbd>jhead -autorot -ft -nfIMG_%Y.%m.%d-%H.%M.%S *.jpg</kbd></p><p>Użyte parametry oznaczają:</p>
 <ul>
@@ -99,7 +100,23 @@
           </span>
         </div>
       </div>
-            </article>
+<hr>
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
+  
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>            </article>
         </div> <!-- /.col-md-12 -->
       </div> <!-- /.row -->
 
@@ -154,6 +171,18 @@
       });
     </script>
 
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
 
 
     <script type="text/javascript">
