@@ -11,9 +11,9 @@
     <meta name="description" content="Static blog generated with JBake">
 
     <!-- Style -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.0/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/yeti/bootstrap.min.css">
     <link rel="stylesheet" href="/css/prettify-themes/github.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/base.css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -60,20 +60,19 @@
 
     <!-- Begin page content -->
     <div class="container">
-      
+
       <div class="row">
         <div class="col-md-12">
           <article>
             <div class="page-header"><h1>Konsolidacja baz mysql dla aplikacji KDE w openSUSE</h1>
               <ol class="breadcrumb tagsbar">
-                <li><a href="/tags/KDE-SC.html">KDE-SC</a></li>
-                <li><a href="/tags/openSUSE.html">openSUSE</a></li>
+                <li><a href="/tagi/KDE-SC.html">KDE-SC</a></li>
+                <li><a href="/tagi/openSUSE.html">openSUSE</a></li>
               </ol>
             </div>
           <p class="post-meta">
             <i class="fa fa-calendar"></i>&nbsp;21 listopada 2013&nbsp;&nbsp;
             <i class="fa fa-user"></i>&nbsp;Mariusz Fik&nbsp;&nbsp;
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://fisiu.github.io/2013/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse.html#disqus_thread"></a></span>
           </p>
               <p><p>Pulpit plazmy korzysta z akonadi, które w domyślnej konfiguracji używa własnej instancji mysql/mariadb. Amarok przechowuje informacje o naszej bibliotece (notowania, teksty, oceny) również w bazie mysql. W tym celu korzysta również z własnej instancji. DigiKam domyślnie przechowuje informacji o kolekcji obrazów w bazie sqlite. Przy większych kolekcjach, może okazać się, że wydajność sqlite jest niewystarczająca. Nic nie stoi na przeszkodzie, aby wszystkie bazy przenieść do systemowej instancji mariadb. Dzięki temu unikniemy dublowania instancji baz dla akonadi i amaroka oraz przyspieszymy działanie digiKama.</p><p>I krótka legenda dla kodów użytych w tym wpisie.Kody zaczynające się od:</p>
 <ul>
@@ -105,40 +104,24 @@ Tracer=null
         <div class="social">
   <!-- Facebook -->
           <span class="facebook">
-            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io2013/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http://fisiu.github.io/2013/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse.html&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=631359390268930" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </span>
   <!-- Google+ -->
           <span class="google">
             <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-            <g:plusone size="medium" href="http://fisiu.github.io2013/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse.html"></g:plusone>
+            <g:plusone size="medium" href="http://fisiu.github.io/2013/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse.html"></g:plusone>
           </span>
   <!-- Twitter -->
           <span class="twitter">
-            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io2013/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse.html">Tweet</a>
+            <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fisiu.github.io/2013/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse.html">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </span>
         </div>
       </div>
-<hr>
-<section class="comments">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
-  
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>            </article>
+            </article>
         </div> <!-- /.col-md-12 -->
       </div> <!-- /.row -->
-        
+
       </div><!-- /.container -->
 
     <footer>
@@ -146,7 +129,7 @@ Tracer=null
         <hr>
         <div class="row">
           <div class="col-xs-10">
-            <p class="text-muted credit">&copy; Mariusz Fik 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.3.0</a> | Baked with <a href="http://jbake.org">JBake v2.3.2</a> | <i title="Linux" class="fa fa-linux"></i></p>
+            <p class="text-muted credit"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0" target="_blank"><i class="fa fa-cc"></i></a> Mariusz Fik 2015 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.3.4</a> | Baked with <a href="http://jbake.org">JBake v2.2.1</a> | <i title="Linux" class="fa fa-linux"></i></p>
           </div>
           <div class="col-xs-2 gotop">
             <a href="#"><i class="fa fa-arrow-circle-up"> do góry</i></a>
@@ -157,7 +140,7 @@ Tracer=null
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gist-embed/1.6/gist-embed.min.js"></script>
     <script src="/js/cookies.js"></script>
     <script src="/js/jquery.image-scale.js"></script>
@@ -190,20 +173,8 @@ Tracer=null
       });
     </script>
 
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'fisiu-github-io'; // required: replace example with your forum shortname
 
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-    </script>
 
-      
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-2256304-7']);
