@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>CodeLite w repozytorium &middot; System.out.println</title>
+    <meta name="generator" content="Hugo 0.16" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Mariusz Fik">
+    
+      <meta name="description" content="Jakiś opis strony">
+    
+    
+    <link rel="icon" href="http://fisiu.github.iofavicon.ico">
+    <link rel="apple-touch-icon" href="http://fisiu.github.ioapple-touch-icon.png" />
+    <link rel="stylesheet" href="http://fisiu.github.iocss/style.css">
+    <link rel="stylesheet" href="http://fisiu.github.iocss/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fisiu.github.iocss/monokai.css">
+    <link rel="stylesheet" href="http://fisiu.github.iofancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="CodeLite w repozytorium" />
+<meta property="og:description" content="CodeLite to zintegrowane środowisko programistyczne (IDE) dla języka C/C&#43;&#43;. Dostępne jest na kilka platform systemowych, w tym Linuksa. Interfejs aplikacji jest oparty o bibliotekę wxWidgetes a sama aplikacja udostępniona jest na licencji GPLv2. Po szczegóły odsyłam na stronę główną programu http://codelite.org/. Moje repozytorium dostępne jest w openSUSE Build Service pod adresem: http://download.opensuse.org/repositories/home:/Fisiu/" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fisiu.github.io/2009/03/codelite-w-repozytorium" />
+
+
+<meta property="og:updated_time" content="2009-03-09T14:47:20&#43;02:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="CodeLite w repozytorium">
+<meta itemprop="description" content="CodeLite to zintegrowane środowisko programistyczne (IDE) dla języka C/C&#43;&#43;. Dostępne jest na kilka platform systemowych, w tym Linuksa. Interfejs aplikacji jest oparty o bibliotekę wxWidgetes a sama aplikacja udostępniona jest na licencji GPLv2. Po szczegóły odsyłam na stronę główną programu http://codelite.org/. Moje repozytorium dostępne jest w openSUSE Build Service pod adresem: http://download.opensuse.org/repositories/home:/Fisiu/">
+
+
+<meta itemprop="dateModified" content="2009-03-09T14:47:20&#43;02:00" />
+<meta itemprop="wordCount" content="52">
+
+
+
+<meta itemprop="keywords" content="opensuse,ajax,android,aptana,bash,blog,build-service,buildservice,c&#43;&#43;,chromium,colibri,dropbox,eclipse,factory,flash,fontconfig,github,ide,java,jbake,kadu,kde,kde-sc,konferencja,linux,luzem,opensuse,osc15,pakiety,php,plazma,pliki,ppapi,projekt,repozytoria,sled,ssd,tomcat,touchpad,widzet,wordpress,wydajność,zsh,zypper," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="CodeLite w repozytorium"/>
+<meta name="twitter:description" content="CodeLite to zintegrowane środowisko programistyczne (IDE) dla języka C/C&#43;&#43;. Dostępne jest na kilka platform systemowych, w tym Linuksa. Interfejs aplikacji jest oparty o bibliotekę wxWidgetes a sama aplikacja udostępniona jest na licencji GPLv2. Po szczegóły odsyłam na stronę główną programu http://codelite.org/. Moje repozytorium dostępne jest w openSUSE Build Service pod adresem: http://download.opensuse.org/repositories/home:/Fisiu/"/>
+<meta name="twitter:site" content="@Fisiu"/>
+
+
+    <link rel="stylesheet" href="http://fisiu.github.iocss/override.css">
+
+
+    
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://fisiu.github.io" id="logo">
+          
+          <i class="logo" style="background-image: url('http://fisiu.github.io/css/images/logo.png')"></i>
+          
+          <span class="site-title">System.out.println</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://fisiu.github.io/">Start</a>
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://fisiu.github.io/archiwum/">Archiwum</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://fisiu.github.io/img/avatar.jpg"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Szukaj">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://fisiu.github.io">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://fisiu.github.io/">Start</a></td>
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://fisiu.github.io/archiwum/">Archiwum</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://fisiu.github.io">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://fisiu.github.io/img/avatar.jpg">
+      <h2 id="name">Mariusz Fik</h2>
+      <h3 id="title">Software engineer • Cyborg • openSUSE Geeko</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Oświęcim/PL</span>
+      
+          <a id="follow" href="https://github.com/Fisiu">
+              Śledź
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        32
+        <span>Posty</span>
+      </div>
+      <div class="article-info-block">
+        
+          43
+        
+        <span>
+            Tagi
+        </span>
+      </div>
+    </div>
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+<td><a href="//github.com/Fisiu" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//plus.google.com/+MariuszFik" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
+
+
+
+
+
+<td><a href="//twitter.com/Fisiu" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+
+            <header class="article-header">
+    <a href="http://fisiu.github.io/2009/03/codelite-w-repozytorium">
+    <h1 class="article-title" itemprop="name">
+        CodeLite w repozytorium
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2009-03-09 14:47:20 &#43;0200 &#43;0200" itemprop="datePublished">2009-03-09</time>
+            &middot;
+            Mariusz Fik
+        </div>
+
+
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                <a class="article-category-link" href="http://fisiu.github.iotags/buildservice">buildservice</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://fisiu.github.iotags/c&#43;&#43;">c&#43;&#43;</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://fisiu.github.iotags/ide">ide</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://fisiu.github.iotags/pakiety">pakiety</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://fisiu.github.iotags/repozytoria">repozytoria</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>CodeLite to zintegrowane środowisko programistyczne (IDE) dla języka C/C++. Dostępne jest na kilka platform systemowych, w tym Linuksa. Interfejs aplikacji jest oparty o bibliotekę <a href="http://www.wxwidgets.org/">wxWidgetes</a> a sama aplikacja udostępniona jest na licencji <a href="http://gnu.org.pl/text/licencja-gnu.html">GPLv2</a>. Po szczegóły odsyłam na stronę główną programu <a href="http://codelite.org/">http://codelite.org/</a>.
+<!-- more -->
+<img src="/img/2009/codelite.jpg" alt="&quot;Zrzut ekranu CodeLite&quot;" /></p>
+
+<p>Moje repozytorium dostępne jest w <a href="http://en.opensuse.org/Build_Service">openSUSE Build Service</a> pod adresem:
+<a href="http://download.opensuse.org/repositories/home:/Fisiu/">http://download.opensuse.org/repositories/home:/Fisiu/</a></p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://fisiu.github.io/2009/03/codelite-w-repozytorium" data-id="333438cd79f7d21009722d78786e0892" class="article-share-link">
+        Udostępnij
+    </a>
+    
+    <a href="http://fisiu.github.io/2009/03/codelite-w-repozytorium/#disqus_thread" class="article-comment-link">
+        Komentarze
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://fisiu.github.io/2009/02/dropbox-i-kde" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Starszy
+      </strong>
+      <div class="article-nav-title">Dropbox i KDE</div>
+    </a>
+    
+
+    
+    <a href="http://fisiu.github.io/2009/03/teleportacja-na-nowy-serwer-zakonczona" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Nowszy
+      </strong>
+      <div class="article-nav-title">Teleportacja na nowy serwer zakończona</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'fisiu-github-io';
+    var disqus_identifier = 'http:\/\/fisiu.github.io\/2009\/03\/codelite-w-repozytorium';
+    var disqus_title = 'CodeLite w repozytorium';
+    var disqus_url = 'http:\/\/fisiu.github.io\/2009\/03\/codelite-w-repozytorium';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Kategorie</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://fisiu.github.iocategories/opensuse">
+                    opensuse
+                </a>
+                <span class="category-list-count">14</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Chmura tagów
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://fisiu.github.iotags/ajax" style="font-size: 12px;">ajax</a>
+        
+        <a href="http://fisiu.github.iotags/android" style="font-size: 12px;">android</a>
+        
+        <a href="http://fisiu.github.iotags/aptana" style="font-size: 12px;">aptana</a>
+        
+        <a href="http://fisiu.github.iotags/bash" style="font-size: 12px;">bash</a>
+        
+        <a href="http://fisiu.github.iotags/blog" style="font-size: 12px;">blog</a>
+        
+        <a href="http://fisiu.github.iotags/build-service" style="font-size: 12px;">build-service</a>
+        
+        <a href="http://fisiu.github.iotags/buildservice" style="font-size: 12px;">buildservice</a>
+        
+        <a href="http://fisiu.github.iotags/c&#43;&#43;" style="font-size: 12px;">c&#43;&#43;</a>
+        
+        <a href="http://fisiu.github.iotags/chromium" style="font-size: 12px;">chromium</a>
+        
+        <a href="http://fisiu.github.iotags/colibri" style="font-size: 12px;">colibri</a>
+        
+        <a href="http://fisiu.github.iotags/dropbox" style="font-size: 12px;">dropbox</a>
+        
+        <a href="http://fisiu.github.iotags/eclipse" style="font-size: 12px;">eclipse</a>
+        
+        <a href="http://fisiu.github.iotags/factory" style="font-size: 12px;">factory</a>
+        
+        <a href="http://fisiu.github.iotags/flash" style="font-size: 12px;">flash</a>
+        
+        <a href="http://fisiu.github.iotags/fontconfig" style="font-size: 12px;">fontconfig</a>
+        
+        <a href="http://fisiu.github.iotags/github" style="font-size: 12px;">github</a>
+        
+        <a href="http://fisiu.github.iotags/ide" style="font-size: 12px;">ide</a>
+        
+        <a href="http://fisiu.github.iotags/java" style="font-size: 12px;">java</a>
+        
+        <a href="http://fisiu.github.iotags/jbake" style="font-size: 12px;">jbake</a>
+        
+        <a href="http://fisiu.github.iotags/kadu" style="font-size: 12px;">kadu</a>
+        
+        <a href="http://fisiu.github.iotags/kde" style="font-size: 12px;">kde</a>
+        
+        <a href="http://fisiu.github.iotags/kde-sc" style="font-size: 12px;">kde-sc</a>
+        
+        <a href="http://fisiu.github.iotags/konferencja" style="font-size: 12px;">konferencja</a>
+        
+        <a href="http://fisiu.github.iotags/linux" style="font-size: 12px;">linux</a>
+        
+        <a href="http://fisiu.github.iotags/luzem" style="font-size: 12px;">luzem</a>
+        
+        <a href="http://fisiu.github.iotags/opensuse" style="font-size: 12px;">opensuse</a>
+        
+        <a href="http://fisiu.github.iotags/osc15" style="font-size: 12px;">osc15</a>
+        
+        <a href="http://fisiu.github.iotags/pakiety" style="font-size: 12px;">pakiety</a>
+        
+        <a href="http://fisiu.github.iotags/php" style="font-size: 12px;">php</a>
+        
+        <a href="http://fisiu.github.iotags/plazma" style="font-size: 12px;">plazma</a>
+        
+        <a href="http://fisiu.github.iotags/pliki" style="font-size: 12px;">pliki</a>
+        
+        <a href="http://fisiu.github.iotags/ppapi" style="font-size: 12px;">ppapi</a>
+        
+        <a href="http://fisiu.github.iotags/projekt" style="font-size: 12px;">projekt</a>
+        
+        <a href="http://fisiu.github.iotags/repozytoria" style="font-size: 12px;">repozytoria</a>
+        
+        <a href="http://fisiu.github.iotags/sled" style="font-size: 12px;">sled</a>
+        
+        <a href="http://fisiu.github.iotags/ssd" style="font-size: 12px;">ssd</a>
+        
+        <a href="http://fisiu.github.iotags/tomcat" style="font-size: 12px;">tomcat</a>
+        
+        <a href="http://fisiu.github.iotags/touchpad" style="font-size: 12px;">touchpad</a>
+        
+        <a href="http://fisiu.github.iotags/widzet" style="font-size: 12px;">widzet</a>
+        
+        <a href="http://fisiu.github.iotags/wordpress" style="font-size: 12px;">wordpress</a>
+        
+        <a href="http://fisiu.github.iotags/wydajno%c5%9b%c4%87" style="font-size: 12px;">wydajność</a>
+        
+        <a href="http://fisiu.github.iotags/zsh" style="font-size: 12px;">zsh</a>
+        
+        <a href="http://fisiu.github.iotags/zypper" style="font-size: 12px;">zypper</a>
+        
+    </div>
+</div>
+
+
+
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-2256304-7', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://fisiu.github.iofancybox/jquery.fancybox.pack.js"></script>
+<script src="http://fisiu.github.iojs/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['\\(','\\)']]}
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Konsolidacja baz mysql dla aplikacji KDE w openSUSE &middot; System.out.println</title>
+    <meta name="generator" content="Hugo 0.16" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Mariusz Fik">
+    
+      <meta name="description" content="Jakiś opis strony">
+    
+    
+    <link rel="icon" href="http://fisiu.github.iofavicon.ico">
+    <link rel="apple-touch-icon" href="http://fisiu.github.ioapple-touch-icon.png" />
+    <link rel="stylesheet" href="http://fisiu.github.iocss/style.css">
+    <link rel="stylesheet" href="http://fisiu.github.iocss/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fisiu.github.iocss/monokai.css">
+    <link rel="stylesheet" href="http://fisiu.github.iofancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Konsolidacja baz mysql dla aplikacji KDE w openSUSE" />
+<meta property="og:description" content="Pulpit plazmy korzysta z akonadi, które w domyślnej konfiguracji używa własnej instancji mysql/mariadb. Amarok przechowuje informacje o naszej bibliotece (notowania, teksty, oceny) również w bazie mysql. W tym celu korzysta również z własnej instancji. DigiKam domyślnie przechowuje informacji o kolekcji obrazów w bazie sqlite. Przy większych kolekcjach, może okazać się, że wydajność sqlite jest niewystarczająca. Nic nie stoi na przeszkodzie, aby wszystkie bazy przenieść do systemowej instancji mariadb. Dzięki temu unikniemy dublowania instancji baz dla akonadi i amaroka oraz przyspieszymy działanie digiKama." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fisiu.github.io/2013/11/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse" />
+
+
+<meta property="og:updated_time" content="2013-11-21T16:50:33&#43;02:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Konsolidacja baz mysql dla aplikacji KDE w openSUSE">
+<meta itemprop="description" content="Pulpit plazmy korzysta z akonadi, które w domyślnej konfiguracji używa własnej instancji mysql/mariadb. Amarok przechowuje informacje o naszej bibliotece (notowania, teksty, oceny) również w bazie mysql. W tym celu korzysta również z własnej instancji. DigiKam domyślnie przechowuje informacji o kolekcji obrazów w bazie sqlite. Przy większych kolekcjach, może okazać się, że wydajność sqlite jest niewystarczająca. Nic nie stoi na przeszkodzie, aby wszystkie bazy przenieść do systemowej instancji mariadb. Dzięki temu unikniemy dublowania instancji baz dla akonadi i amaroka oraz przyspieszymy działanie digiKama.">
+
+
+<meta itemprop="dateModified" content="2013-11-21T16:50:33&#43;02:00" />
+<meta itemprop="wordCount" content="709">
+
+
+
+<meta itemprop="keywords" content="opensuse,ajax,android,aptana,bash,blog,build-service,buildservice,c&#43;&#43;,chromium,colibri,dropbox,eclipse,factory,flash,fontconfig,github,ide,java,jbake,kadu,kde,kde-sc,konferencja,linux,luzem,opensuse,osc15,pakiety,php,plazma,pliki,ppapi,projekt,repozytoria,sled,ssd,tomcat,touchpad,widzet,wordpress,wydajność,zsh,zypper," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Konsolidacja baz mysql dla aplikacji KDE w openSUSE"/>
+<meta name="twitter:description" content="Pulpit plazmy korzysta z akonadi, które w domyślnej konfiguracji używa własnej instancji mysql/mariadb. Amarok przechowuje informacje o naszej bibliotece (notowania, teksty, oceny) również w bazie mysql. W tym celu korzysta również z własnej instancji. DigiKam domyślnie przechowuje informacji o kolekcji obrazów w bazie sqlite. Przy większych kolekcjach, może okazać się, że wydajność sqlite jest niewystarczająca. Nic nie stoi na przeszkodzie, aby wszystkie bazy przenieść do systemowej instancji mariadb. Dzięki temu unikniemy dublowania instancji baz dla akonadi i amaroka oraz przyspieszymy działanie digiKama."/>
+<meta name="twitter:site" content="@Fisiu"/>
+
+
+    <link rel="stylesheet" href="http://fisiu.github.iocss/override.css">
+
+
+    
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://fisiu.github.io" id="logo">
+          
+          <i class="logo" style="background-image: url('http://fisiu.github.io/css/images/logo.png')"></i>
+          
+          <span class="site-title">System.out.println</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://fisiu.github.io/">Start</a>
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://fisiu.github.io/archiwum/">Archiwum</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://fisiu.github.io/img/avatar.jpg"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Szukaj">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://fisiu.github.io">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://fisiu.github.io/">Start</a></td>
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://fisiu.github.io/archiwum/">Archiwum</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://fisiu.github.io">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://fisiu.github.io/img/avatar.jpg">
+      <h2 id="name">Mariusz Fik</h2>
+      <h3 id="title">Software engineer • Cyborg • openSUSE Geeko</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Oświęcim/PL</span>
+      
+          <a id="follow" href="https://github.com/Fisiu">
+              Śledź
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        32
+        <span>Posty</span>
+      </div>
+      <div class="article-info-block">
+        
+          43
+        
+        <span>
+            Tagi
+        </span>
+      </div>
+    </div>
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+<td><a href="//github.com/Fisiu" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//plus.google.com/+MariuszFik" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
+
+
+
+
+
+<td><a href="//twitter.com/Fisiu" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+
+            <header class="article-header">
+    <a href="http://fisiu.github.io/2013/11/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse">
+    <h1 class="article-title" itemprop="name">
+        Konsolidacja baz mysql dla aplikacji KDE w openSUSE
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2013-11-21 16:50:33 &#43;0200 &#43;0200" itemprop="datePublished">2013-11-21</time>
+            &middot;
+            Mariusz Fik
+        </div>
+
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                <a class="article-category-link" href="http://fisiu.github.iocategories/opensuse">openSUSE</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                <a class="article-category-link" href="http://fisiu.github.iotags/opensuse">openSUSE</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://fisiu.github.iotags/kde">KDE</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p>Pulpit plazmy korzysta z akonadi, które w domyślnej konfiguracji używa własnej instancji mysql/mariadb. Amarok przechowuje informacje o naszej bibliotece (notowania, teksty, oceny) również w bazie mysql. W tym celu korzysta również z własnej instancji. DigiKam domyślnie przechowuje informacji o kolekcji obrazów w bazie sqlite. Przy większych kolekcjach, może okazać się, że wydajność sqlite jest niewystarczająca. Nic nie stoi na przeszkodzie, aby wszystkie bazy przenieść do systemowej instancji mariadb. Dzięki temu unikniemy dublowania instancji baz dla akonadi i amaroka oraz przyspieszymy działanie digiKama.</p>
+
+<p>I krótka legenda dla kodów użytych w tym wpisie.Kody zaczynające się od:</p>
+
+<ul>
+<li># - należy wykonać jako root</li>
+<li>$ - należy wykonać jako zwykły użytkownik</li>
+<li>&gt; - należy wykonać w konsoli mysql/mariadb</li>
+</ul>
+
+<p>Zanim zaczniemy migrować bazy, należy zainstalować serwer mysql/mariadb i uruchomić go:</p>
+
+<p><div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i># zypper in mariadb</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i># systemctl enable mysql</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i># systemctl start mysql</kbd></div>
+</p>
+
+<!-- more -->
+
+<h3 id="akonadi">Akonadi</h3>
+
+<p>Upewniamy się, że akonadi działa:</p>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>$ akonadictl status</kbd></div>
+
+
+<p>Tworzymy zrzut aktualnej bazy akonadi za pomocą:</p>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>$ mysqldump --socket=~/.local/share/akonadi/socket-$HOSTNAME/mysql.socket akonadi &gt; ~/akonadi-backup.sql</kbd></div>
+
+
+<p>Zatrzymujemy serwer akonadi:</p>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>$ akonadictl stop</kbd></div>
+
+
+<p>Zmieniamy konfigurację bazy danych akonadi, tak aby korzystała z zewnętrznego serwera mysql. Możemy edytować plik <code>~/.config/akonadi/akonadiserverrc</code> by jego zawartość wyglądała następująco:</p>
+
+<pre><code>[%General]
+Driver=QMYSQL
+SizeThreshold=4096
+ExternalPayload=false
+
+[QMYSQL]
+Name=akonadi
+Host=localhost
+Options=
+ServerPath=/usr/sbin/mysqld
+StartServer=false
+User=akonadi
+Password=akonadi
+
+[Debug]
+Tracer=null
+</code></pre>
+
+<p>Lub możemy uruchomić:</p>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>$ kcmshell4 akonadi</kbd></div>
+
+
+<p>Odznaczamy &lsquo;Używaj wewnętrznego serwera MySQL&rsquo; i uzupełniamy dane jak na rysunku poniżej.</p>
+
+<p><img src="/img/2013/akonadi-system-mariadb.png" alt="akonadi-system-mariadb" /></p>
+
+<p>Następnie konieczne jest dodanie bazy danych i użytkownika.</p>
+
+<p><div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; CREATE USER &#39;akonadi&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;akonadi&#39;;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; CREATE DATABASE \`akonadi\`;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; GRANT ALL PRIVILEGES ON akonadi.* to &#39;akonadi&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;akonadi&#39;;</kbd></div>
+</p>
+
+<p>Następnie należy przywrócić nasz zrzut bazy akonadi za pomocą:</p>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>$ mysql akonadi &lt; akonadi-backup.sql</kbd></div>
+
+
+<p>Teraz pozostało nam już tylko uruchomić serwer akonadi za pomocą:</p>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>$ akonadictl start</kbd></div>
+
+
+<p>Jeśli spotkamy się z błędem:</p>
+
+<pre><code class="language-mysql">Sql error: Table 'akonadi.SchemaVersionTable' doesn't exist QMYSQL: Unable to execute query
+</code></pre>
+
+<p>należy zmienić nazwy table naszej bazy na format <a href="http://en.wikipedia.org/wiki/CamelCase">CamelCase</a>.</p>
+
+<p><div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE schemaversiontable TO SchemaVersionTable;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE resourcetable TO ResourceTable;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE collectionattributetable TO CollectionAttributeTable;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE collectionmimetyperelation TO CollectionMimeTypeRelation;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE collectionpimitemrelation TO CollectionPimItemRelation;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE collectiontable TO CollectionTable;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE flagtable TO FlagTable;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE mimetypetable TO MimeTypeTable;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE parttable TO PartTable;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE pimitemflagrelation TO PimItemFlagRelation;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; RENAME TABLE pimitemtable TO PimItemTable;</kbd></div>
+</p>
+
+<p>Od teraz akonadi będzie korzystało z systemowej instancji mysql/mariadb.
+Możliwe są dalsze <a href="http://cgbdx.wordpress.com/2011/07/21/how-to-setup-your-external-sql-server-for-akonadi/">optymalizacje</a> bazy danych, adekwatne do <a href="https://projects.kde.org/projects/kdesupport/akonadi/repository/revisions/master/entry/server/src/storage/mysql-global.conf">konfiguracji</a> używanej przez dedykowaną instancję bazy.</p>
+
+<h3 id="amarok">Amarok</h3>
+
+<p>Zatrzymujemy serwer mysql/mariadb:</p>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i># systemctl stop mysql</kbd></div>
+
+
+<p>Uruchamiamy serwer tylko z bazą amaroka:</p>
+
+<p><div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>$ cd ~/.kde4/share/apps/amarok</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>$ /usr/sbin/mysqld --defaults-file=\`pwd\`/my.cnf --default-storage-engine=MyISAM --datadir=\`pwd\`/mysqle --socket=\`pwd\`/sock --skip-grant-tables</kbd></div>
+</p>
+
+<p>Teraz pozostaje utworzyć zrzut bazy amaroka:</p>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>$ mysqldump -S sock amarok &gt; amarok.sql</kbd></div>
+
+
+<p>Po wykonaniu zrzuty możemy już zatrzymać serwer z bazą amarok i uruchomić serwer z konfiguracją globalną.</p>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i># systemctl start mysql</kbd></div>
+
+
+<p>Następnie konieczne jest utworzenie bazy danych, do której zaimportujemy dane z zrzutu.
+Tworzymy bazę i użytkownika:</p>
+
+<p><div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; CREATE USER &#39;amarok&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;amarok&#39;;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; CREATE DATABASE \`amarok\`;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; GRANT ALL PRIVILEGES ON amarok.* to &#39;amarok&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;amarok&#39;;</kbd></div>
+</p>
+
+<p>Importujemy zrzut do nowej bazy:</p>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>$ mysql -u amarok -p amarok &lt; amarok.sql</kbd></div>
+
+
+<p>Teraz pozostaje tylko skonfigurować amaroka, aby korzystał z zewnętrznej bazy danych. Dane muszą być oczywiście takie jakich użyliśmy przed chwilą.</p>
+
+<p><img src="/img/2013/amarok-system-mariadb.png" alt="Konfiguracja amaroka i zewnętrznej bazy" /></p>
+
+<h3 id="digikam">digiKam</h3>
+
+<p>Zaczniemy od utworzenia 2 nowych baz dla digiKama i użytkownika dla tych baz.</p>
+
+<p><div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; CREATE USER &#39;digikam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;digikam&#39;;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; CREATE DATABASE \`digikam\`;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; CREATE DATABASE \`thumbnails-digikam\`;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; GRANT ALL PRIVILEGES ON digikam.* to &#39;digikam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;digikam&#39;;</kbd></div>
+
+<div class="kbd-wrapper"><kbd><i class="fa fa-keyboard-o prompt" aria-hidden="true"></i>&gt; GRANT ALL PRIVILEGES ON thumbnails-digikam.* to &#39;digikam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;digikam&#39;;</kbd></div>
+</p>
+
+<p>Następnie korzystamy z wbudowanego w digiKam narzędzia do migracji bazy danych. W tym celu uruchamiamy digiKam i z menu <code>Ustawienienia</code> wybieramy <code>Migracja bazy danych</code>. W lewej części okna wybieramy sqlite i podajemy ścieżkę gdzie są aktualnie bazy przechowywane. Domyślnie jest to <code>~/Obrazy</code>. W prawej części okna uzupełniamy dane niezbędne do połączenia z bazą mysql/mariadb.</p>
+
+<p><img src="/img/2013/digikam-system-mariadb.png" alt="Migracja sqlite do mariadb w digiKam" /></p>
+
+<p>Pozostaje sprawdzić połączenie i zmigrować naszą bazę sqlite do mysql/mariadb przez naciśnięcie przycisku <code>Migruj -&gt;</code>.
+Czas migracji zależny jest od wielkości naszej kolekcji oraz wydajności naszego sprzętu, zwłaszcza dysku twardego i procesora. Po migracji ostatnim krokiem jest skonfigurowanie digiKama, aby korzystał z bazy mysql/mariadb. Z menu <code>Ustawienia</code> wybieramy <code>Konfiguracja: digiKam...</code> i w sekcji <code>Baza danych</code> należy wybrać MySQL i uzupełnić dane połączenia.</p>
+
+<p><img src="/img/2013/digikam-use-system-mariadb.png" alt="Konfiguracja mysql w digiKam" /></p>
+
+<p>UWAGA! Jeśli z komputera korzysta kilku użytkowników, należy dla każdego użytkownika utworzyć osobną bazę. Jako nazwę dla baz, można użyć schematu <code>$USER_akonadi</code>, <code>$USER_amarok</code> i <code>$USER_digikam</code>.</p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://fisiu.github.io/2013/11/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse" data-id="dd0c5076f83ead33906cfb97e4c08f53" class="article-share-link">
+        Udostępnij
+    </a>
+    
+    <a href="http://fisiu.github.io/2013/11/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse/#disqus_thread" class="article-comment-link">
+        Komentarze
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://fisiu.github.io/2013/03/chromium-i-flash-via-ppapi" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Starszy
+      </strong>
+      <div class="article-nav-title">Chromium i flash via PPAPI</div>
+    </a>
+    
+
+    
+    <a href="http://fisiu.github.io/2014/03/z-wordpressa-do-html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Nowszy
+      </strong>
+      <div class="article-nav-title">Z wordpressa do html</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'fisiu-github-io';
+    var disqus_identifier = 'http:\/\/fisiu.github.io\/2013\/11\/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse';
+    var disqus_title = 'Konsolidacja baz mysql dla aplikacji KDE w openSUSE';
+    var disqus_url = 'http:\/\/fisiu.github.io\/2013\/11\/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Kategorie</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://fisiu.github.iocategories/opensuse">
+                    opensuse
+                </a>
+                <span class="category-list-count">14</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Chmura tagów
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://fisiu.github.iotags/ajax" style="font-size: 12px;">ajax</a>
+        
+        <a href="http://fisiu.github.iotags/android" style="font-size: 12px;">android</a>
+        
+        <a href="http://fisiu.github.iotags/aptana" style="font-size: 12px;">aptana</a>
+        
+        <a href="http://fisiu.github.iotags/bash" style="font-size: 12px;">bash</a>
+        
+        <a href="http://fisiu.github.iotags/blog" style="font-size: 12px;">blog</a>
+        
+        <a href="http://fisiu.github.iotags/build-service" style="font-size: 12px;">build-service</a>
+        
+        <a href="http://fisiu.github.iotags/buildservice" style="font-size: 12px;">buildservice</a>
+        
+        <a href="http://fisiu.github.iotags/c&#43;&#43;" style="font-size: 12px;">c&#43;&#43;</a>
+        
+        <a href="http://fisiu.github.iotags/chromium" style="font-size: 12px;">chromium</a>
+        
+        <a href="http://fisiu.github.iotags/colibri" style="font-size: 12px;">colibri</a>
+        
+        <a href="http://fisiu.github.iotags/dropbox" style="font-size: 12px;">dropbox</a>
+        
+        <a href="http://fisiu.github.iotags/eclipse" style="font-size: 12px;">eclipse</a>
+        
+        <a href="http://fisiu.github.iotags/factory" style="font-size: 12px;">factory</a>
+        
+        <a href="http://fisiu.github.iotags/flash" style="font-size: 12px;">flash</a>
+        
+        <a href="http://fisiu.github.iotags/fontconfig" style="font-size: 12px;">fontconfig</a>
+        
+        <a href="http://fisiu.github.iotags/github" style="font-size: 12px;">github</a>
+        
+        <a href="http://fisiu.github.iotags/ide" style="font-size: 12px;">ide</a>
+        
+        <a href="http://fisiu.github.iotags/java" style="font-size: 12px;">java</a>
+        
+        <a href="http://fisiu.github.iotags/jbake" style="font-size: 12px;">jbake</a>
+        
+        <a href="http://fisiu.github.iotags/kadu" style="font-size: 12px;">kadu</a>
+        
+        <a href="http://fisiu.github.iotags/kde" style="font-size: 12px;">kde</a>
+        
+        <a href="http://fisiu.github.iotags/kde-sc" style="font-size: 12px;">kde-sc</a>
+        
+        <a href="http://fisiu.github.iotags/konferencja" style="font-size: 12px;">konferencja</a>
+        
+        <a href="http://fisiu.github.iotags/linux" style="font-size: 12px;">linux</a>
+        
+        <a href="http://fisiu.github.iotags/luzem" style="font-size: 12px;">luzem</a>
+        
+        <a href="http://fisiu.github.iotags/opensuse" style="font-size: 12px;">opensuse</a>
+        
+        <a href="http://fisiu.github.iotags/osc15" style="font-size: 12px;">osc15</a>
+        
+        <a href="http://fisiu.github.iotags/pakiety" style="font-size: 12px;">pakiety</a>
+        
+        <a href="http://fisiu.github.iotags/php" style="font-size: 12px;">php</a>
+        
+        <a href="http://fisiu.github.iotags/plazma" style="font-size: 12px;">plazma</a>
+        
+        <a href="http://fisiu.github.iotags/pliki" style="font-size: 12px;">pliki</a>
+        
+        <a href="http://fisiu.github.iotags/ppapi" style="font-size: 12px;">ppapi</a>
+        
+        <a href="http://fisiu.github.iotags/projekt" style="font-size: 12px;">projekt</a>
+        
+        <a href="http://fisiu.github.iotags/repozytoria" style="font-size: 12px;">repozytoria</a>
+        
+        <a href="http://fisiu.github.iotags/sled" style="font-size: 12px;">sled</a>
+        
+        <a href="http://fisiu.github.iotags/ssd" style="font-size: 12px;">ssd</a>
+        
+        <a href="http://fisiu.github.iotags/tomcat" style="font-size: 12px;">tomcat</a>
+        
+        <a href="http://fisiu.github.iotags/touchpad" style="font-size: 12px;">touchpad</a>
+        
+        <a href="http://fisiu.github.iotags/widzet" style="font-size: 12px;">widzet</a>
+        
+        <a href="http://fisiu.github.iotags/wordpress" style="font-size: 12px;">wordpress</a>
+        
+        <a href="http://fisiu.github.iotags/wydajno%c5%9b%c4%87" style="font-size: 12px;">wydajność</a>
+        
+        <a href="http://fisiu.github.iotags/zsh" style="font-size: 12px;">zsh</a>
+        
+        <a href="http://fisiu.github.iotags/zypper" style="font-size: 12px;">zypper</a>
+        
+    </div>
+</div>
+
+
+
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-2256304-7', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://fisiu.github.iofancybox/jquery.fancybox.pack.js"></script>
+<script src="http://fisiu.github.iojs/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['\\(','\\)']]}
+  });
+</script>
+
+</body>
+</html>
