@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tomcat on System.out.println</title>
+    <link>http://fisiu.github.io/tags/tomcat/</link>
+    <description>Recent content in Tomcat on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Thu, 27 Mar 2014 13:12:27 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/tomcat/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Biblioteka Apache Tomcat Native w Eclipse</title>
+      <link>http://fisiu.github.io/2014/03/biblioteka-apache-tomcat-native-w-eclipse</link>
+      <pubDate>Thu, 27 Mar 2014 13:12:27 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2014/03/biblioteka-apache-tomcat-native-w-eclipse</guid>
+      <description>
+
+&lt;p&gt;Po dodaniu serwera aplikacji Apache Tomcat w Eclipse, podczas startu widzimy w logach:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jak dodać bibliotekę Apache Tomcat Native do &lt;code&gt;java.library.path&lt;/code&gt;? Najpierw trzeba ją skompilować.&lt;/p&gt;
+
+&lt;p&gt;No potrzeby tego postu, zakładam, że tomcat znajduje w katalogu &lt;code&gt;/opt/java/servers/tomcat7&lt;/code&gt;. Jeśli zmienna CATALINA_HOME nie jest ustawiona, warto ją dodać do np. &lt;code&gt;~/.profile&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Export tomcat home
+export CATALINA_HOME=/opt/java/servers/tomcat7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;instalacja-zależności&#34;&gt;Instalacja zależności&lt;/h3&gt;
+
+&lt;p&gt;Zanim zaczniemy kompilować, konieczne jest przygotowanie systemu. Na podstawowy zestaw narzędzi do kompilacji kodu w języku &lt;code&gt;c&lt;/code&gt; składa się &lt;code&gt;gcc&lt;/code&gt; i &lt;code&gt;make&lt;/code&gt;. Indywidualne pakiety można zainstalować za pomocą:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper in make gcc&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Można także skorzystać z dostępnych wzorców i zainstalować &lt;code&gt;pattern devel_C_C++&lt;/code&gt; za pomocą:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper in -t pattern devel_C_C&amp;#43;&amp;#43;&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Do kompilacji samej zaś biblioteki potrzebujemy pakiety &lt;code&gt;libopenssl-devel&lt;/code&gt; oraz &lt;code&gt;libapr1-devel&lt;/code&gt;. Jeśli jeszcze ich nie mamy w systemie, to instalujemy:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper in libopenssl-devel libapr1-devel&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&#34;kompilacja-biblioteki&#34;&gt;Kompilacja biblioteki&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Przechodzimy do katalogu &lt;code&gt;bin&lt;/code&gt; w katalogu tomcata i rozpakowujemy źródła.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;cd $CATALINA_HOME/bin&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;tar xf tomcat-native.tar.gz&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Przechodzimy do katalogu &lt;code&gt;tomcat-native-1.1.29-src/jni/native&lt;/code&gt;
+Uwaga! Wersja biblioteki może się różnić, zależnie od użytej wersji tomcata. W wersji tomcat-7.0.52 biblioteka natywna jest w wersji 1.1.29.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;cd tomcat-native-1.1.29-src/jni/native&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Konfiguracja i kompilacja
+Aby przygotować źródła do kompilacji, wywołujemy skrypt &lt;code&gt;configure&lt;/code&gt;. W liście parametrów dostarczamy ścieżkę do plików nagłówkowych &lt;code&gt;apr&lt;/code&gt; oraz ustawiamy &lt;code&gt;prefix&lt;/code&gt; - ścieżka gdzie biblioteka zostanie zainstalowana po wywołaniu &lt;code&gt;make install&lt;/code&gt; z zachowaniem struktury katalogów. Po skonfigurowaniu, wystarczy skompilować i zainstalować bibliotekę.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;./configure --with-apr=$(which apr-1-config) --prefix=$CATALINA_HOME/native&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;make &amp;amp;&amp;amp; make install&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Jako potwierdzenie, że biblioteka została zainstalowana, wyświetlona zostanie informacja:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;Libraries have been installed in:
+   /opt/java/servers/tomcat7/native/lib
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Na powyższą ścieżkę składa się użyty &lt;code&gt;prefix&lt;/code&gt; podczas konfiguracji i katalog &lt;code&gt;lib&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;java-library-path&#34;&gt;java.library.path&lt;/h3&gt;
+
+&lt;p&gt;Podczas próby uruchomienia tomcata z poziomy eclipse, nadal dostajemy informację, że biblioteka natywna nie jest dostępna. Pomimo, że przed chwilą zostało skompilowana i zainstalowana. Trzeba jeszcze dać ją do ściżki, z której będzie dostępna dla Javy. Aby nie modyfikować ustawień systemowych, można to osiągnąć w eclipse.
+Otwieramy konfigurację uruchamiania. PPM na naszym projekcie → Run configurations wybieramy konfigurację dla Apache Tomcat a z niej kartę &lt;code&gt;Environment&lt;/code&gt;. Dodajemy nowy parametr o nazwie &lt;code&gt;LD_LIBRARY_PATH&lt;/code&gt; i wartości takiej jak ścieżka, gdzie nasza biblioteka została zainstalowana, czyli &lt;code&gt;/opt/java/servers/tomcat7/native/lib&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2014/tomcat-native-lib-eclipse.png&#34; alt=&#34;java.library.path&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Po zastosowaniu zmian i uruchomieniu serwera, w dzienniku uruchamiania możemy zobaczyć:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;INFO: Loaded APR based Apache Tomcat Native library 1.1.29 using APR version 1.4.8.
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

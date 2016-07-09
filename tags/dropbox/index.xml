@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dropbox on System.out.println</title>
+    <link>http://fisiu.github.io/tags/dropbox/</link>
+    <description>Recent content in Dropbox on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Thu, 26 Feb 2009 16:41:20 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/dropbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dropbox i KDE</title>
+      <link>http://fisiu.github.io/2009/02/dropbox-i-kde</link>
+      <pubDate>Thu, 26 Feb 2009 16:41:20 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2009/02/dropbox-i-kde</guid>
+      <description>&lt;p&gt;Dropbox jest usługą pozwalającą nam na synchronizację plików pomiędzy komputerami. Nasze dane są przesyłane na serwer a z niego na inne nasze komputery. O cały proces dba aplikacja działająca w tle, która monitoruje nasze pliki i w razie potrzeby dokonuje ich aktualizacji. Darmowa wersja konta udostępnia nam 2GB przestrzeni dyskowej. Aczkolwiek istnieje sposób na powiększenie jej do 6GB bez wydawania nawet złotówki. Po więcej informacji na ten temat zapraszam na &lt;a href=&#34;https://www.getdropbox.com/referrals&#34;&gt;https://www.getdropbox.com/referrals&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Twórcy usługi nie ograniczają się tylko do użytkowników &lt;em&gt;jedynie słusznego systemu&lt;/em&gt; i dlatego udostępnili aplikację zarówno dla Windows, MacOSX jak i Linux. Oficjalna wersja dla  &lt;em&gt;pingwina&lt;/em&gt; jest zintegrowana z nautilusem, elementem środowiska Gnome. Jednak cóż począć, jeśli korzystamy z KDE? A i na to jest rada ;)
+&lt;!-- more --&gt;
+Najpierw musimy pobrać aplikację stosowną do wersji naszego systemu.
+  * &lt;a href=&#34;http://www.getdropbox.com/download?plat=lnx.x86&#34;&gt;Dropbox&lt;/a&gt; dla wersji 32-bit
+  * &lt;a href=&#34;http://www.getdropbox.com/download?plat=lnx.x86_64&#34;&gt;Dropbox&lt;/a&gt; dla wersji 64-bit&lt;/p&gt;
+
+&lt;p&gt;Załóżmy, że archiwum z aplikacją zostanie zapisane w naszym katalogu domowym, &lt;code&gt;~/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Następnie musimy je rozpakować. W tym celu możemy użyć menu kontekstowego menedżera plików bądź wydając polecenie w konsoli:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;tar -xvf dropbox-lnx.x86*&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Archiwum zostnie wypakowane do naszego katalogu domowego. Następnie przechodzimy do miejsca, gdzie zostało ono rozpakowane:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;cd ~/.dropbox-dist&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Teraz pozostaje nam już tylko uruchomić program, wydając polecenie:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;./dropboxd&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Dalej postępujemy zgodnie z kreatorem pierwszego uruchomienia, gdzie możemy określić m.in. katalog, którego zawartość będzie synchronizowana.&lt;/p&gt;
+
+&lt;p&gt;Jeśli chcemy, aby  &lt;em&gt;Dropbox&lt;/em&gt; był uruchamiany razem z KDE, wystarczy dodać go do aplikacji auto startu. W tym celu wybieramy z menu systemowego &lt;em&gt;Ustawienia Systemowe → Zaawansowane → Automatyczne Uruchomienie&lt;/em&gt;. W oknie konfiguracji wybieramy przycisk  &lt;strong&gt;Add Program&lt;/strong&gt; i podajemy ścieżkę do programu:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;~/.dropbox-dist/dropboxd&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Zaznaczamy jeszcze opcję &lt;strong&gt;Enabled&lt;/strong&gt;, aby aktywować automatyczne uruchamianie dopiero co skonfigurowanego programu.&lt;/p&gt;
+
+&lt;p&gt;Od tej pory &lt;em&gt;Dropbox&lt;/em&gt; będzie czuwał nad stanem naszych plików po każdym uruchomieniu komputera.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2009/dropbox_tray-300x55.png&#34; alt=&#34;&amp;quot;Dropbox w tacce Systemowej&amp;quot;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sled on System.out.println</title>
+    <link>http://fisiu.github.io/tags/sled/</link>
+    <description>Recent content in Sled on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Mon, 06 Apr 2009 20:20:04 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/sled/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>home:Fisiu także dla SLED11</title>
+      <link>http://fisiu.github.io/2009/04/home-fisiu-takze-dla-sled11</link>
+      <pubDate>Mon, 06 Apr 2009 20:20:04 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2009/04/home-fisiu-takze-dla-sled11</guid>
+      <description>&lt;p&gt;Dotychczas &lt;a href=&#34;https://build.opensuse.org/&#34;&gt;openSUSE Build Service&lt;/a&gt; wykorzystywałem do budowania pakietów dla openSUSE. Jak pokazuje życie, również użytkownicy &lt;a href=&#34;http://www.novell.com/linux/&#34;&gt;SUSE Linux Enterpsrise Desktop&lt;/a&gt; chcieliby korzystać z aplikacji takich jak &lt;a href=&#34;http://www.kadu.net&#34;&gt;kadu&lt;/a&gt; czy &lt;a href=&#34;http://krzemin.iglu.cz/software/qnapi&#34;&gt;qnapi&lt;/a&gt;. Więc postanowiłem stworzyć repozytorium również dla nich. Jako, że wersja SLED/SLES 11 bazuje na openSUSE 11.1, stworzenie repozytorium i przebudowanie pakietów zajęło tylko kilka chwil. Dostępne jest ono pod adresem:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;http://download.opensuse.org/repositories/home:/Fisiu/SLE_11/&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Wystarczy dodać adres repozytorium za pomocą Yast lub terminala:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper ar http://download.opensuse.org/repositories/home:/Fisiu/SLE_11/home:Fisiu&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

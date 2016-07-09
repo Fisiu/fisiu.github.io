@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssd on System.out.println</title>
+    <link>http://fisiu.github.io/tags/ssd/</link>
+    <description>Recent content in Ssd on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Tue, 11 Mar 2014 18:10:19 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/ssd/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Planista We/Wy dla dysków SSD w openSUSE</title>
+      <link>http://fisiu.github.io/2014/03/planista-we/wy-dla-dysk%C3%B3w-ssd-w-opensuse</link>
+      <pubDate>Tue, 11 Mar 2014 18:10:19 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2014/03/planista-we/wy-dla-dysk%C3%B3w-ssd-w-opensuse</guid>
+      <description>&lt;p&gt;Domyślnym planistą We/Wy w openSUSE jest &lt;abbr title=&#34;Complete Fairness Queueing&#34;&gt;CFQ&lt;/abbr&gt; i radzi on sobie z klasycznymi dyskami talerzowymi całkiem dobrze. Więcej informacji o samym planiście CFQ można znaleźć w &lt;a href=&#34;https://www.kernel.org/doc/Documentation/block/cfq-iosched.txt&#34;&gt;dokumentacji kernela&lt;/a&gt; a przegląd planistów dostępnych w dystrybucji openSUSE dostępny jest w &lt;a href=&#34;http://activedoc.opensuse.org/book/opensuse-system-analysis-and-tuning-guide/chapter-13-tuning-io-performance&#34;&gt;podręczniku openSUSE, rozdział 13&lt;/a&gt;. Dla dysków &lt;abbr title=&#34;Solid State Drive&#34;&gt;SSD&lt;/abbr&gt; lepszym wyborem zdaje się być planista Deadline bądź Noop.&lt;/p&gt;
+
+&lt;p&gt;Sprawdzić aktualnie używanego planistę można za pomocą:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;cat /sys/block/sda/queue/scheduler&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;noop deadline [cfq]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jako &lt;code&gt;root&lt;/code&gt; możemy zmienić planistę w &amp;lsquo;locie&amp;rsquo;:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;echo noop &amp;gt; /sys/block/sda/queue/scheduler&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Skoro już wiemy jak zmienić planistę po uruchomieniu systemu, pozostaje tylko ten proces zautomatyzować. Jeśli posiadamy w komputerze tylko jeden dysk, i jest nim dysk SSD (lub kilka, lecz wszystkie są SSD), najprostszym rozwiązaniem będzie dodanie parametru &lt;code&gt;elevator&lt;/code&gt; (nazwa planisty jako wartość) do listy wywołania jądra. W tym celu edytujemy plik:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;sudo vi /etc/default/grub&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I dodajemy nasz parametr do pozostałych dla opcji &lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT&lt;/code&gt;. Przykładowy fragment ww. pliku może wyglądać tak:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-config&#34;&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot; video=1680x1050 resume=/dev/disk/by-id/ata-Hitachi_HDS721050CLA362_JP1521HN0MUHTA-part5 splash=silent quiet showopts radeon.audio=0 radeon.dpm=1 elevator=deadline&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pozostaje nam jeszcze zaktualizowanie menu rozruchowego, za pomocą:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;grub2-mkconfig -o /boot/grub2/grub.cfg&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;A co gdy mamy kilka dysków, różnego typu, zarówno talerzowe jak i SSD? Wówczas nie ruszamy menu gruba, tylko korzystamy z dobrodziejstw &lt;code&gt;udev&lt;/code&gt;. Tworzymy zestaw prostych reguł, dzięki którym przydzielimy planistę w zależności od typu dysku. Tworzymy plik &lt;code&gt;/etc/udev/rules.d/50-io-schedulers.rules&lt;/code&gt; z zawartością:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-config&#34;&gt;# set deadline scheduler for non-rotating disks
+ACTION==&amp;quot;add|change&amp;quot;, KERNEL==&amp;quot;sd[a-z]&amp;quot;, ATTR{queue/rotational}==&amp;quot;0&amp;quot;, ATTR{queue/scheduler}=&amp;quot;deadline&amp;quot;
+
+# set cfq scheduler for rotating disks
+ACTION==&amp;quot;add|change&amp;quot;, KERNEL==&amp;quot;sd[a-z]&amp;quot;, ATTR{queue/rotational}==&amp;quot;1&amp;quot;, ATTR{queue/scheduler}=&amp;quot;cfq&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Reguły będą mieć zastosowanie po ponownym uruchomieniu komputera. Dla przykładu, w komputerze dysk &lt;code&gt;/dev/sda&lt;/code&gt; jest dyskiem SSD a &lt;code&gt;/dev/sdb&lt;/code&gt; jest dyskiem talerzowym. Wyjście polecenia &lt;code&gt;cat /sys/block/sd{a,b}/queue/scheduler&lt;/code&gt; zwróci:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;noop [deadline] cfq
+noop deadline [cfq]
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

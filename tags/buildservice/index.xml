@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Buildservice on System.out.println</title>
+    <link>http://fisiu.github.io/tags/buildservice/</link>
+    <description>Recent content in Buildservice on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Mon, 08 Nov 2010 21:15:54 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/buildservice/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Krusader z svn</title>
+      <link>http://fisiu.github.io/2010/11/krusader-z-svn</link>
+      <pubDate>Mon, 08 Nov 2010 21:15:54 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2010/11/krusader-z-svn</guid>
+      <description>&lt;p&gt;Krusader zainstalowany z domyślnych repozytoriów na openSUSE 11.3 potrafi zirytować nawet najbardziej wytrwałego i cierpliwego usera. Ja nie wytrzymywałem z błędami istniejącymi w wersji 2.0 więc skompilowałem paczki z wersją prosto z svn. Aktualnie jest to wersja 2.2.0.svn z 02.11.2010. Paczki dostępne są w repo &lt;a href=&#34;http://download.opensuse.org/repositories/home:/Fisiu:/playground/openSUSE_11.3/&#34;&gt;home:Fisiu:playground&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2010/krusader_2.2.0.svn_.png&#34; alt=&#34;&amp;quot;Krusader 2.2&amp;quot;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Zmiany w repozytorium</title>
+      <link>http://fisiu.github.io/2010/10/zmiany-w-repozytorium</link>
+      <pubDate>Tue, 26 Oct 2010 12:52:31 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2010/10/zmiany-w-repozytorium</guid>
+      <description>&lt;p&gt;No i zakurzyło się tu trochę. Czas na porządki. Zacznę od repo.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Zaktualizowane paczki cairo + freetype z włączonym wygładzaniem podpikselowym. Od teraz w osobnym repo &lt;a href=&#34;http://download.opensuse.org/repositories/home:/Fisiu:/lcd/&#34;&gt;home:Fisiu:lcd&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.kadu.net/&#34;&gt;Kadu&lt;/a&gt; jest oficjalnie w repo &lt;a href=&#34;http://en.opensuse.org/Package_repositories#Contrib&#34;&gt;Contrib&lt;/a&gt; i tym samym paczka z home powędrowała do własnego miejsca w &lt;a href=&#34;http://download.opensuse.org/repositories/home:/Fisiu:/kadu/&#34;&gt;home:Fisiu:kadu&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Pakiety &lt;a href=&#34;http://qbittorrent.sourceforge.net/&#34;&gt;qbittorrent&lt;/a&gt; i &lt;a href=&#34;http://codelite.org/&#34;&gt;codelite&lt;/a&gt; są już w repo Contrib. I najlepiej instalować stamtąd instalować :wink:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I tyle z najważniejszych zmian&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CodeLite w repozytorium</title>
+      <link>http://fisiu.github.io/2009/03/codelite-w-repozytorium</link>
+      <pubDate>Mon, 09 Mar 2009 14:47:20 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2009/03/codelite-w-repozytorium</guid>
+      <description>&lt;p&gt;CodeLite to zintegrowane środowisko programistyczne (IDE) dla języka C/C++. Dostępne jest na kilka platform systemowych, w tym Linuksa. Interfejs aplikacji jest oparty o bibliotekę &lt;a href=&#34;http://www.wxwidgets.org/&#34;&gt;wxWidgetes&lt;/a&gt; a sama aplikacja udostępniona jest na licencji &lt;a href=&#34;http://gnu.org.pl/text/licencja-gnu.html&#34;&gt;GPLv2&lt;/a&gt;. Po szczegóły odsyłam na stronę główną programu &lt;a href=&#34;http://codelite.org/&#34;&gt;http://codelite.org/&lt;/a&gt;.
+&lt;!-- more --&gt;
+&lt;img src=&#34;http://fisiu.github.io/img/2009/codelite.jpg&#34; alt=&#34;&amp;quot;Zrzut ekranu CodeLite&amp;quot;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Moje repozytorium dostępne jest w &lt;a href=&#34;http://en.opensuse.org/Build_Service&#34;&gt;openSUSE Build Service&lt;/a&gt; pod adresem:
+&lt;a href=&#34;http://download.opensuse.org/repositories/home:/Fisiu/&#34;&gt;http://download.opensuse.org/repositories/home:/Fisiu/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
