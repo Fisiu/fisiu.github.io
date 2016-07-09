@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fontconfig on System.out.println</title>
+    <link>http://fisiu.github.io/tags/fontconfig/</link>
+    <description>Recent content in Fontconfig on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Wed, 25 Jan 2012 22:22:22 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/fontconfig/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Priorytety fontów a fontconfig</title>
+      <link>http://fisiu.github.io/2012/01/priorytety-fontow-a-fontconfig</link>
+      <pubDate>Wed, 25 Jan 2012 22:22:22 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2012/01/priorytety-fontow-a-fontconfig</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.freedesktop.org/wiki/Software/fontconfig&#34;&gt;Fontconfig&lt;/a&gt; jest biblioteką służącą do konfiguracji dostępu do fontów. Cała konfiguracja jest przechowywana w plikach &lt;a href=&#34;http://pl.wikipedia.org/wiki/XML&#34;&gt;xml&lt;/a&gt;, dzięki czemu są one czytelne i łatwe w modyfikacji. Wyczerpujące informacje można znaleźć w podręczniku man fonts-conf bądź bezpośrednio na &lt;a href=&#34;http://www.freedesktop.org/software/fontconfig/fontconfig-user.html&#34;&gt;stronie&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Domyślna konfiguracja jest wystarczająca dla przeciętnego użytkownika jednak ma pewien mankament. Otóż rodzina fontów MS ma większy priorytet niż fonty domyślne. Dla przykładu, mając ustawione fonty z rodziny &lt;strong&gt;DejaVu Sans&lt;/strong&gt; jako domyślne instalujemy font &lt;strong&gt;Consolas&lt;/strong&gt; (dostępny np. w &lt;a href=&#34;http://download.microsoft.com/download/E/6/7/E675FFFC-2A6D-4AB0-B3EB-27C9F8C8F696/PowerPointViewer.exe&#34;&gt;PowerPointViewer&lt;/a&gt; - wypakować za pomocą cabextract). Okazuje się, że po instalacji staje się on domyślnym fontem monospace. Czy aby tego chcieliśmy?&lt;/p&gt;
+
+&lt;p&gt;Jeśli nie chcemy aby zainstalowane fonty MS stały się domyślnymi, wystarczy zmienić konfigurację fontconfig. Tworzymy kopię zapasową i edytujemy plik:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;cp /etc/fonts/suse-post-user.conf /etc/fonts/suse-post-user.conf.backup&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;vim /etc/fonts/suse-post-user.conf&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Odszukujemy odpowiednie fonty które wg. nas nie powinny panoszyć się w systemie (np. Consolas, Verdana, etc.) i przenosimy je o kilka linii w dół. Po zapisaniu pliku pozostaje nam odświeżenie pamięci podręcznej fontconfig:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;rm /var/cache/fontconfig/*&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;fc-cache -r&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Od teraz, fonty którym obniżyliśmy priorytet nie będą &amp;lsquo;ustawiać&amp;rsquo; się jako domyślne choć nadal można będzie z nich korzystać.&lt;/p&gt;
+
+&lt;p&gt;Przykładowy plik konfiguracyjny z obniżonym priorytetem fontów MS: &lt;script src=&#34;//gist.github.com/Fisiu/9403085.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

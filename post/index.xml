@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on System.out.println</title>
+    <link>http://fisiu.github.io/post/</link>
+    <description>Recent content in Posts on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Sun, 10 May 2015 14:58:17 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Konferencja openSUSE #oSC15</title>
+      <link>http://fisiu.github.io/2015/05/konferencja-opensuse-osc15</link>
+      <pubDate>Sun, 10 May 2015 14:58:17 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2015/05/konferencja-opensuse-osc15</guid>
+      <description>
+
+&lt;p&gt;Jako wieloletni użytkownik openSUSE, po &lt;a href=&#34;https://build.opensuse.org/project/show/home:Fisiu&#34;&gt;kilku&lt;/a&gt; &lt;a href=&#34;http://forum.suse.pl/index.php?action=profile;u=3617&#34;&gt;latach&lt;/a&gt; &lt;a href=&#34;https://forums.opensuse.org/member.php/284-Fisiu&#34;&gt;aktywnego&lt;/a&gt; &lt;a href=&#34;https://i18n.opensuse.org/stats/trunk/pl/&#34;&gt;uczestnictwa&lt;/a&gt; w projekcie openSUSE zdecydowałem się na udział w konferencji. Była to okazja do poznania ludzi, z którymi znamy się od lat - jednak do tej pory wyłącznie przez internet. Planowanie zacząłem około 2 miesiące przed datą konferencji, która zaplanowana była na 1 - 4 Maj 2015. Od jakiegoś czasu w openSUSE istnieje program &lt;a href=&#34;https://en.opensuse.org/openSUSE:Travel_Support_Program&#34;&gt;TSP&lt;/a&gt;, dzięku któremu można wziąć udział w wydarzeniach związanych z openSUSE nie rujnując swojego budżetu. Sam też korzystałem ze wsparcia TSP ;-)&lt;/p&gt;
+
+&lt;h3 id=&#34;dzień-0&#34;&gt;Dzień 0.&lt;/h3&gt;
+
+&lt;p&gt;Po dotarciu na &lt;a href=&#34;https://www.google.pl/maps/place/Westvliet+Fitness+%26+Racket+club/@52.0668922,4.3699617,17z/data=!4m2!3m1!1s0x0000000000000000:0x9885b46b2cff059b?hl=pl&#34;&gt;miejsce&lt;/a&gt; konferencji, okazło się, że jestem pierwszy :-D
+Jednak trudy podróży OSW -&amp;gt; &lt;i class=&#34;fa fa-car&#34;&gt;&lt;/i&gt; -&amp;gt; KTW -&amp;gt; &lt;i class=&#34;fa fa-plane&#34;&gt;&lt;/i&gt; -&amp;gt; EIN -&amp;gt; &lt;i class=&#34;fa fa-train&#34;&gt;&lt;/i&gt; -&amp;gt; HAG nie były straszne, bo od razu po dotarciu, razem z organizatorami (+&lt;a href=&#34;https://plus.google.com/+HansdeRaad/&#34;&gt;Hans&lt;/a&gt;, +&lt;a href=&#34;https://plus.google.com/101576589822337229579/&#34;&gt;Robin&lt;/a&gt;) zaczęliśmy ogarniać krzesła w kilku (6!) salach konferencyjnych. Na koniec zostało rozwieszenie plakatów i banerów. Westvliet Sport Center było gotowe, by dnia następnego hostować konferencję &lt;code&gt;#oSC15&lt;/code&gt;.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&#34;dzień-1&#34;&gt;Dzień 1.&lt;/h3&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;systemctl start #oSC15&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Już z samego rana ustawiłem się na froncie, by dopilnować rejestracji użytkowników ;-) Później już same sesje, rozmowy, warsztaty. Było o uwolnieniu źródeł SLE, o nowościach i planach rozwojowych OBS o także ciekawie o kluczach w przestrzeni publicznej. Nie mogę także zapomnieć o 2 warsztatach, na których doskonaliliśmy umiejętności tworzenia/utrzymywania pakietów rpm.&lt;/p&gt;
+
+&lt;h3 id=&#34;dzień-2&#34;&gt;Dzień 2.&lt;/h3&gt;
+
+&lt;p&gt;Więcej sesji. O nowościach w LibreOffice i YaST. Bardzo ciekawa była sesja o &amp;ldquo;płytkach ARM&amp;rdquo; i openSUSE, czyli jakie kroki podjąć, by nasza płytka działała pod kontrolą openSUSE. Na sesji poświęconej monitorowaniu serwerów dowiedziałem się jak to robię mistrzowie - inżynierowie z SUSE. Poznałem także webowe narzędzie postfix.admin do zarządzania serwerem pocztowym postfix. No i oczywiście warsztaty z ownCloud - własna chmura na płytce ARM :-)
+Wieczorne zwiedzanie Hagi zakończyło się zbyt późno, by zdążyć jeszcze na BBQ ;-)&lt;/p&gt;
+
+&lt;h3 id=&#34;dzień-3&#34;&gt;Dzień 3.&lt;/h3&gt;
+
+&lt;p&gt;Cały ranek, aż do obiadu - mega warsztat z vim. Czyli jak być bardziej produkcyjnym, niekoniecznie pracując w trybie INSERT :-D Poźniej było kilka sesji związanych z bezpieczeństwem zarówno serwerów jak i stacji roboczych.
+Zwiedzanie skończone wcześniej = &lt;code&gt;BBQ mode&lt;/code&gt; :-)&lt;/p&gt;
+
+&lt;h3 id=&#34;dzień-4&#34;&gt;Dzień 4.&lt;/h3&gt;
+
+&lt;p&gt;Godzinny udział w spotkaniu projektu openSUSE. Niestety, lot zaplanowany na 15:10 zmusił mnie do wczesnego pożegnania się z konferencją.&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;systemctl stop #oSC15&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Konferencja skończona.&lt;/li&gt;
+&lt;li&gt;Bagaż doświadczeń powiększył się.&lt;/li&gt;
+&lt;li&gt;Nowe znajomości zawarte.&lt;/li&gt;
+&lt;li&gt;Poziom wiedzy wzrósł.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Jednym słowem - konferencja &lt;code&gt;#oSC15&lt;/code&gt; była świetna!&lt;/p&gt;
+
+&lt;p&gt;Co dalej? Już za rok w Norymberdze kolejna konferencja openSUSE, &lt;code&gt;#oSC16&lt;/code&gt;. Już dzisiaj wiem, że pojadę. Może tym razem będzie z Polski ktoś jeszcze? Do zobaczenia zielona drużyno!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Jak okiełznać bałagan w zdjęciach?</title>
+      <link>http://fisiu.github.io/2014/06/jak-okielznac-balagan-w-zdjeciach</link>
+      <pubDate>Sun, 22 Jun 2014 19:31:45 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2014/06/jak-okielznac-balagan-w-zdjeciach</guid>
+      <description>&lt;p&gt;Zbieramy fotki z jakiegoś wydarzenia na przestrzeni kilku lat. W tym czasie używamy różnych aparatów, telefonów czy kamer. Każde z tych urządzeń ma inny schemat nazywania plików, różne formaty daty i/lub czasu. Dochodzimy do momentu, że w katalogu mamy setki czy tysiące zdjęć. Jak zatem zapanować na takim bałaganem? Ano w 2 prostych krokach.
+Po pierwsze, kopiujemy wszystkie zdjęcia do nowego katalogu. W międzyczasie sprawdzamy czy mamy zainstalowany program &lt;code&gt;jhead&lt;/code&gt; np. za pomocą &lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;which jhead&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Jeśli programu brak, to w openSUSE szybko instalujemy za pomocą YaST bądź w konsoli &lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;sudo zypper in jhead&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Program zainstalowany, zdjęcia skopiowane - czas ogarnąć bałagan.
+W konsoli przechodzimy do katalogu ze zdjęciami i uruchamiamy:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;jhead -autorot -ft -nfIMG_%Y.%m.%d-%H.%M.%S *.jpg&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Użyte parametry oznaczają:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;-autorot Automatyczne obracanie zdjęcia na podstawie danych Exif&lt;/li&gt;
+&lt;li&gt;-ft Ustawia datę modyfikacji pliku na podstawie daty z danych Exif&lt;/li&gt;
+&lt;li&gt;-nf Zmienia nazwę pliku, zgodnie z podanym wzorcem (&lt;code&gt;man date&lt;/code&gt;), data i czas ustawiane na podstawie danych Exif&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I tak przykładowy plik &lt;code&gt;20130801_144642.jpg&lt;/code&gt; zmieni nazwę na &lt;code&gt;IMG_2013.08.01-14.46.41.jpg&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;PS. Jeśli wcześniej usunęliśmy dane Exif z plików, niestety nic z tego nie wyjdzie.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Porządki w home:Fisiu:kadu</title>
+      <link>http://fisiu.github.io/2014/06/porzadki-w-home-fisiu-kadu</link>
+      <pubDate>Thu, 19 Jun 2014 18:22:03 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2014/06/porzadki-w-home-fisiu-kadu</guid>
+      <description>&lt;p&gt;Wydanie kadu-1.0 coraz &lt;a href=&#34;http://www.kadu.im/forum/viewtopic.php?f=6&amp;amp;t=16970&#34;&gt;bliżej&lt;/a&gt;. O ile do wydania openSUSE 13.2 jeszcze sporo czasu &lt;a href=&#34;https://news.opensuse.org/2013/05/17/opensuse-kicks-off-development-with-milestone-1&#34;&gt;pozostało&lt;/a&gt;, to moje repozytorium &lt;a href=&#34;https://build.opensuse.org/project/show/home:Fisiu:kadu&#34;&gt;home:Fisiu:kadu&lt;/a&gt; dostarczało kadu w najnowszej wersji wszystkim użytkownikom openSUSE. Aktualnie dostępne są dwie wersje, ostatnie wydanie z serii 0.12 - kadu-0.12.3, a dla starszych wersji openSUSE ostatnie wydanie z serii 0.6 - kadu-0.6.5.&lt;/p&gt;
+
+&lt;p&gt;Kadu 0.12.3 zostanie zaktualizowane do wersji 1.0 a kadu-old (czyli wersja 0.6.5) zostanie usunięte. Jeśli ktoś z Was chciałby widzieć wersję kadu-0.12.3 jako wersję archiwalną czyli kadu-old, proszę o taką informację. Jeśli w przeciągu tygodnia nie będzie takiej informacji, uznam, że liczy się dla Was tylko najnowsza wersja kadu ;-) Albo wersja dostępna w głównym repozytorium danej wersji openSUSE.&lt;/p&gt;
+
+&lt;p&gt;Główna biblioteka z której korzysta kadu, &lt;code&gt;libgadu&lt;/code&gt; jest już dostępna w wersji &lt;a href=&#34;http://libgadu.net/releases/1.12.0.html&#34;&gt;1.12.0&lt;/a&gt; więc kadu-1.0 powinno być dostępne &amp;ldquo;na dniach&amp;rdquo;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JBake 2.3.0 dostępny</title>
+      <link>http://fisiu.github.io/2014/06/jbake-2-3-0-dostepny</link>
+      <pubDate>Sun, 15 Jun 2014 21:07:47 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2014/06/jbake-2-3-0-dostepny</guid>
+      <description>&lt;p&gt;Całkiem niedawno ukazała się nowa wersja &lt;a href=&#34;http://jbake.org/&#34;&gt;jbake&lt;/a&gt; - 2.3.0. Lista zmian dla tego wydania przedstawia się nastepująco:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Wsparcie dla przyrostowego renderowania stron (w tym wydaniu jeszcze domyślnie wyłączone, funkcja eksperymentalna)&lt;/li&gt;
+&lt;li&gt;Dodano wsparcie dla projektów w podkatalogach&lt;/li&gt;
+&lt;li&gt;Kod odpowiedzialny za parsowanie i renderowanie został przepisany, dzięki czemu łatwiejsze jest jego utrzymanie i dodawanie nowych funkcjonalności&lt;/li&gt;
+&lt;li&gt;Domyślny status może być teraz zdefiniowany w pliku konfiguracyjnym&lt;/li&gt;
+&lt;li&gt;Naprawiono błąd URI występujący na platformie Windows&lt;/li&gt;
+&lt;li&gt;Dodano opcję wiersza polceń realizującą opcje bake+serve&lt;/li&gt;
+&lt;li&gt;Dostęp do opcji konfiguracyjnych z plików w formacie AsciiDoc&lt;/li&gt;
+&lt;li&gt;Dodano wsparcie dla frameworka logowania&lt;/li&gt;
+&lt;li&gt;Dodano obsługę szablonów Groovy oraz Thymeleaf&lt;/li&gt;
+&lt;li&gt;Rozszerzony model danych jest dostępny w szablonach&lt;/li&gt;
+&lt;li&gt;Usprawniono raportowanie błędów&lt;/li&gt;
+&lt;li&gt;Startowy szablon został zaktualizowany i używa teraz Bootstrap 3.1.1 oraz jQuery 1.11.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Jbake &lt;a href=&#34;http://search.maven.org/#browse|523103791&#34;&gt;jest&lt;/a&gt; już dostępny w centralnym repozytorium maven. Można także użyć &lt;a href=&#34;https://github.com/ingenieux/jbake-maven-plugin&#34;&gt;jbake-maven-plugin&lt;/a&gt; do szybkiego generowania stron i podglądu na żywo. Lista celów: &lt;code&gt;mvn jbake:help&lt;/code&gt; w głównym katalogu projektu.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Biblioteka Apache Tomcat Native w Eclipse</title>
+      <link>http://fisiu.github.io/2014/03/biblioteka-apache-tomcat-native-w-eclipse</link>
+      <pubDate>Thu, 27 Mar 2014 13:12:27 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2014/03/biblioteka-apache-tomcat-native-w-eclipse</guid>
+      <description>
+
+&lt;p&gt;Po dodaniu serwera aplikacji Apache Tomcat w Eclipse, podczas startu widzimy w logach:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jak dodać bibliotekę Apache Tomcat Native do &lt;code&gt;java.library.path&lt;/code&gt;? Najpierw trzeba ją skompilować.&lt;/p&gt;
+
+&lt;p&gt;No potrzeby tego postu, zakładam, że tomcat znajduje w katalogu &lt;code&gt;/opt/java/servers/tomcat7&lt;/code&gt;. Jeśli zmienna CATALINA_HOME nie jest ustawiona, warto ją dodać do np. &lt;code&gt;~/.profile&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Export tomcat home
+export CATALINA_HOME=/opt/java/servers/tomcat7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;instalacja-zależności&#34;&gt;Instalacja zależności&lt;/h3&gt;
+
+&lt;p&gt;Zanim zaczniemy kompilować, konieczne jest przygotowanie systemu. Na podstawowy zestaw narzędzi do kompilacji kodu w języku &lt;code&gt;c&lt;/code&gt; składa się &lt;code&gt;gcc&lt;/code&gt; i &lt;code&gt;make&lt;/code&gt;. Indywidualne pakiety można zainstalować za pomocą:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper in make gcc&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Można także skorzystać z dostępnych wzorców i zainstalować &lt;code&gt;pattern devel_C_C++&lt;/code&gt; za pomocą:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper in -t pattern devel_C_C&amp;#43;&amp;#43;&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Do kompilacji samej zaś biblioteki potrzebujemy pakiety &lt;code&gt;libopenssl-devel&lt;/code&gt; oraz &lt;code&gt;libapr1-devel&lt;/code&gt;. Jeśli jeszcze ich nie mamy w systemie, to instalujemy:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper in libopenssl-devel libapr1-devel&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&#34;kompilacja-biblioteki&#34;&gt;Kompilacja biblioteki&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Przechodzimy do katalogu &lt;code&gt;bin&lt;/code&gt; w katalogu tomcata i rozpakowujemy źródła.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;cd $CATALINA_HOME/bin&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;tar xf tomcat-native.tar.gz&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Przechodzimy do katalogu &lt;code&gt;tomcat-native-1.1.29-src/jni/native&lt;/code&gt;
+Uwaga! Wersja biblioteki może się różnić, zależnie od użytej wersji tomcata. W wersji tomcat-7.0.52 biblioteka natywna jest w wersji 1.1.29.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;cd tomcat-native-1.1.29-src/jni/native&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Konfiguracja i kompilacja
+Aby przygotować źródła do kompilacji, wywołujemy skrypt &lt;code&gt;configure&lt;/code&gt;. W liście parametrów dostarczamy ścieżkę do plików nagłówkowych &lt;code&gt;apr&lt;/code&gt; oraz ustawiamy &lt;code&gt;prefix&lt;/code&gt; - ścieżka gdzie biblioteka zostanie zainstalowana po wywołaniu &lt;code&gt;make install&lt;/code&gt; z zachowaniem struktury katalogów. Po skonfigurowaniu, wystarczy skompilować i zainstalować bibliotekę.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;./configure --with-apr=$(which apr-1-config) --prefix=$CATALINA_HOME/native&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;make &amp;amp;&amp;amp; make install&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Jako potwierdzenie, że biblioteka została zainstalowana, wyświetlona zostanie informacja:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;Libraries have been installed in:
+   /opt/java/servers/tomcat7/native/lib
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Na powyższą ścieżkę składa się użyty &lt;code&gt;prefix&lt;/code&gt; podczas konfiguracji i katalog &lt;code&gt;lib&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;java-library-path&#34;&gt;java.library.path&lt;/h3&gt;
+
+&lt;p&gt;Podczas próby uruchomienia tomcata z poziomy eclipse, nadal dostajemy informację, że biblioteka natywna nie jest dostępna. Pomimo, że przed chwilą zostało skompilowana i zainstalowana. Trzeba jeszcze dać ją do ściżki, z której będzie dostępna dla Javy. Aby nie modyfikować ustawień systemowych, można to osiągnąć w eclipse.
+Otwieramy konfigurację uruchamiania. PPM na naszym projekcie → Run configurations wybieramy konfigurację dla Apache Tomcat a z niej kartę &lt;code&gt;Environment&lt;/code&gt;. Dodajemy nowy parametr o nazwie &lt;code&gt;LD_LIBRARY_PATH&lt;/code&gt; i wartości takiej jak ścieżka, gdzie nasza biblioteka została zainstalowana, czyli &lt;code&gt;/opt/java/servers/tomcat7/native/lib&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2014/tomcat-native-lib-eclipse.png&#34; alt=&#34;java.library.path&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Po zastosowaniu zmian i uruchomieniu serwera, w dzienniku uruchamiania możemy zobaczyć:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;INFO: Loaded APR based Apache Tomcat Native library 1.1.29 using APR version 1.4.8.
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Uzupełnianie poleceń zyppera w zsh</title>
+      <link>http://fisiu.github.io/2014/03/uzupelnianie-polecen-zyppera-w-zsh</link>
+      <pubDate>Sun, 23 Mar 2014 19:12:19 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2014/03/uzupelnianie-polecen-zyppera-w-zsh</guid>
+      <description>&lt;p&gt;Narzędzie uzupełniania poleceń w zsh jest na prawdę potężne. Po zainstalowaniu ZSH w openSUSE 13.1 za pomocą &lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;sudo zypper in zsh&lt;/kbd&gt;&lt;/div&gt;
+ przyszła pora na poprawę wyglądu i zachowania powłoki.
+Zamiast tworzyć wszystko od podstaw skorzystałem z gotowego rozwiązania jakim jest &lt;a href=&#34;http://ohmyz.sh/&#34;&gt;oh-my-zsh&lt;/a&gt;. Jednak zamiast korzystać z wbudowanych motywów, użyłem &lt;a href=&#34;https://powerline.readthedocs.org/en/latest/&#34;&gt;powerline&lt;/a&gt; i dostosowałem wygląd do swoich potrzeb. Aktualnie wygląda to tak:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2014/zsh-konsole-powerline-prompt.png&#34; alt=&#34;konsola_powerline_prompt&#34; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Domyślna dystrybucja ZSH zawiera sporą ilość rozszerzeń, jednym z nich jest uzupełnianie poleceń zyppera. Jednak zaraz po instalacji ZSH, uzupełnianie są tylko globalne opcje zyppera, bez listy poleceń. Można się spytać po co nam takie uzupełnianie które nie działa? A no po to żeby je naprawić ;-) Najpierw uruchomiłem ZSH z parametrami &lt;code&gt;-xv&lt;/code&gt;, dzięki temu widziałem jaka funkcja i skąd jest uruchamiana. Okazało się, że lista poleceń zyppera była źle filtrowana, i w efekcie wszystkie polecenia były pomijane na liście podpowiedzi. Rozwiązanie okazało się całkiem proste i wygląda dokładnie jak w poniższym kodzie:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-patch&#34;&gt;From 08c2443e5722b578943d2eccfca708e54dea5d20 Mon Sep 17 00:00:00 2001
+From: Mariusz Fik &amp;lt;fisiu@opensuse.org&amp;gt;
+Date: Sat, 15 Mar 2014 20:23:51 +0100
+Subject: [PATCH] Fix zypper commands completion [zypper &amp;lt;TAB&amp;gt;].
+
+Signed-off-by: Mariusz Fik &amp;lt;fisiu@opensuse.org&amp;gt;
+---
+ Completion/openSUSE/Command/_zypper | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/Completion/openSUSE/Command/_zypper b/Completion/openSUSE/Command/_zypper
+index ef8ca20..25a32c3 100644
+--- a/Completion/openSUSE/Command/_zypper
++++ b/Completion/openSUSE/Command/_zypper
+@@-2,6 +2,7 @@
+ #
+ # Copyright (C) 2009 Holger Macht &amp;lt;holger@homac.de&amp;gt;
+ # Copyright (C) 2014 Thomas Mitterfellner &amp;lt;thomas.mitterfellner@gmail.com&amp;gt;
++# Copyright (C) 2014 Mariusz Fik &amp;lt;fisiu@opensuse.org&amp;gt;
+ #
+ # This file is released under the GPLv2.
+ #
+@@-45,8 +46,10 @@ _zypper() {
+             # start parsing with &amp;quot;Global Options:&amp;quot;
+             [[ $hline =~ &amp;quot;^Global Options:&amp;quot; ]] &amp;amp;&amp;amp; tag=1
+             [[ $tag = 0 ]] &amp;amp;&amp;amp; continue
++            # skip empty lines
++            [[ $hline =~ ^\s*$ ]] &amp;amp;&amp;amp; continue
+             # all commands have to start with lower case letters
+-            [[ $hline[1] =~ ^[A-Z] ]] &amp;amp;&amp;amp; continue
++            [[ $hline == [[:upper:]]* ]] &amp;amp;&amp;amp; continue
+             (( ${#hline} &amp;lt; 2 )) &amp;amp;&amp;amp; continue
+
+             # cut comma at end of command
+--
+1.8.4.5﻿
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Powyższa łatka została już &lt;a href=&#34;https://sourceforge.net/p/zsh/code/ci/2dcf05310612d9bc9980d57f15d500fcf220a974/&#34;&gt;włączona&lt;/a&gt; do rozwojowej wersji ZSH i tym samym będzie dostępna wraz z kolejnym wydaniem (5.0.6) ZSH. Jednak nic nie stoi na przeszkodzie aby samodzielnie poprawić funkcję uzupełniania, wystarczy tylko zmodyfikować plik &lt;code&gt;/usr/share/zsh/functions/Completion/openSUSE/_zypper&lt;/code&gt;.
+Od teraz, wpisując w terminalu np. &lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper s[tab]&lt;/kbd&gt;&lt;/div&gt;
+ zobaczymy wszystkie możliwe opcje zaczynające się na literę s:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;search           -- se Search for packages matching a pattern.
+services         -- ls List all defined services.
+shell            -- sh Accept multiple commands at once.
+source-download  -- Download source rpms for all installed packages to a local directory.
+source-install   -- si Install source packages and their build dependencies.
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Planista We/Wy dla dysków SSD w openSUSE</title>
+      <link>http://fisiu.github.io/2014/03/planista-we/wy-dla-dysk%C3%B3w-ssd-w-opensuse</link>
+      <pubDate>Tue, 11 Mar 2014 18:10:19 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2014/03/planista-we/wy-dla-dysk%C3%B3w-ssd-w-opensuse</guid>
+      <description>&lt;p&gt;Domyślnym planistą We/Wy w openSUSE jest &lt;abbr title=&#34;Complete Fairness Queueing&#34;&gt;CFQ&lt;/abbr&gt; i radzi on sobie z klasycznymi dyskami talerzowymi całkiem dobrze. Więcej informacji o samym planiście CFQ można znaleźć w &lt;a href=&#34;https://www.kernel.org/doc/Documentation/block/cfq-iosched.txt&#34;&gt;dokumentacji kernela&lt;/a&gt; a przegląd planistów dostępnych w dystrybucji openSUSE dostępny jest w &lt;a href=&#34;http://activedoc.opensuse.org/book/opensuse-system-analysis-and-tuning-guide/chapter-13-tuning-io-performance&#34;&gt;podręczniku openSUSE, rozdział 13&lt;/a&gt;. Dla dysków &lt;abbr title=&#34;Solid State Drive&#34;&gt;SSD&lt;/abbr&gt; lepszym wyborem zdaje się być planista Deadline bądź Noop.&lt;/p&gt;
+
+&lt;p&gt;Sprawdzić aktualnie używanego planistę można za pomocą:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;cat /sys/block/sda/queue/scheduler&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;noop deadline [cfq]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jako &lt;code&gt;root&lt;/code&gt; możemy zmienić planistę w &amp;lsquo;locie&amp;rsquo;:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;echo noop &amp;gt; /sys/block/sda/queue/scheduler&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Skoro już wiemy jak zmienić planistę po uruchomieniu systemu, pozostaje tylko ten proces zautomatyzować. Jeśli posiadamy w komputerze tylko jeden dysk, i jest nim dysk SSD (lub kilka, lecz wszystkie są SSD), najprostszym rozwiązaniem będzie dodanie parametru &lt;code&gt;elevator&lt;/code&gt; (nazwa planisty jako wartość) do listy wywołania jądra. W tym celu edytujemy plik:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;sudo vi /etc/default/grub&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I dodajemy nasz parametr do pozostałych dla opcji &lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT&lt;/code&gt;. Przykładowy fragment ww. pliku może wyglądać tak:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-config&#34;&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot; video=1680x1050 resume=/dev/disk/by-id/ata-Hitachi_HDS721050CLA362_JP1521HN0MUHTA-part5 splash=silent quiet showopts radeon.audio=0 radeon.dpm=1 elevator=deadline&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pozostaje nam jeszcze zaktualizowanie menu rozruchowego, za pomocą:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;grub2-mkconfig -o /boot/grub2/grub.cfg&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;A co gdy mamy kilka dysków, różnego typu, zarówno talerzowe jak i SSD? Wówczas nie ruszamy menu gruba, tylko korzystamy z dobrodziejstw &lt;code&gt;udev&lt;/code&gt;. Tworzymy zestaw prostych reguł, dzięki którym przydzielimy planistę w zależności od typu dysku. Tworzymy plik &lt;code&gt;/etc/udev/rules.d/50-io-schedulers.rules&lt;/code&gt; z zawartością:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-config&#34;&gt;# set deadline scheduler for non-rotating disks
+ACTION==&amp;quot;add|change&amp;quot;, KERNEL==&amp;quot;sd[a-z]&amp;quot;, ATTR{queue/rotational}==&amp;quot;0&amp;quot;, ATTR{queue/scheduler}=&amp;quot;deadline&amp;quot;
+
+# set cfq scheduler for rotating disks
+ACTION==&amp;quot;add|change&amp;quot;, KERNEL==&amp;quot;sd[a-z]&amp;quot;, ATTR{queue/rotational}==&amp;quot;1&amp;quot;, ATTR{queue/scheduler}=&amp;quot;cfq&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Reguły będą mieć zastosowanie po ponownym uruchomieniu komputera. Dla przykładu, w komputerze dysk &lt;code&gt;/dev/sda&lt;/code&gt; jest dyskiem SSD a &lt;code&gt;/dev/sdb&lt;/code&gt; jest dyskiem talerzowym. Wyjście polecenia &lt;code&gt;cat /sys/block/sd{a,b}/queue/scheduler&lt;/code&gt; zwróci:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;noop [deadline] cfq
+noop deadline [cfq]
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Z wordpressa do html</title>
+      <link>http://fisiu.github.io/2014/03/z-wordpressa-do-html</link>
+      <pubDate>Mon, 10 Mar 2014 14:49:19 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2014/03/z-wordpressa-do-html</guid>
+      <description>&lt;p&gt;Wiosna za pasem więc czas po porządki. Z racji, że ciągłe powiadomienia o kolejnych aktualizacjach wordpressa czy jego wtyczek zaczęły mnie dość mocno irytować a samo utrzymywanie tego bloga wymagało systematycznego nakładu pracy. Postanowiłem wyeliminować źródło problemów, czyli wordpressa. Więc zacząłem się rozglądać za &amp;ldquo;czymś&amp;rdquo; do generowania statycznych treści. Miało być to proste narzędzie, z relatywnie małymi zależnościami, umożliwiające szybki start. No i oczywiście import starych postów z wordpressa.&lt;/p&gt;
+
+&lt;p&gt;I tak trafiłem na system &lt;a href=&#34;http://www.jbake.org/&#34;&gt;JBake&lt;/a&gt;. Narzędzie napisane w Javie, kilka silników do obsługi szablonów (&lt;a href=&#34;http://freemarker.org/&#34;&gt;freemarker&lt;/a&gt;, &lt;a href=&#34;http://groovy.codehaus.org/Groovy+Templates&#34;&gt;groovy templates&lt;/a&gt; i &lt;a href=&#34;http://www.thymeleaf.org/&#34;&gt;thymeleaf&lt;/a&gt; v.2.3.0), dostępna &lt;a href=&#34;https://github.com/ingenieux/jbake-maven-plugin&#34;&gt;wtyczka mavena&lt;/a&gt; umożliwia podgląd postów na żywo oraz automatyczne wysyłanie treści na &lt;a href=&#34;http://pages.github.com/&#34;&gt;githuba&lt;/a&gt;. JBake nie posiada możliwości importowania danych bezpośrednio z wordpressa. Jednak istnieje sporo narzędzi do eksportowania stron/postów z wordpressa do formatu markdown. Osobiście użyłem nieco &lt;a href=&#34;https://github.com/Fisiu/exitwp&#34;&gt;zmodyfikowanego&lt;/a&gt; skryptu &lt;a href=&#34;https://github.com/thomasf/exitwp&#34;&gt;exitwp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pozostało stworzyć jakiś motyw i poprawić domyślne szablony. Podczas tego eksperymentu powstał motyw &lt;code&gt;fidbake&lt;/code&gt;, zbudowany w oparciu o bootstrap 3, fontawesome i system komentarzy disqus. Całość dostępna jest na licencji MIT: &lt;a href=&#34;https://github.com/Fisiu/fidbake&#34;&gt;https://github.com/Fisiu/fidbake&lt;/a&gt; a demo można sprawdzić pod adresem &lt;a href=&#34;http://jbake-fidano.rhcloud.com/&#34;&gt;http://jbake-fidano.rhcloud.com/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Stara (sub)domena jeszcze działa i wskazuje na stary blog. Aktualnie nie jestem pewien czy podpiąć ją pod githuba czy dać o niej zapomnieć. Czas pokaże&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Konsolidacja baz mysql dla aplikacji KDE w openSUSE</title>
+      <link>http://fisiu.github.io/2013/11/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse</link>
+      <pubDate>Thu, 21 Nov 2013 16:50:33 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2013/11/konsolidacja-baz-mysql-dla-aplikacji-kde-w-opensuse</guid>
+      <description>
+
+&lt;p&gt;Pulpit plazmy korzysta z akonadi, które w domyślnej konfiguracji używa własnej instancji mysql/mariadb. Amarok przechowuje informacje o naszej bibliotece (notowania, teksty, oceny) również w bazie mysql. W tym celu korzysta również z własnej instancji. DigiKam domyślnie przechowuje informacji o kolekcji obrazów w bazie sqlite. Przy większych kolekcjach, może okazać się, że wydajność sqlite jest niewystarczająca. Nic nie stoi na przeszkodzie, aby wszystkie bazy przenieść do systemowej instancji mariadb. Dzięki temu unikniemy dublowania instancji baz dla akonadi i amaroka oraz przyspieszymy działanie digiKama.&lt;/p&gt;
+
+&lt;p&gt;I krótka legenda dla kodów użytych w tym wpisie.Kody zaczynające się od:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;# - należy wykonać jako root&lt;/li&gt;
+&lt;li&gt;$ - należy wykonać jako zwykły użytkownik&lt;/li&gt;
+&lt;li&gt;&amp;gt; - należy wykonać w konsoli mysql/mariadb&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Zanim zaczniemy migrować bazy, należy zainstalować serwer mysql/mariadb i uruchomić go:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;# zypper in mariadb&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;# systemctl enable mysql&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;# systemctl start mysql&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&#34;akonadi&#34;&gt;Akonadi&lt;/h3&gt;
+
+&lt;p&gt;Upewniamy się, że akonadi działa:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;$ akonadictl status&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Tworzymy zrzut aktualnej bazy akonadi za pomocą:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;$ mysqldump --socket=~/.local/share/akonadi/socket-$HOSTNAME/mysql.socket akonadi &amp;gt; ~/akonadi-backup.sql&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Zatrzymujemy serwer akonadi:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;$ akonadictl stop&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Zmieniamy konfigurację bazy danych akonadi, tak aby korzystała z zewnętrznego serwera mysql. Możemy edytować plik &lt;code&gt;~/.config/akonadi/akonadiserverrc&lt;/code&gt; by jego zawartość wyglądała następująco:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[%General]
+Driver=QMYSQL
+SizeThreshold=4096
+ExternalPayload=false
+
+[QMYSQL]
+Name=akonadi
+Host=localhost
+Options=
+ServerPath=/usr/sbin/mysqld
+StartServer=false
+User=akonadi
+Password=akonadi
+
+[Debug]
+Tracer=null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lub możemy uruchomić:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;$ kcmshell4 akonadi&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Odznaczamy &amp;lsquo;Używaj wewnętrznego serwera MySQL&amp;rsquo; i uzupełniamy dane jak na rysunku poniżej.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2013/akonadi-system-mariadb.png&#34; alt=&#34;akonadi-system-mariadb&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Następnie konieczne jest dodanie bazy danych i użytkownika.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; CREATE USER &amp;#39;akonadi&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;akonadi&amp;#39;;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; CREATE DATABASE \`akonadi\`;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; GRANT ALL PRIVILEGES ON akonadi.* to &amp;#39;akonadi&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;akonadi&amp;#39;;&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Następnie należy przywrócić nasz zrzut bazy akonadi za pomocą:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;$ mysql akonadi &amp;lt; akonadi-backup.sql&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Teraz pozostało nam już tylko uruchomić serwer akonadi za pomocą:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;$ akonadictl start&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Jeśli spotkamy się z błędem:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-mysql&#34;&gt;Sql error: Table &#39;akonadi.SchemaVersionTable&#39; doesn&#39;t exist QMYSQL: Unable to execute query
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;należy zmienić nazwy table naszej bazy na format &lt;a href=&#34;http://en.wikipedia.org/wiki/CamelCase&#34;&gt;CamelCase&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE schemaversiontable TO SchemaVersionTable;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE resourcetable TO ResourceTable;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE collectionattributetable TO CollectionAttributeTable;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE collectionmimetyperelation TO CollectionMimeTypeRelation;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE collectionpimitemrelation TO CollectionPimItemRelation;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE collectiontable TO CollectionTable;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE flagtable TO FlagTable;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE mimetypetable TO MimeTypeTable;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE parttable TO PartTable;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE pimitemflagrelation TO PimItemFlagRelation;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; RENAME TABLE pimitemtable TO PimItemTable;&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Od teraz akonadi będzie korzystało z systemowej instancji mysql/mariadb.
+Możliwe są dalsze &lt;a href=&#34;http://cgbdx.wordpress.com/2011/07/21/how-to-setup-your-external-sql-server-for-akonadi/&#34;&gt;optymalizacje&lt;/a&gt; bazy danych, adekwatne do &lt;a href=&#34;https://projects.kde.org/projects/kdesupport/akonadi/repository/revisions/master/entry/server/src/storage/mysql-global.conf&#34;&gt;konfiguracji&lt;/a&gt; używanej przez dedykowaną instancję bazy.&lt;/p&gt;
+
+&lt;h3 id=&#34;amarok&#34;&gt;Amarok&lt;/h3&gt;
+
+&lt;p&gt;Zatrzymujemy serwer mysql/mariadb:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;# systemctl stop mysql&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Uruchamiamy serwer tylko z bazą amaroka:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;$ cd ~/.kde4/share/apps/amarok&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;$ /usr/sbin/mysqld --defaults-file=\`pwd\`/my.cnf --default-storage-engine=MyISAM --datadir=\`pwd\`/mysqle --socket=\`pwd\`/sock --skip-grant-tables&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Teraz pozostaje utworzyć zrzut bazy amaroka:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;$ mysqldump -S sock amarok &amp;gt; amarok.sql&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Po wykonaniu zrzuty możemy już zatrzymać serwer z bazą amarok i uruchomić serwer z konfiguracją globalną.&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;# systemctl start mysql&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Następnie konieczne jest utworzenie bazy danych, do której zaimportujemy dane z zrzutu.
+Tworzymy bazę i użytkownika:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; CREATE USER &amp;#39;amarok&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;amarok&amp;#39;;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; CREATE DATABASE \`amarok\`;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; GRANT ALL PRIVILEGES ON amarok.* to &amp;#39;amarok&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;amarok&amp;#39;;&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Importujemy zrzut do nowej bazy:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;$ mysql -u amarok -p amarok &amp;lt; amarok.sql&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Teraz pozostaje tylko skonfigurować amaroka, aby korzystał z zewnętrznej bazy danych. Dane muszą być oczywiście takie jakich użyliśmy przed chwilą.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2013/amarok-system-mariadb.png&#34; alt=&#34;Konfiguracja amaroka i zewnętrznej bazy&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;digikam&#34;&gt;digiKam&lt;/h3&gt;
+
+&lt;p&gt;Zaczniemy od utworzenia 2 nowych baz dla digiKama i użytkownika dla tych baz.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; CREATE USER &amp;#39;digikam&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;digikam&amp;#39;;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; CREATE DATABASE \`digikam\`;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; CREATE DATABASE \`thumbnails-digikam\`;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; GRANT ALL PRIVILEGES ON digikam.* to &amp;#39;digikam&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;digikam&amp;#39;;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&amp;gt; GRANT ALL PRIVILEGES ON thumbnails-digikam.* to &amp;#39;digikam&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;digikam&amp;#39;;&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Następnie korzystamy z wbudowanego w digiKam narzędzia do migracji bazy danych. W tym celu uruchamiamy digiKam i z menu &lt;code&gt;Ustawienienia&lt;/code&gt; wybieramy &lt;code&gt;Migracja bazy danych&lt;/code&gt;. W lewej części okna wybieramy sqlite i podajemy ścieżkę gdzie są aktualnie bazy przechowywane. Domyślnie jest to &lt;code&gt;~/Obrazy&lt;/code&gt;. W prawej części okna uzupełniamy dane niezbędne do połączenia z bazą mysql/mariadb.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2013/digikam-system-mariadb.png&#34; alt=&#34;Migracja sqlite do mariadb w digiKam&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pozostaje sprawdzić połączenie i zmigrować naszą bazę sqlite do mysql/mariadb przez naciśnięcie przycisku &lt;code&gt;Migruj -&amp;gt;&lt;/code&gt;.
+Czas migracji zależny jest od wielkości naszej kolekcji oraz wydajności naszego sprzętu, zwłaszcza dysku twardego i procesora. Po migracji ostatnim krokiem jest skonfigurowanie digiKama, aby korzystał z bazy mysql/mariadb. Z menu &lt;code&gt;Ustawienia&lt;/code&gt; wybieramy &lt;code&gt;Konfiguracja: digiKam...&lt;/code&gt; i w sekcji &lt;code&gt;Baza danych&lt;/code&gt; należy wybrać MySQL i uzupełnić dane połączenia.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2013/digikam-use-system-mariadb.png&#34; alt=&#34;Konfiguracja mysql w digiKam&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;UWAGA! Jeśli z komputera korzysta kilku użytkowników, należy dla każdego użytkownika utworzyć osobną bazę. Jako nazwę dla baz, można użyć schematu &lt;code&gt;$USER_akonadi&lt;/code&gt;, &lt;code&gt;$USER_amarok&lt;/code&gt; i &lt;code&gt;$USER_digikam&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Chromium i flash via PPAPI</title>
+      <link>http://fisiu.github.io/2013/03/chromium-i-flash-via-ppapi</link>
+      <pubDate>Sun, 03 Mar 2013 13:19:19 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2013/03/chromium-i-flash-via-ppapi</guid>
+      <description>&lt;p&gt;Ady korzystać z najnowszego flasha w openSUSE konieczne jest zainstalowanie pakietu &lt;code&gt;chromium-pepper-flash&lt;/code&gt;. Dostępny jest on w repozytorium &lt;strong&gt;packmana&lt;/strong&gt;. Instalacja ogranicza się tylko do wykonania:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper in chromium-pepper-flash&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Jednak aby chromium współpracowało z nową wtyczką, konieczne jest dodanie odpowiednich flag do globalnego pliku konfiguracyjnego chromium. Jako root edytujemy plik &lt;strong&gt;/etc/default/chromium&lt;/strong&gt; i dodajemy poniższe flagi. Jeśli już korzystamy z innych flag, wystarczy je dopisać na końcu.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-config&#34;&gt;CHROMIUM_FLAGS=&amp;quot;--ppapi-flash-path=/usr/lib/chromium/PepperFlash/libpepflashplayer.so&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jeśli korzystamy z openSUSE w wersji x86_64, ścieżka do wtyczki zawiera &lt;strong&gt;lib64&lt;/strong&gt; zamiast &lt;strong&gt;lib&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Po ponownym uruchomieniu przeglądarki chromium, odwiedzamy adres &lt;code&gt;chrome://plugins&lt;/code&gt;. Szukamy wtyczek flasha i wyłączamy wersję NPAPI. Od teraz chromium będzie korzystało z nowego flasha, aktualnie w wersji 11.6. Dzięki temu, karta graficzna działająca na otwartym sterowniku radeon czy intel wykorzystywana jest do renderowania obrazu. Zapewne podobna sytuacja będzie mieć miejsce w przypadku korzystania z innego sprzętu i sterowników, choć sam na innych konfiguracjach tego nie testowałem.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Touchpad i mysz usb bez spięć</title>
+      <link>http://fisiu.github.io/2012/04/touchpad-i-mysz-usb-bez-spiec</link>
+      <pubDate>Wed, 25 Apr 2012 14:24:23 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2012/04/touchpad-i-mysz-usb-bez-spiec</guid>
+      <description>&lt;p&gt;Często pracując na laptopie korzystam z zewnętrznej myszki na usb. Jednak po jej podłączeniu touchpad nadal działa a &amp;ldquo;magiczny&amp;rdquo; skrót do jego obsługi Fn + F3 &lt;strong&gt;*&lt;/strong&gt; zdaje się być bezużyteczny. Z pomocą przychodzi nam udev i wszechstronność jego reguł. Aby wyłączyć touchpad po podłączeniu myszy do portu usb i automatycznie go włączyć po jej odłączeniu wystarczy, że utworzymy 2 proste reguły. Tworzymy plik &lt;code&gt;/etc/udev/rules.d/01-touchpad.rules&lt;/code&gt; z zawartością zamieszczoną poniżej. W miejsce &lt;code&gt;$user&lt;/code&gt; wstawiamy nazwę użytkownika.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ACTION==&amp;quot;add&amp;quot;, SUBSYSTEM==&amp;quot;input&amp;quot;, KERNEL==&amp;quot;mouse[1-9]&amp;quot;, ENV{DISPLAY}=&amp;quot;:0.0&amp;quot;, ENV{XAUTHORITY}=&amp;quot;/home/$user/.Xauthority&amp;quot;, ENV{ID_CLASS}=&amp;quot;mouse&amp;quot;, RUN+=&amp;quot;/usr/bin/synclient TouchpadOff=1&amp;quot;
+ACTION==&amp;quot;remove&amp;quot;, SUBSYSTEM==&amp;quot;input&amp;quot;, KERNEL==&amp;quot;mouse[1-9]&amp;quot;, ENV{DISPLAY}=&amp;quot;:0.0&amp;quot;, ENV{XAUTHORITY}=&amp;quot;/home/$user/.Xauthority&amp;quot;, ENV{ID_CLASS}=&amp;quot;mouse&amp;quot;, RUN+=&amp;quot;/usr/bin/synclient TouchpadOff=0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;*&lt;/strong&gt; Dell Vostro 3450 + Linux 3.3.2-1-desktop&lt;/p&gt;
+
+&lt;p&gt;Pozwoliłem sobie na edycję posta z bardzo prostego powodu. Człowiek pisze reguły udev zamiast uruchomić &lt;code&gt;synaptiks&lt;/code&gt; i zaznaczyć żądaną opcję. Zdecydowanie szybciej i wygodniej. Powyższy plik można spokojnie usunąć :wink:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2012/synaptiks-with-mouse.png&#34; alt=&#34;&amp;quot;Konfiguracja touchpada w KDE&amp;quot;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Priorytety fontów a fontconfig</title>
+      <link>http://fisiu.github.io/2012/01/priorytety-fontow-a-fontconfig</link>
+      <pubDate>Wed, 25 Jan 2012 22:22:22 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2012/01/priorytety-fontow-a-fontconfig</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.freedesktop.org/wiki/Software/fontconfig&#34;&gt;Fontconfig&lt;/a&gt; jest biblioteką służącą do konfiguracji dostępu do fontów. Cała konfiguracja jest przechowywana w plikach &lt;a href=&#34;http://pl.wikipedia.org/wiki/XML&#34;&gt;xml&lt;/a&gt;, dzięki czemu są one czytelne i łatwe w modyfikacji. Wyczerpujące informacje można znaleźć w podręczniku man fonts-conf bądź bezpośrednio na &lt;a href=&#34;http://www.freedesktop.org/software/fontconfig/fontconfig-user.html&#34;&gt;stronie&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Domyślna konfiguracja jest wystarczająca dla przeciętnego użytkownika jednak ma pewien mankament. Otóż rodzina fontów MS ma większy priorytet niż fonty domyślne. Dla przykładu, mając ustawione fonty z rodziny &lt;strong&gt;DejaVu Sans&lt;/strong&gt; jako domyślne instalujemy font &lt;strong&gt;Consolas&lt;/strong&gt; (dostępny np. w &lt;a href=&#34;http://download.microsoft.com/download/E/6/7/E675FFFC-2A6D-4AB0-B3EB-27C9F8C8F696/PowerPointViewer.exe&#34;&gt;PowerPointViewer&lt;/a&gt; - wypakować za pomocą cabextract). Okazuje się, że po instalacji staje się on domyślnym fontem monospace. Czy aby tego chcieliśmy?&lt;/p&gt;
+
+&lt;p&gt;Jeśli nie chcemy aby zainstalowane fonty MS stały się domyślnymi, wystarczy zmienić konfigurację fontconfig. Tworzymy kopię zapasową i edytujemy plik:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;cp /etc/fonts/suse-post-user.conf /etc/fonts/suse-post-user.conf.backup&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;vim /etc/fonts/suse-post-user.conf&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Odszukujemy odpowiednie fonty które wg. nas nie powinny panoszyć się w systemie (np. Consolas, Verdana, etc.) i przenosimy je o kilka linii w dół. Po zapisaniu pliku pozostaje nam odświeżenie pamięci podręcznej fontconfig:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;rm /var/cache/fontconfig/*&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;fc-cache -r&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Od teraz, fonty którym obniżyliśmy priorytet nie będą &amp;lsquo;ustawiać&amp;rsquo; się jako domyślne choć nadal można będzie z nich korzystać.&lt;/p&gt;
+
+&lt;p&gt;Przykładowy plik konfiguracyjny z obniżonym priorytetem fontów MS: &lt;script src=&#34;//gist.github.com/Fisiu/9403085.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Android i openSUSE 11.4</title>
+      <link>http://fisiu.github.io/2011/03/android-i-opensuse-11-4</link>
+      <pubDate>Thu, 24 Mar 2011 13:33:44 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2011/03/android-i-opensuse-11-4</guid>
+      <description>&lt;p&gt;Po instalacji i konfiguracji openSUSE 11.4 okazało się, że po instalacji &lt;a href=&#34;http://developer.android.com/sdk/index.html&#34;&gt;SDK Androida&lt;/a&gt; nie można połączyć się z zewnętrznym urządzeniem. Efekt jest taki:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;adb devices&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;List of devices attached
+????????????     no permissions
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Rozwiązanie jest bardzo proste. Należy najpierw sprawdzić, jak identyfikuje się nasz sprzęt.&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;lsusb&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 001 Device 002: ID 0dda:2005 Integrated Circuit Solution, Inc. Datalux DLX-1611 16in1 Card Reader
+Bus 001 Device 004: ID 04e8:681c Samsung Electronics Co., Ltd ← Moje urządzenie
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Istotną informacją jest ID producenta, w moim wypadku &lt;strong&gt;04e8&lt;/strong&gt;.
+Teraz pozostało stworzyć odpowiednią regułę udev. Bez zagłębiania się w szczegóły reguł udev, można to zrobić tak:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;echo &amp;#39;SUBSYSTEM==&amp;#34;usb&amp;#34;, ATTRS{idVendor}==&amp;#34;04e8&amp;#34;, ATTRS{idProduct}==&amp;#34;681c&amp;#34;, MODE=&amp;#34;0660&amp;#34; GROUP=&amp;#34;users&amp;#34;&amp;#39; &amp;gt; /etc/udev/rules.d/51-android.rules&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Od teraz urządzenie powinno już prawidłowo działać z naszym systemem.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Koniec spamowania ;)</title>
+      <link>http://fisiu.github.io/2011/02/koniec-spamowania-</link>
+      <pubDate>Fri, 25 Feb 2011 13:20:44 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2011/02/koniec-spamowania-</guid>
+      <description>&lt;p&gt;Jako, że cały czas poszukiwałem wtyczki odpowiedzialnej za kolorowane składni w WordPressie dzisiaj przyszła pora na zmianę&amp;hellip; Aktualnie ustawiłem &lt;del&gt;CodeColorer&lt;/del&gt; SyntaxHighlighter. Wtyczka ta korzysta z tagów code a nie z pre tak jak poprzednia. W związku z tym zmodyfikowałem kilka postów aby zastosować style nowej wtyczki. Niestety spowodowało to zaśmiecenie planety openSUSE więc dalszych edycji zaniechałem.
+Przepraszam czytelników za spam :)&lt;/p&gt;
+
+&lt;p&gt;W ramach przypomnienia, chciałem napisać o zmianie struktury repozytorium Packman. Wraz z &lt;a href=&#34;http://lists.links2linux.de/pipermail/packman/2011-February/009422.html&#34;&gt;aktualizacją OBS do 2.1&lt;/a&gt; na serwerach Packmana zmieniono układ repozytoriów. Do tej pory dostępne było jedno repozytorium w którym znajdowały się wszystkie pakiety. Aktualnie trwa przebudowywanie wszystkich pakietów więc nowy układ repozytoriów nie jest jeszcze kompletny. Jednak w efekcie końcowym, Packman będzie miał 4 repozytoria:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Essentials - podstawowe kodeki, MPlayer, SMPlayer&lt;/li&gt;
+&lt;li&gt;Multimedia - dodatkowe multimedia&lt;/li&gt;
+&lt;li&gt;Games - gry&lt;/li&gt;
+&lt;li&gt;Extra - wszystko co nie weszło w skład trzech powyższych&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Więc każdy będzie mógł dodać to co mu pasuje. Jednak jeśli ktoś będzie chciał mieć tylko jedno repozytorium zawierające wszystkie powyższe, dostępny będzie plik .repo. Tym sposobem będzie można korzystać z Packmana tak jak dotychczas.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Colibri - alternatywne powiadomienia plazmy</title>
+      <link>http://fisiu.github.io/2011/02/colibri-alternatywne-powiadomienia-plazmy</link>
+      <pubDate>Thu, 10 Feb 2011 13:25:44 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2011/02/colibri-alternatywne-powiadomienia-plazmy</guid>
+      <description>&lt;p&gt;Aby skorzystać z alternatywnych powiadomień plazmy konieczne jest posiadanie KDE SC w wersji minimum 4.5. Potrzebny nam pakiet znajduje się w repozytorium Extra - stosownym dla naszej wersji KDE. Instalujemy go za pomocą:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper install colibri&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Następnie usuwamy widżet domyślnych powiadomień plazmy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2011/remove_plazma_notification.png&#34; alt=&#34;&amp;quot;Usuwanie powiadomień plazmy&amp;quot;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Teraz wystarczy włączyć nowe powiadomienia. W tym celu uruchamiamy Ustawienia Systemowe → Powiadomienia programów i systemu → Colibri Notifications.
+Oto jak prezentuje się nowy styl powiadomień:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2011/colibri_notification.png&#34; alt=&#34;&amp;quot;Powiadomienia Colibri&amp;quot;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

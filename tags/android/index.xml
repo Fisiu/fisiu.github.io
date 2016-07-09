@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on System.out.println</title>
+    <link>http://fisiu.github.io/tags/android/</link>
+    <description>Recent content in Android on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Thu, 24 Mar 2011 13:33:44 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Android i openSUSE 11.4</title>
+      <link>http://fisiu.github.io/2011/03/android-i-opensuse-11-4</link>
+      <pubDate>Thu, 24 Mar 2011 13:33:44 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2011/03/android-i-opensuse-11-4</guid>
+      <description>&lt;p&gt;Po instalacji i konfiguracji openSUSE 11.4 okazało się, że po instalacji &lt;a href=&#34;http://developer.android.com/sdk/index.html&#34;&gt;SDK Androida&lt;/a&gt; nie można połączyć się z zewnętrznym urządzeniem. Efekt jest taki:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;adb devices&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;List of devices attached
+????????????     no permissions
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Rozwiązanie jest bardzo proste. Należy najpierw sprawdzić, jak identyfikuje się nasz sprzęt.&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;lsusb&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 001 Device 002: ID 0dda:2005 Integrated Circuit Solution, Inc. Datalux DLX-1611 16in1 Card Reader
+Bus 001 Device 004: ID 04e8:681c Samsung Electronics Co., Ltd ← Moje urządzenie
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Istotną informacją jest ID producenta, w moim wypadku &lt;strong&gt;04e8&lt;/strong&gt;.
+Teraz pozostało stworzyć odpowiednią regułę udev. Bez zagłębiania się w szczegóły reguł udev, można to zrobić tak:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;echo &amp;#39;SUBSYSTEM==&amp;#34;usb&amp;#34;, ATTRS{idVendor}==&amp;#34;04e8&amp;#34;, ATTRS{idProduct}==&amp;#34;681c&amp;#34;, MODE=&amp;#34;0660&amp;#34; GROUP=&amp;#34;users&amp;#34;&amp;#39; &amp;gt; /etc/udev/rules.d/51-android.rules&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Od teraz urządzenie powinno już prawidłowo działać z naszym systemem.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

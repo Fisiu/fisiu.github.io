@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ide on System.out.println</title>
+    <link>http://fisiu.github.io/tags/ide/</link>
+    <description>Recent content in Ide on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Mon, 20 Apr 2009 21:59:28 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/ide/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Aptana IDE i openSUSE x86_64</title>
+      <link>http://fisiu.github.io/2009/04/aptana-ide-i-opensuse-x86_64</link>
+      <pubDate>Mon, 20 Apr 2009 21:59:28 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2009/04/aptana-ide-i-opensuse-x86_64</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.aptana.com/&#34;&gt;Aptana&lt;/a&gt; - to zintegrowane środowisko programistyczne zbudowane na bazie &lt;a href=&#34;http://www.eclipse.org/&#34;&gt;Eclipse&lt;/a&gt;. Służy głównie do tworzenia aplikacji sieciowych w technologii &lt;a href=&#34;http://pl.wikipedia.org/wiki/AJAX&#34;&gt;AJAX&lt;/a&gt;. Środowisko oferuje wsparcie dla &lt;em&gt;JavaScript&lt;/em&gt;, &lt;em&gt;HTML&lt;/em&gt;, &lt;em&gt;DOM&lt;/em&gt;, &lt;em&gt;CSS&lt;/em&gt;, uzupełnianie kodu oraz debugger JavaScript. Dzięki mechanizmowi wtyczek możemy w łatwy sposób dodać wsparcie dla &lt;em&gt;Ruby on Rails&lt;/em&gt;, &lt;em&gt;PHP&lt;/em&gt;, &lt;em&gt;Python&lt;/em&gt;, &lt;em&gt;Perl&lt;/em&gt;, &lt;em&gt;Adobe AIR&lt;/em&gt; oraz &lt;em&gt;Apple iPhone&lt;/em&gt;. Aplikacja dostępna jest na wiele platform, jak i również w formie wtyczki do &lt;em&gt;Eclipse&lt;/em&gt;. Aptana, jako samodzielna aplikacja dostępna jest na platformę 32 bitową. Jednak po kilku prostych zabiegach możliwe jest jej uruchomienie w systemie x86_64.&lt;/p&gt;
+
+&lt;p&gt;Najpierw musimy pobrać główną aplikację Aptana Studio ze &lt;a href=&#34;http://www.aptana.com/&#34;&gt;strony domowej&lt;/a&gt;. W tym opisie wszystkie pobierane pliki znajdują się w katalogu domowym, &lt;code&gt;~/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;wget http://update.aptana.com/studio-standalone/Aptana_Studio_Setup_Linux_1.2.6.zip&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Następnie tworzymy katalog &lt;code&gt;/opt/aptana&lt;/code&gt;, zmieniamy jego właściciela i rozpakowujemy tam pobrany przed momentem plik.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;mkdir /opt/aptana&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;chown użytkownik:users /opt/aptana&amp;gt;&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;exit&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;unzip ~/Aptana_Studio_Setup_Linux_1.2.6.zip -d /opt&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Kolejno pobieramy i rozpakowujemy mozilla-xulrunner w wersji 32bit.
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;wget http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/linux-i686/xulrunner-1.8.1.3.en-US.linux-i686-20080128.tar.gz&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;tar -xvf ~/xulrunner-1.8.1.3.en-US.linux-i686-20080128.tar.gz -C /opt/aptana&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Teraz pozostało nam jeszcze doinstalowanie środowiska Javy 32bit. Uruchamiamy YaST → Oprogramowanie → Zarządzanie oprogramowaniem. Wybieramy pakiet widoczny na obrazku poniżej i akceptujemy zmiany.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2009/sun_java_i586.png&#34; alt=&#34;&amp;quot;sun_java_i586&amp;quot;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kolejną czynnością jaką musimy wykonać jest napisanie prostego skryptu o nazwie np. &lt;em&gt;RunAptana.sh&lt;/em&gt;. Można użyć dowolnego edytora. Ja posłużę się vi.&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;vi /opt/aptana/RunAptana.sh&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Kod skryptu powinien wyglądać tak:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+MOZILLA_FIVE_HOME=/opt/aptana/xulrunner
+if [ $LD_LIBRARY_PATH ]; then
+LD_LIBRARY_PATH=$MOZILLA_FIVE_HOME:$LD_LIBRARY_PATH
+else
+LD_LIBRARY_PATH=$MOZILLA_FIVE_HOME
+fi
+export MOZILLA_FIVE_HOME LD_LIBRARY_PATH
+/opt/aptana/AptanaStudio -vm /usr/lib/jvm/java-1.6.0-sun-1.6.0/jre/bin/java
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I teraz już możemy zacząć korzystać z Aptany, uruchamiając ją za pomocą tego skryptu:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;/opt/aptana/RunAptana.sh&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Bardziej wymagający użytkownicy mogą sobie stworzyć jeszcze skrót w menu aplikacji.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CodeLite w repozytorium</title>
+      <link>http://fisiu.github.io/2009/03/codelite-w-repozytorium</link>
+      <pubDate>Mon, 09 Mar 2009 14:47:20 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2009/03/codelite-w-repozytorium</guid>
+      <description>&lt;p&gt;CodeLite to zintegrowane środowisko programistyczne (IDE) dla języka C/C++. Dostępne jest na kilka platform systemowych, w tym Linuksa. Interfejs aplikacji jest oparty o bibliotekę &lt;a href=&#34;http://www.wxwidgets.org/&#34;&gt;wxWidgetes&lt;/a&gt; a sama aplikacja udostępniona jest na licencji &lt;a href=&#34;http://gnu.org.pl/text/licencja-gnu.html&#34;&gt;GPLv2&lt;/a&gt;. Po szczegóły odsyłam na stronę główną programu &lt;a href=&#34;http://codelite.org/&#34;&gt;http://codelite.org/&lt;/a&gt;.
+&lt;!-- more --&gt;
+&lt;img src=&#34;http://fisiu.github.io/img/2009/codelite.jpg&#34; alt=&#34;&amp;quot;Zrzut ekranu CodeLite&amp;quot;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Moje repozytorium dostępne jest w &lt;a href=&#34;http://en.opensuse.org/Build_Service&#34;&gt;openSUSE Build Service&lt;/a&gt; pod adresem:
+&lt;a href=&#34;http://download.opensuse.org/repositories/home:/Fisiu/&#34;&gt;http://download.opensuse.org/repositories/home:/Fisiu/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
