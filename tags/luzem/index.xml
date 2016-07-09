@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Luzem on System.out.println</title>
+    <link>http://fisiu.github.io/tags/luzem/</link>
+    <description>Recent content in Luzem on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Sun, 02 Nov 2008 22:57:58 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/luzem/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Czas start!</title>
+      <link>http://fisiu.github.io/2008/11/czas-start</link>
+      <pubDate>Sun, 02 Nov 2008 22:57:58 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2008/11/czas-start</guid>
+      <description>&lt;p&gt;W końcu znalazłem chwilę, aby dokończyć bloga. Co prawda w ostatniej chwili zdecydowałem się na zmianę motywu, przez co mogą pojawiać się drobne braki graficzne bądź inne. Mam nadzieję, że w niedługiej przyszłości doprowadzę wszystko do stanu prawie idealnego.
+Czas na rozpoczęcie blogowania, ze względu na liczebność obowiązków może nie jest najlepszy, choć biorąc pod uwagę cykl wydawniczy &lt;a href=&#34;http://www.opensuse.org&#34;&gt;openSUSE&lt;/a&gt; - jak najbardziej. Aktualną wersją systemu jest 11.0 a aktualnie trwające prace odnoszą się do wersji 11.1. Na dzień dzisiejszy, dodawanie &amp;ldquo;czegokolwiek&amp;rdquo; nowego do zestawu pakietów dystrybucji jest już zablokowane. Deweloperzy skupiają się teraz tylko i wyłącznie na eliminacji znalezionych i zgłoszonych błędów.
+Już jutro ma ukazać się kolejna wersja rozwojowa openSUSE Beta4. Więcej wiadomości na ten temat już wkrótce!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

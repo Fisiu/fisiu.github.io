@@ -1,0 +1,35 @@
+#profile a, .search-form-input, .article-more-link a {
+  border-radius: 0 !important;
+}
+
+.article-entry code {
+  background-color: #e4e4e4;
+}
+.archive-article-thumbnail {
+  display: none;
+}
+.article-entry p {
+  margin-bottom: 0;
+}
+
+pre code {
+  font-size: 0.9em;
+}
+
+.kbd-wrapper {
+  background-color: #34383d;
+  padding: 2px 4px;
+  margin: 0 -20px;
+}
+
+kbd {
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  color: #fff;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+ kbd .prompt {
+   color: #a6e22e;
+   margin-right: 10px;
+}

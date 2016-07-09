@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Colibri on System.out.println</title>
+    <link>http://fisiu.github.io/tags/colibri/</link>
+    <description>Recent content in Colibri on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Thu, 10 Feb 2011 13:25:44 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/colibri/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Colibri - alternatywne powiadomienia plazmy</title>
+      <link>http://fisiu.github.io/2011/02/colibri-alternatywne-powiadomienia-plazmy</link>
+      <pubDate>Thu, 10 Feb 2011 13:25:44 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2011/02/colibri-alternatywne-powiadomienia-plazmy</guid>
+      <description>&lt;p&gt;Aby skorzystać z alternatywnych powiadomień plazmy konieczne jest posiadanie KDE SC w wersji minimum 4.5. Potrzebny nam pakiet znajduje się w repozytorium Extra - stosownym dla naszej wersji KDE. Instalujemy go za pomocą:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper install colibri&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Następnie usuwamy widżet domyślnych powiadomień plazmy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2011/remove_plazma_notification.png&#34; alt=&#34;&amp;quot;Usuwanie powiadomień plazmy&amp;quot;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Teraz wystarczy włączyć nowe powiadomienia. W tym celu uruchamiamy Ustawienia Systemowe → Powiadomienia programów i systemu → Colibri Notifications.
+Oto jak prezentuje się nowy styl powiadomień:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://fisiu.github.io/img/2011/colibri_notification.png&#34; alt=&#34;&amp;quot;Powiadomienia Colibri&amp;quot;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

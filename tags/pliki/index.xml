@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pliki on System.out.println</title>
+    <link>http://fisiu.github.io/tags/pliki/</link>
+    <description>Recent content in Pliki on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Sun, 22 Jun 2014 19:31:45 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/pliki/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Jak okiełznać bałagan w zdjęciach?</title>
+      <link>http://fisiu.github.io/2014/06/jak-okielznac-balagan-w-zdjeciach</link>
+      <pubDate>Sun, 22 Jun 2014 19:31:45 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2014/06/jak-okielznac-balagan-w-zdjeciach</guid>
+      <description>&lt;p&gt;Zbieramy fotki z jakiegoś wydarzenia na przestrzeni kilku lat. W tym czasie używamy różnych aparatów, telefonów czy kamer. Każde z tych urządzeń ma inny schemat nazywania plików, różne formaty daty i/lub czasu. Dochodzimy do momentu, że w katalogu mamy setki czy tysiące zdjęć. Jak zatem zapanować na takim bałaganem? Ano w 2 prostych krokach.
+Po pierwsze, kopiujemy wszystkie zdjęcia do nowego katalogu. W międzyczasie sprawdzamy czy mamy zainstalowany program &lt;code&gt;jhead&lt;/code&gt; np. za pomocą &lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;which jhead&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Jeśli programu brak, to w openSUSE szybko instalujemy za pomocą YaST bądź w konsoli &lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;sudo zypper in jhead&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Program zainstalowany, zdjęcia skopiowane - czas ogarnąć bałagan.
+W konsoli przechodzimy do katalogu ze zdjęciami i uruchamiamy:&lt;/p&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;jhead -autorot -ft -nfIMG_%Y.%m.%d-%H.%M.%S *.jpg&lt;/kbd&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Użyte parametry oznaczają:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;-autorot Automatyczne obracanie zdjęcia na podstawie danych Exif&lt;/li&gt;
+&lt;li&gt;-ft Ustawia datę modyfikacji pliku na podstawie daty z danych Exif&lt;/li&gt;
+&lt;li&gt;-nf Zmienia nazwę pliku, zgodnie z podanym wzorcem (&lt;code&gt;man date&lt;/code&gt;), data i czas ustawiane na podstawie danych Exif&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I tak przykładowy plik &lt;code&gt;20130801_144642.jpg&lt;/code&gt; zmieni nazwę na &lt;code&gt;IMG_2013.08.01-14.46.41.jpg&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;PS. Jeśli wcześniej usunęliśmy dane Exif z plików, niestety nic z tego nie wyjdzie.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
