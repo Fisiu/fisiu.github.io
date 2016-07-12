@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Skaner on System.out.println</title>
+    <link>http://fisiu.github.io/tags/skaner/</link>
+    <description>Recent content in Skaner on System.out.println</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl-PL</language>
+    <lastBuildDate>Wed, 13 Jul 2016 00:38:54 +0200</lastBuildDate>
+    <atom:link href="http://fisiu.github.io/tags/skaner/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Brother DCP-J140W w openSUSE Leap 42 1</title>
+      <link>http://fisiu.github.io/2016/07/brother-dcp-j140w-w-opensuse-leap-42-1</link>
+      <pubDate>Wed, 13 Jul 2016 00:38:54 +0200</pubDate>
+      
+      <guid>http://fisiu.github.io/2016/07/brother-dcp-j140w-w-opensuse-leap-42-1</guid>
+      <description>&lt;p&gt;openSUSE Leap 42.1 zagościł u mnie stosunkowo późno, chyba dopiero około pół roku po premierze. I to tylko na jednym komputerze. Do tej pory wykonywałem uaktualnienie, wykonując nadzwyczaj magiczne polecenie
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper dup&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;O ile mnie pamięc nie myli, to ta historia powtarzała się od kilku już lat. Począwszy od wersji 12.1, który była instalowana &amp;ldquo;na czysto&amp;rdquo;. Jednak przy wersji 42.1 ponownie postanowiłem zainstalować system na czysto. A jak wiadomo, wiąże się to zawsze za kopią i przywracaniem plików. Dodatkowo jest to dobra okazja aby nieco posprzątać, zwłaszcza w miejscach, gdzie dawno nie zaglądaliśmy&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Sama instalacja openSUSE Leap 42.1 nie stanowiła żadnego problemu. Pliki również udało się przywrócić dość sprawnie, konfiguracja vima i powłoki leży w repozytorium gita - więc i tu poszło gładko. I tak przez jakiś czas system pracował, wydawało mi się, że o niczym nie zapomniałem. Aż do czasu kiedy chciałem coś przeskanować i wydrukować. Wszak Brother DCP-J140W działał przez sieć, choć było to jeszcze na starym systemie. Więc zabrałem się za instalację, choć sama &lt;a href=&#34;http://support.brother.com/g/s/id/linux/en/index.html?c=us_ot&amp;amp;lang=en&amp;amp;comple=on&amp;amp;redirect=on&#34;&gt;dokumentacja&lt;/a&gt; mówi, że to bułka z masłem. Na pierwszy ogień poszedł skaner. Po instalacji sterownika z pakietu rpm konieczne było dodadnie skanera. Poszło gładko.
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper in ~/Pobrane/brscan4-0.4.3-3.x86_64.rpm&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;brsaneconfig4 -a name=DCP-J140W model=DCP-J140W ip=192.168.1.10&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;W razie czego pomagamy sobie &lt;code&gt;brsaneconfig4 -h&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Niestety, pomimo tego, że polecenie
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;brsaneconfig4 -q&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;informowało, że urządzenie jest dostępne:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-terminal&#34;&gt;Devices on network
+  0 DCP-J140W           &amp;quot;DCP-J140W&amp;quot;         I:192.168.1.10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;to żadna aplikacja do skanowania nie mogła ze skanerem się połączyć. Dokumentacja milczy na ten tema, jednak rozwiązanie okazło się całkiem proste. Wystarczy dodać na końcu pliku &lt;code&gt;/etc/sane.d/dll.conf&lt;/code&gt; linię &lt;code&gt;brother4&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Za skanerem poszła drukarka. Bez większych przygód. Instalacja sterownika ograniczała się do:
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;su&lt;/kbd&gt;&lt;/div&gt;
+
+&lt;div class=&#34;kbd-wrapper&#34;&gt;&lt;kbd&gt;&lt;i class=&#34;fa fa-keyboard-o prompt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;zypper in ~/Pobrane/dcpj140wcupswrapper-1.1.3-6.i386.rpm ~/Pobrane/dcpj140wlpr-1.1.3-6.i386.rpm&lt;/kbd&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Potem zostało już tylko dodanie drukarki w &lt;a href=&#34;http://www.cups.org/&#34;&gt;CUPS&lt;/a&gt;. Ja w tym celu wykorzystałem interfejs www pod adresem &lt;a href=&#34;http://localhost:631&#34;&gt;http://localhost:631&lt;/a&gt;. W sekcji &lt;code&gt;Administration&lt;/code&gt; → &lt;code&gt;Add printer&lt;/code&gt; → &lt;code&gt;LPD/LPR&lt;/code&gt; i jako połączenie wpisujemy &lt;code&gt;lpd://192.168.1.10/binary_p1&lt;/code&gt;. Następnie podajemy nazwę i opis a później wskazujemy plik .ppd. W moim przypadku był to plik &lt;code&gt;/opt/brother/Printers/dcpj140w/cupswrapper/brother_dcpj140w_printer_en.ppd&lt;/code&gt;. Na samym końcu zostało wybranie domyślnych ustawień drukowania.&lt;/p&gt;
+
+&lt;p&gt;Tadam! Można drukować i skanować.&lt;/p&gt;
+
+&lt;p&gt;UWAGA. W odpowiednich miejscach użyj adresu IP który odpowiada twojemu urządzeniu ;-)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
